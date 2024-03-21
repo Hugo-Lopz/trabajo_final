@@ -1,0 +1,221 @@
+/*Navegación*/
+.deseos {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+.carrito {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    font-family: "Assistant" !important;
+}
+
+.lupa {
+    font-size: 1.5rem;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.hr {
+    color: black;
+}
+
+.botonCuenta {
+    margin-top: 0.2rem;
+}
+
+.menu2 {
+    background-color: red;
+}
+
+.menu2 i {
+    color: white;
+}
+
+.oculto {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
+
+.logo {
+    width: 15rem;
+    margin-top: -60px;
+    background-color: red;
+    padding: 1rem;
+    border-radius: 60%;
+}
+
+.dropDownLogos {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.menu2 a {
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+.menu1 .nav-item {
+    font-size: 1.5rem;
+}
+
+.menu2 .dropdown-item {
+    color: black !important;
+}
+
+.menu2 .btn {
+    background-color: black;
+ }
+
+ .menu2 .btn:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+
+/*Breadcrumb*/
+.breadcrumb {
+    margin: 3rem;
+}
+
+/*Catálogo*/
+.titulo {
+    margin-bottom: 3rem;
+}
+
+.producto {
+    margin: 5rem;
+}
+
+.catalogo img {
+    height: 250px;
+    width: 400px;
+    display: block;
+}
+
+.datos {
+    background-color: rgb(241, 241, 241);
+    margin-top: 0%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.datos .btn {
+    background-color: red !important;
+    color: white !important;
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    font-family: "Assistant" !important;
+}
+
+/*Footer*/
+.footer {
+    margin-top: 4rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: -1rem;
+    background-color: rgb(36, 35, 35);
+    color: white !important;
+    font-family: "Assistant" !important;
+}
+
+.footer i {
+    color: white;
+    font-size: 1rem;
+}
+
+.footer a  {
+    color: white;
+}
+
+.footer p {
+    font-size: 0.75rem;
+}
+
+.footer li {
+    font-size: 0.75rem;
+}
+
+.footer a:hover  {
+    color: red;
+}
+
+.footer .btn {
+    background-color: red !important;
+    color: white !important;
+}
+
+/*Medias query*/
+@media screen and (max-width:767px) {
+    .menu1 {
+        display: none;
+        visibility: hidden;
+        padding: 0px;
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    .menu2 {
+        margin-top: -20px;
+    }
+
+    .oculto {
+        visibility: visible;
+        height: auto;
+        width: auto;
+    }
+
+    .logo {
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .catalogo img {
+        height: 200px;
+        width: 280px;
+    }
+    
+    .datos {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .catalogo img {
+        height: 250px;
+        width: 370px;
+    }
+    
+    .datos {
+        width: 370px;
+    }
+}

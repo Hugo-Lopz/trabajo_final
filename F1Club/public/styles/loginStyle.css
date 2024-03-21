@@ -1,0 +1,185 @@
+/*Navegación*/
+.deseos {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+.carrito {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    font-family: "Assistant" !important;
+}
+
+.lupa {
+    font-size: 1.5rem;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.hr {
+    color: black;
+}
+
+.botonCuenta {
+    margin-top: 0.2rem;
+}
+
+.menu2 {
+    background-color: red;
+    margin-bottom: 3.5rem;
+}
+
+.oculto {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
+
+.logo {
+    width: 15rem;
+    margin-top: -60px;
+    background-color: red;
+    padding: 1rem;
+    border-radius: 60%;
+}
+
+.dropDownLogos {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.menu2 a {
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+.menu1 .nav-item {
+    font-size: 1.5rem;
+}
+
+.menu2 .dropdown-item {
+    color: black !important;
+}
+
+.menu2 i {
+    color: white;
+}
+
+.menu2 .btn {
+    background-color: black;
+}
+
+.menu2 .btn:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+
+/*Formulario*/
+.login {
+    font-family: "Assistant" !important;
+}
+
+.login .descripcion {
+    color: black !important;
+}
+
+.login .card {
+    border-color: red !important;
+}
+
+.botonSubmit .btn {
+    background-color: red;
+    color: white !important;
+}
+
+.botonSubmit .btn:hover,
+.botonSubmit .btn:focus {
+    background-color: rgb(179, 2, 2);
+}
+
+.apartadoDescripcion {
+    padding-bottom: 40rem;
+}
+
+/*Footer*/
+.footer {
+    margin-top: 4rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: -1rem;
+    background-color: rgb(36, 35, 35);
+    color: white !important;
+    font-family: "Assistant" !important;
+}
+
+.footer i {
+    color: white;
+    font-size: 1rem;
+}
+
+.footer a  {
+    color: white;
+}
+
+.footer p {
+    font-size: 0.75rem;
+}
+
+.footer li {
+    font-size: 0.75rem;
+}
+
+.footer a:hover  {
+    color: red;
+}
+
+.footer .btn {
+    background-color: red !important;
+    color: white !important;
+}
+
+/*Medias query*/
+@media screen and (max-width:767px) {
+    .menu1 {
+        display: none;
+        visibility: hidden;
+        padding: 0px;
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    .menu2 {
+        margin-top: -20px;
+    }
+
+    .oculto {
+        visibility: visible;
+        height: auto;
+        width: auto;
+    }
+
+    .logo {
+        margin: 5px;
+    }
+}

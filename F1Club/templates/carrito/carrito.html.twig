@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
+    <h1>Carrito de Compras</h1>
+    <table>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio unitario</th>
+            <th>Total</th>
+            <th>Gestionar unidades</th>
+        </tr>
+        {% for productId, productInfo in productosCarrito %}
+            <tr>
+                <td>{{ productInfo.nombre }}</td>
+                <td>{{ productInfo.cantidad }}</td>
+                <td>{{ productInfo.precio }}</td>
+                <td>{{ productInfo.cantidad * productInfo.precio }}</td>
+                <td> <a href="{{ path('quitar_producto_del_carrito', { idProducto: idProducto })}}"><button class="btn btn-danger"> Quitar una unidad </button><a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path('pagina_de_pago')}}"><button class="btn btn-danger">Comprar</button><a>
+{% endblock %}

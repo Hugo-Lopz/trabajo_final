@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="d-flex align-items-center justify-content-center">
+	<div class="card">
+  		<div class="card-body">
+			<h2>Total de productos vendidos</h2>
+    		<p>{{productosVendidos}}</p>
+  		</div>
+	</div>
+		<div class="card">
+  		<div class="card-body">
+			<h2>Ingresos totales</h2>
+    		<p>{{ingresosTotales}} €</p>
+  		</div>
+	</div>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+	<a href="{{ path('mostrar_mas_vendidos_este_mes')}}"><button class="btn btn-danger">Ver los 10 productos más vendidos este mes</button><a>
+	<a href="{{ path('mostrar_pedidos_diarios_del_mes_actual')}}"><button class="btn btn-danger">Ver cuantos pedidos se han hecho cada día del mes</button><a>
+	<a href="{{ path('mostrar_ventas_fabricantes_mes_actual')}}"><button class="btn btn-danger">Ventas de cada fabricante este mes</button><a>
+	<a href="{{ path('app_logout')}}"><button class="btn btn-danger">Cerrar sesión</button><a>
+</div>
+{% endblock %}

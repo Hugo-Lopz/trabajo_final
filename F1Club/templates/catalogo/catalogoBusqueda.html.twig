@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/catalogueStyle.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
+	<h1 class="titulo">Resultados de la búsqueda</h1>
+	{% if productosConImagen is empty %}
+		<p>No se han enontrado resultados</p>
+	{% else %}
+	    <section id="catalogo" class="catalogo d-flex flex-column">
+        <div class="container-fluid">
+            <div class="row">
+				{% for productoConImagen in productosConImagen %}
+                <div class="col-md-12 col-lg-4 d-flex align-items-center justify-content-center">
+                    <div class="producto">
+						{% if productoConImagen.imagen %}
+							<img src="{{ asset('images/' ~ productoConImagen.imagen.urlimagen) }}" alt="Imagen del producto">
+						{% endif %}
+                        <div class="datos">
+                            <h5> {{ productoConImagen.producto.nombreproducto }}</h5>
+                            <h6> Precio: {{ productoConImagen.producto.precio }} </h6>
+                            <a href="{{ path('ver_producto', { id: productoConImagen.producto.id }) }}"><button class="btn" type="button" aria-expanded="false">
+                                Ver producto
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+				{% endfor %}
+            </div>
+        </div>
+    	</section>
+	{% endif %}
+{% endblock %}

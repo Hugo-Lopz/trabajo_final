@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	<h1>Página de pago</h1>
+    <p>El total del pago es {{precio_total}} €</p>
+    <form action="{{ path('procesar_compra') }}" method="post">
+        <select name="metodo_pago">
+            {% for metodoPago in metodos_de_pago %}
+                <option value="{{ metodoPago.id }}">{{ metodoPago.nombre }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Seleccionar</button>
+    </form>
+{% endblock %}

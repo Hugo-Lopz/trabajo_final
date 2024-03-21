@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
+	<div class="accordion" id="accordionExample">
+		{% if pedidosUsuario is empty %}
+			<p>Todavía no se han realizado pedidos</p>
+
+		{% else %}
+		{% for pedido in pedidosUsuario %}
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{pedido.id}}" aria-expanded="false" aria-controls="collapse{{pedido.id}}">
+						<p>Pedido realizado el día:
+							{{pedido.fechaPedido|date('Y-m-d')}}
+							- Coste:
+							{{pedido.costeTotal}}</p>
+					</button>
+				</h2>
+				<div id="collapse{{pedido.id}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+					<div class="accordion-body">
+						<ul>
+							{% for lineaPedido in pedido.lineasPedido %}
+								<li>{{lineaPedido.nombreProducto}}
+									- x{{lineaPedido.cantidad}}
+									-
+									{{lineaPedido.precio}}€</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		{% endfor %}
+		{% endif %}
+	</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascript %}{% endblock %}
+
+{% block body %}
+ <!--footer-->
+    <section class="footer">
+        <div class="container-fluid">
+            <footer class="py-2">
+                <div class="row">
+                    <div class="col-2">
+                        <h6>Tienda</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Productos por escala</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Productos por década</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Productos por equipo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h6>Foro</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Noticias</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Rumores</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Carreras</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Coleccionismo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h6>Sobre la web</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">¿Quienes somos?</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Contacto</a></li>
+                            <li class="nav-item mb-2"><a href="/WebMap_page/webMap.html" class="nav-link p-0 ">Mapa web</a></li>
+                            <li class="nav-item mb-2"><a href="/accessibilty/accessibility.html" class="nav-link p-0 ">Documento de accesibilidad</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 offset-1">
+                        <form>
+                            <h6>Subscribete a nuestro newsletter</h6>
+                            <p>Recibirás noticias mensuales</p>
+                            <div class="d-flex w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Dirección email</label>
+                                <input id="newsletter1" type="text" class="form-control"
+                                    placeholder="Dirección de correo">
+                                <button class="btn" type="button">Subscribirse</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <p>&copy; 2024 Hugo López All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><i class="bi bi-twitter-x"></i></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><i class="bi bi-tiktok"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<p>Compra realizada con éxito</p>
+<a href="{{ path('app_home')}}"><button class="btn btn-danger">Volver al inicio</button><a>
+<a href="{{ path('usuario_vista_pedidos')}}"><button class="btn btn-danger">Ver pedidos</button><a>
+{% endblock %}
