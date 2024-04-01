@@ -65,11 +65,19 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToOne(inversedBy: 'usuario', cascade: ['persist', 'remove'])]
     private ?ListaDeseos $lista_deseos = null;
 
+    #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: Mensaje::class)]
+    private Collection $mensajes;
+
+    #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: Participante::class)]
+    private Collection $participantes;
+
     public function __construct()
     {
         $this->pedidos = new ArrayCollection();
         $this->valoraciones = new ArrayCollection();
         $this->cupones = new ArrayCollection();
+        $this->mensajes = new ArrayCollection();
+        $this->participantes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -321,6 +329,66 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     public function setListaDeseos(?ListaDeseos $lista_deseos): static
     {
         $this->lista_deseos = $lista_deseos;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Mensaje>
+     */
+    public function getMensajes(): Collection
+    {
+        return $this->mensajes;
+    }
+
+    public function addMensaje(Mensaje $mensaje): static
+    {
+        if (!$this->mensajes->contains($mensaje)) {
+            $this->mensajes->add($mensaje);
+            $mensaje->setUsuario($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMensaje(Mensaje $mensaje): static
+    {
+        if ($this->mensajes->removeElement($mensaje)) {
+            // set the owning side to null (unless already changed)
+            if ($mensaje->getUsuario() === $this) {
+                $mensaje->setUsuario(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Participante>
+     */
+    public function getParticipantes(): Collection
+    {
+        return $this->participantes;
+    }
+
+    public function addParticipante(Participante $participante): static
+    {
+        if (!$this->participantes->contains($participante)) {
+            $this->participantes->add($participante);
+            $participante->setUsuario($this);
+        }
+
+        return $this;
+    }
+
+    public function removeParticipante(Participante $participante): static
+    {
+        if ($this->participantes->removeElement($participante)) {
+            // set the owning side to null (unless already changed)
+            if ($participante->getUsuario() === $this) {
+                $participante->setUsuario(null);
+            }
+        }
 
         return $this;
     }

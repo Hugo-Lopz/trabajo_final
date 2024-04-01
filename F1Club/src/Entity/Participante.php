@@ -17,6 +17,9 @@ class Participante
     #[ORM\JoinColumn(nullable: false)]
     private ?Conversacion $conversacion = null;
 
+    #[ORM\ManyToOne(inversedBy: 'participantes')]
+    private ?Usuario $usuario = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -30,6 +33,18 @@ class Participante
     public function setConversacion(?Conversacion $conversacion): static
     {
         $this->conversacion = $conversacion;
+
+        return $this;
+    }
+
+    public function getUsuario(): ?Usuario
+    {
+        return $this->usuario;
+    }
+
+    public function setUsuario(?Usuario $usuario): static
+    {
+        $this->usuario = $usuario;
 
         return $this;
     }

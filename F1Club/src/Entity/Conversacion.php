@@ -19,7 +19,7 @@ class Conversacion
     private Collection $participantes;
 
     #[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: true)]
     private ?Mensaje $ultimoMensaje = null;
 
     #[ORM\OneToMany(mappedBy: 'conversacion', targetEntity: Mensaje::class)]

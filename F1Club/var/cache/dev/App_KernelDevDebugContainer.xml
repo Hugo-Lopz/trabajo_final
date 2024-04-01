@@ -340,11 +340,28 @@
         <argument type="service" id=".service_locator.ZP92gqz.App\Controller\Admin\UsuarioCrudController"/>
       </call>
     </service>
+    <service id="App\Controller\ConversacionController" class="App\Controller\ConversacionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\UsuarioRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument type="service" id="App\Repository\ConversacionRepository"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\ConversacionController"/>
+      </call>
+    </service>
     <service id="App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\Manager\ManagerController"/>
+      </call>
+    </service>
+    <service id="App\Controller\MensajeController" class="App\Controller\MensajeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\MensajeController"/>
       </call>
     </service>
     <service id="App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" public="true" autowire="true" autoconfigure="true">
@@ -5871,9 +5888,15 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\UsuarioCrudController" class="App\Controller\Admin\UsuarioCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\UsuarioCrudController" class="App\Controller\Admin\UsuarioCrudController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\UsuarioCrudController" class="App\Controller\Admin\UsuarioCrudController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ConversacionController" class="App\Controller\ConversacionController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ConversacionController" class="App\Controller\ConversacionController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ConversacionController" class="App\Controller\ConversacionController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MensajeController" class="App\Controller\MensajeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MensajeController" class="App\Controller\MensajeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MensajeController" class="App\Controller\MensajeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -7663,9 +7686,21 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\ConversacionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ConversacionController"/>
+      <argument>App\Controller\ConversacionController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
+    </service>
     <service id=".service_locator.jUv.zyj.App\Controller\Manager\ManagerController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Manager\ManagerController"/>
       <argument>App\Controller\Manager\ManagerController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
+    </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\MensajeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\MensajeController"/>
+      <argument>App\Controller\MensajeController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
