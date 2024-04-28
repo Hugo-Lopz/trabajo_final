@@ -27,7 +27,7 @@ class ConversacionController extends AbstractController
     }
 
     #[Route('/conversacion/{id}', name: 'app_conversacion')]
-    public function index(Request $request, int $id)
+    public function crearConversaciones(Request $request, int $id)
     {
         $otroUser = $request->get(key:'otroUsuario', default:0);
         $otroUser = $this->usuarioRepository->find($id);
@@ -81,5 +81,16 @@ class ConversacionController extends AbstractController
 
         
         return $this->json(['id' => $conversacion->getId()], Response::HTTP_CREATED, [], []);
+    }
+
+    #[Route('/conversaciones', name: 'getConversaciones')]
+    public function obtenerConversaciones()
+    {
+        $usuarioActual = $this->getUser();
+        if ($usuarioActual instanceof Usuario) {
+            $conversaciones = $this->conversacionRepository->findConversacionByUsuario($usuarioActual->getId());
+        }
+
+        return $this->json($conversaciones);
     }
 }

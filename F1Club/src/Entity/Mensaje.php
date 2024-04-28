@@ -26,6 +26,8 @@ class Mensaje
     #[ORM\ManyToOne(inversedBy: 'mensajes')]
     private ?Usuario $usuario = null;
 
+    private $miMensaje;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -76,6 +78,18 @@ class Mensaje
     {
         $this->usuario = $usuario;
 
+        return $this;
+    }
+
+    public function getMiMensaje()
+    {
+        return $this->miMensaje;
+    }
+
+    public function setMiMensaje($miMensaje)
+    {
+        $this->miMensaje = $miMensaje;
+        
         return $this;
     }
 }

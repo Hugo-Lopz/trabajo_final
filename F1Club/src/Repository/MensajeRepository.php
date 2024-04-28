@@ -21,6 +21,16 @@ class MensajeRepository extends ServiceEntityRepository
         parent::__construct($registry, Mensaje::class);
     }
 
+    public function findMensajeByIdConversacion(int $idConversacion)
+    {
+        return $this->createQueryBuilder('m')
+        ->where('m.conversacion = :idConversacion')
+        ->orderBy('m.id', 'DESC')
+        ->setParameter('idConversacion', $idConversacion)
+        ->getQuery()
+        ->getResult();
+    }
+
 //    /**
 //     * @return Mensaje[] Returns an array of Mensaje objects
 //     */

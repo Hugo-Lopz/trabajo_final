@@ -36,6 +36,34 @@ class ConversacionRepository extends ServiceEntityRepository
         ->getResult();
     }
 
+    public function findConversacionByUsuario(int $idUsuario): array
+    {
+        return $this->createQueryBuilder('c')
+        ->select('otroUsuario.nombre, c.id as idConversacion, um.contenido, um.timeStamp')
+        ->innerJoin('c.participantes', 'p', 'WITH', 'p.usuario != :idUsuario')
+        ->innerJoin('c.participantes', 'me', 'WITH', 'me.usuario = :idUsuario')
+        ->leftJoin('c.ultimoMensaje', 'um')
+        ->innerJoin('me.usuario', 'miUsuario')
+        ->innerJoin('p.usuario', 'otroUsuario')
+        ->where('miUsuario.id = :idUsuario')
+        ->setParameter('idUsuario', $idUsuario)
+        ->orderBy('um.timeStamp','DESC')
+        ->getQuery()
+        ->getResult();
+    }
+
+    public function comprobarUsuarioEsParticipante(int $idConversacion, string $identificadorDeUsuario) {
+        return $this->createQueryBuilder('c')
+        ->innerJoin('c.participantes', 'p')
+        ->innerJoin('p.usuario', 'u')
+        ->where('c.id = :idConversacion')
+        ->andWhere('u.email = :identificadorDeUsuario')
+        ->setParameter('idConversacion', $idConversacion)
+        ->setParameter('identificadorDeUsuario', $identificadorDeUsuario)
+        ->getQuery()
+        ->getOneOrNullResult();
+    }
+
 //    /**
 //     * @return Conversacion[] Returns an array of Conversacion objects
 //     */
