@@ -20,6 +20,7 @@ return [
         '/home' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\Shop\\HomeController::home'], null, null, null, false, false, null]],
         '/lista_deseos' => [[['_route' => 'acceder_lista_deseos', '_controller' => 'App\\Controller\\Shop\\ListaDeseosController::accederAListaDeseos'], null, null, null, false, false, null]],
         '/busqueda' => [[['_route' => 'busqueda_producto', '_controller' => 'App\\Controller\\Shop\\ProductoController::buscarProducto'], null, null, null, false, false, null]],
+        '/social/media/home' => [[['_route' => 'app_social_media_home', '_controller' => 'App\\Controller\\SocialMediaHomeController::socialMediaHome'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\User\\LoginController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\User\\LoginController::logout'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\User\\RegistrationController::register'], null, null, null, false, false, null]],
@@ -35,18 +36,21 @@ return [
                         .'|delete/([^/]++)(*:118)'
                     .')'
                 .')'
-                .'|/mensajes/([^/]++)(*:146)'
-                .'|/fabricante/([^/]++)(*:174)'
+                .'|/mensajes/(?'
+                    .'|([^/]++)(*:149)'
+                    .'|nuevo/([^/]++)(*:171)'
+                .')'
+                .'|/fabricante/([^/]++)(*:200)'
                 .'|/e(?'
-                    .'|quipo/([^/]++)(*:201)'
-                    .'|scala/([^/]++)(*:223)'
+                    .'|quipo/([^/]++)(*:227)'
+                    .'|scala/([^/]++)(*:249)'
                 .')'
                 .'|/lista_deseos/(?'
-                    .'|add/([^/]++)(*:261)'
-                    .'|remove/([^/]++)(*:284)'
+                    .'|add/([^/]++)(*:287)'
+                    .'|remove/([^/]++)(*:310)'
                 .')'
-                .'|/producto/([^/]++)(*:311)'
-                .'|/valorar/([^/]++)(*:336)'
+                .'|/producto/([^/]++)(*:337)'
+                .'|/valorar/([^/]++)(*:362)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -54,14 +58,15 @@ return [
         67 => [[['_route' => 'app_conversacion', '_controller' => 'App\\Controller\\ConversacionController::crearConversaciones'], ['id'], null, null, false, true, null]],
         96 => [[['_route' => 'agregar_producto_al_carrito', '_controller' => 'App\\Controller\\Shop\\CarritoController::agregarProductoAlCarrito'], ['idProducto'], null, null, false, true, null]],
         118 => [[['_route' => 'quitar_producto_del_carrito', '_controller' => 'App\\Controller\\Shop\\CarritoController::quitarProductodelCarrito'], ['idProducto'], null, null, false, true, null]],
-        146 => [[['_route' => 'getMensajes', '_controller' => 'App\\Controller\\MensajeController::obtenerMensajes'], ['id'], null, null, false, true, null]],
-        174 => [[['_route' => 'seleccion_fabricante', '_controller' => 'App\\Controller\\Shop\\CategoriaController::catalogoFabricantes'], ['id'], null, null, false, true, null]],
-        201 => [[['_route' => 'seleccion_equipo', '_controller' => 'App\\Controller\\Shop\\CategoriaController::catalogoEquipos'], ['id'], null, null, false, true, null]],
-        223 => [[['_route' => 'seleccion_escala', '_controller' => 'App\\Controller\\Shop\\CategoriaController::catalogoEscalas'], ['id'], null, null, false, true, null]],
-        261 => [[['_route' => 'agregar_producto_a_lista_deseos', '_controller' => 'App\\Controller\\Shop\\ListaDeseosController::agregarProductoAListaDeseos'], ['idProducto'], null, null, false, true, null]],
-        284 => [[['_route' => 'eliminar_producto_de_lista_deseos', '_controller' => 'App\\Controller\\Shop\\ListaDeseosController::eliminarProductoAListaDeseos'], ['idProducto'], null, null, false, true, null]],
-        311 => [[['_route' => 'ver_producto', '_controller' => 'App\\Controller\\Shop\\ProductoController::visualizarProducto'], ['id'], null, null, false, true, null]],
-        336 => [
+        149 => [[['_route' => 'getMensajes', '_controller' => 'App\\Controller\\MensajeController::obtenerMensajes'], ['id'], null, null, false, true, null]],
+        171 => [[['_route' => 'nuevoMensaje', '_controller' => 'App\\Controller\\MensajeController::nuevoMensaje'], ['id'], null, null, false, true, null]],
+        200 => [[['_route' => 'seleccion_fabricante', '_controller' => 'App\\Controller\\Shop\\CategoriaController::catalogoFabricantes'], ['id'], null, null, false, true, null]],
+        227 => [[['_route' => 'seleccion_equipo', '_controller' => 'App\\Controller\\Shop\\CategoriaController::catalogoEquipos'], ['id'], null, null, false, true, null]],
+        249 => [[['_route' => 'seleccion_escala', '_controller' => 'App\\Controller\\Shop\\CategoriaController::catalogoEscalas'], ['id'], null, null, false, true, null]],
+        287 => [[['_route' => 'agregar_producto_a_lista_deseos', '_controller' => 'App\\Controller\\Shop\\ListaDeseosController::agregarProductoAListaDeseos'], ['idProducto'], null, null, false, true, null]],
+        310 => [[['_route' => 'eliminar_producto_de_lista_deseos', '_controller' => 'App\\Controller\\Shop\\ListaDeseosController::eliminarProductoAListaDeseos'], ['idProducto'], null, null, false, true, null]],
+        337 => [[['_route' => 'ver_producto', '_controller' => 'App\\Controller\\Shop\\ProductoController::visualizarProducto'], ['id'], null, null, false, true, null]],
+        362 => [
             [['_route' => 'valoracion_producto', '_controller' => 'App\\Controller\\Shop\\ProductoController::valorarProducto'], ['idProducto'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

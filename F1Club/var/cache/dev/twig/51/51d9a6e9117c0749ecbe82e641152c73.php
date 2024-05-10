@@ -80,8 +80,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
         // line 10
         $this->loadTemplate("/compartido/nav.html.twig", "home/home.html.twig", 10)->display(twig_array_merge($context, ["escalas" => (isset($context["escalas"]) || array_key_exists("escalas", $context) ? $context["escalas"] : (function () { throw new RuntimeError('Variable "escalas" does not exist.', 10, $this->source); })()), "equipos" => (isset($context["equipos"]) || array_key_exists("equipos", $context) ? $context["equipos"] : (function () { throw new RuntimeError('Variable "equipos" does not exist.', 10, $this->source); })()), "fabricantes" => (isset($context["fabricantes"]) || array_key_exists("fabricantes", $context) ? $context["fabricantes"] : (function () { throw new RuntimeError('Variable "fabricantes" does not exist.', 10, $this->source); })())]));
         // line 11
-        echo " <!--Sección slider de presentación-->
-    <section class=\"seccionPresentacion d-flex flex-column\">
+        echo "    <section class=\"seccionPresentacion d-flex flex-column\">
         <div class=\"titulo\">
             <h2 class=\"seccion-titulo\">Te damos la bienvenida a F1 Club
                 Shop</h2>
@@ -94,7 +93,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                     <div>
                         <div class=\"card mb-3\">
                             <img src=\"";
-        // line 24
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/card1.jpg"), "html", null, true);
         echo "\" class=\"card-img-top\" alt=\"Imagen descripción compra\">
                             <div class=\"card-body\">
@@ -110,7 +109,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                     <div>
                         <div class=\"card mb-3\">
                             <img src=\"";
-        // line 37
+        // line 36
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/card2.webp"), "html", null, true);
         echo "\" class=\"card-img-top\"
                                 alt=\"Imagen de pilotos para la descripción de foro\">
@@ -127,7 +126,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                     <div>
                         <div class=\"card mb-3\">
                             <img src=\"";
-        // line 51
+        // line 50
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/card3.jpg"), "html", null, true);
         echo "\" class=\"card-img-top\"
                                 alt=\"Imagen de una colección para la descripción de coleccionismo\">
@@ -153,14 +152,14 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                 <div class=\"col-sm-12 col-md-6 col-lg-4\">
                     <div class=\"categoria\">
                         <img src=\"";
-        // line 74
+        // line 73
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/rblogo.jpeg"), "html", null, true);
         echo "\"alt=\"Foto logo equipo Red Bull\">
                         <div class=\"overlay\">
                             <h3>Red Bull Racing F1</h3>
                             <h6>Pilotos: M. verstappen y S. Pérez</h6>
                             <a href=\"";
-        // line 78
+        // line 77
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => 1]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -172,14 +171,14 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                 <div class=\"col-sm-12 col-md-6 col-lg-4\">
                     <div class=\"categoria\">
                         <img src=\"";
-        // line 87
+        // line 86
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/mblogo.jpg"), "html", null, true);
         echo "\" alt=\"Foto logo equipo Mercedes-Benz\">
                         <div class=\"overlay\">
                             <h3>Mercedes AMG F1</h3>
                             <h6>Pilotos: L. Hamilton y G. Russell</h6>
                             <a href=\"";
-        // line 91
+        // line 90
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => 3]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -191,14 +190,14 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                 <div class=\"col-sm-12 col-md-6 col-lg-4\">
                     <div class=\"categoria\">
                         <img src=\"";
-        // line 100
+        // line 99
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/ferrarilogo.jpg"), "html", null, true);
         echo "\" alt=\"Foto logo equipo Ferrari\">
                         <div class=\"overlay\">
                             <h3>Scuderia Ferrari F1</h3>
                             <h6>Pilotos: C. Sainz y C. Leclerc</h6>
                             <a href=\"";
-        // line 104
+        // line 103
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => 5]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -210,14 +209,14 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                 <div class=\"col-sm-12 col-md-6 col-lg-4\">
                     <div class=\"categoria\">
                         <img src=\"";
-        // line 113
+        // line 112
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/amlogo.jpg"), "html", null, true);
         echo "\" alt=\"Foto logo equipo Aston Martin\">
                         <div class=\"overlay\">
                             <h3>Aston Martin F1</h3>
                             <h6>Pilotos: L. Stroll y F. Alonso</h6>
                             <a href=\"";
-        // line 117
+        // line 116
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => 2]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -229,14 +228,14 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                 <div class=\"col-sm-12 col-md-6 col-lg-4\">
                     <div class=\"categoria\">
                         <img src=\"";
-        // line 126
+        // line 125
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/mclarenlogo.jpg"), "html", null, true);
         echo "\" alt=\"Foto logo equipo Mclaren\">
                         <div class=\"overlay\">
                             <h3>Mclaren F1</h3>
                             <h6>Pilotos: L. Norris y O. Piastri</h6>
                             <a href=\"";
-        // line 130
+        // line 129
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => 4]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -248,14 +247,14 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                 <div class=\"col-sm-12 col-md-6 col-lg-4\">
                     <div class=\"categoria\">
                         <img src=\"";
-        // line 139
+        // line 138
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/home/alpine-logo.webp"), "html", null, true);
         echo "\" alt=\"Foto logo equipo Alpine\">
                         <div class=\"overlay\">
                             <h3>Alpine F1</h3>
                             <h6>Pilotos: E. Ocon y P. Gasly</h6>
                             <a href=\"";
-        // line 143
+        // line 142
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => 6]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -284,7 +283,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                                 <li> Mayor calidad en los detalles </li>
                             </ul>
                             <a href=\"";
-        // line 169
+        // line 168
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_escala", ["id" => 1]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -300,7 +299,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                                 <li> Incluye vitrina de exposición </li>
                             </ul>
                             <a href=\"";
-        // line 182
+        // line 181
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_escala", ["id" => 2]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -316,7 +315,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                                 <li> Incluye vitrina de exposición </li>
                             </ul>
                             <a href=\"";
-        // line 195
+        // line 194
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_escala", ["id" => 3]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -333,7 +332,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
                                     detalles de calidad </li>
                             </ul>
                             <a href=\"";
-        // line 209
+        // line 208
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_escala", ["id" => 4]);
         echo "\"><button class=\"btn btn-dark\" type=\"button\" aria-expanded=\"false\">
                                 Comprar
@@ -345,8 +344,8 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
         </div>
     </section>
     ";
-        // line 218
-        $this->loadTemplate("/compartido/footer.html.twig", "home/home.html.twig", 218)->display($context);
+        // line 217
+        $this->loadTemplate("/compartido/footer.html.twig", "home/home.html.twig", 217)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -373,7 +372,7 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  349 => 218,  337 => 209,  320 => 195,  304 => 182,  288 => 169,  259 => 143,  252 => 139,  240 => 130,  233 => 126,  221 => 117,  214 => 113,  202 => 104,  195 => 100,  183 => 91,  176 => 87,  164 => 78,  157 => 74,  131 => 51,  114 => 37,  98 => 24,  83 => 11,  81 => 10,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  348 => 217,  336 => 208,  319 => 194,  303 => 181,  287 => 168,  258 => 142,  251 => 138,  239 => 129,  232 => 125,  220 => 116,  213 => 112,  201 => 103,  194 => 99,  182 => 90,  175 => 86,  163 => 77,  156 => 73,  130 => 50,  113 => 36,  97 => 23,  83 => 11,  81 => 10,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -388,7 +387,6 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
 
 
 \t{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
- <!--Sección slider de presentación-->
     <section class=\"seccionPresentacion d-flex flex-column\">
         <div class=\"titulo\">
             <h2 class=\"seccion-titulo\">Te damos la bienvenida a F1 Club
@@ -597,6 +595,6 @@ class __TwigTemplate_4137dd549ab3d818852449efac49dc34 extends Template
     </section>
     {% include '/compartido/footer.html.twig' %}
 {% endblock %}
-", "home/home.html.twig", "/home/daw/Escritorio/Proyecto_tienda/proyectoServidor/templates/home/home.html.twig");
+", "home/home.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/home/home.html.twig");
     }
 }

@@ -88,6 +88,10 @@ nav li a {
     background-color: rgb(66, 66, 66);
 }
 
+.botonMandarMensaje {
+
+}
+
 /*Sección presentación*/
 .seccionPresentacion .card {
     border-right: 5px solid red;
@@ -139,7 +143,6 @@ nav li a {
 }
 
 /*Equipos*/
-
 .catalogo2 img {
     width: 80%;
     height: 80%;

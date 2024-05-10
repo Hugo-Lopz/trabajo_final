@@ -71,6 +71,9 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: Participante::class)]
     private Collection $participantes;
 
+    #[ORM\OneToMany(mappedBy: 'usuarios', targetEntity: Posts::class, orphanRemoval: true)]
+    private Collection $posts;
+
     public function __construct()
     {
         $this->pedidos = new ArrayCollection();
@@ -78,6 +81,7 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
         $this->cupones = new ArrayCollection();
         $this->mensajes = new ArrayCollection();
         $this->participantes = new ArrayCollection();
+        $this->posts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -387,6 +391,36 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($participante->getUsuario() === $this) {
                 $participante->setUsuario(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Posts>
+     */
+    public function getPosts(): Collection
+    {
+        return $this->posts;
+    }
+
+    public function addPost(Posts $post): static
+    {
+        if (!$this->posts->contains($post)) {
+            $this->posts->add($post);
+            $post->setUsuarios($this);
+        }
+
+        return $this;
+    }
+
+    public function removePost(Posts $post): static
+    {
+        if ($this->posts->removeElement($post)) {
+            // set the owning side to null (unless already changed)
+            if ($post->getUsuarios() === $this) {
+                $post->setUsuarios(null);
             }
         }
 

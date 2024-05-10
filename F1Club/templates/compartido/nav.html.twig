@@ -51,6 +51,17 @@
 					<div class="vr"></div>
 					<li class="nav-item">
 						<a href="{{ path('acceder_lista_deseos')}}" class="deseos">
+							<i class="bi bi-envelope-plus-fill"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="{{ path('acceder_lista_deseos')}}" class="deseos">
+							<i class="bi bi-envelope-open-fill"></i>
+						</a>
+					</li>
+					<div class="vr"></div>
+					<li class="nav-item">
+						<a href="{{ path('acceder_lista_deseos')}}" class="deseos">
 							<i class="bi bi-heart-fill"></i>
 						</a>
 					</li>
@@ -121,7 +132,9 @@
 				</ul>
 				<form class="d-flex" action="{{ path('busqueda_producto')}}" method="post">
 					<input class="form-control me-2" name="busqueda" type="search" placeholder="Buscar producto" aria-label="Search">
-					<button class="btn" type="submit"><i class="lupa bi bi-search"></i></button>
+					<button class="btn" type="submit">
+						<i class="lupa bi bi-search"></i>
+					</button>
 				</form>
 			</div>
 		</div>

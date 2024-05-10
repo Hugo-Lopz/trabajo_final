@@ -25,7 +25,6 @@ class MensajeRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('m')
         ->where('m.conversacion = :idConversacion')
-        ->orderBy('m.id', 'DESC')
         ->setParameter('idConversacion', $idConversacion)
         ->getQuery()
         ->getResult();

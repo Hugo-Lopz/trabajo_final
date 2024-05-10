@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    {% include '/compartido/navSocial.html.twig' with { 'temas': temas } %}
+    
+    {% include '/compartido/footer.html.twig' %}
+{% endblock %}

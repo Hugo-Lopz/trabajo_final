@@ -162,12 +162,29 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
         // line 53
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("acceder_lista_deseos");
         echo "\" class=\"deseos\">
-\t\t\t\t\t\t\t<i class=\"bi bi-heart-fill\"></i>
+\t\t\t\t\t\t\t<i class=\"bi bi-envelope-plus-fill\"></i>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t<a href=\"";
         // line 58
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("acceder_lista_deseos");
+        echo "\" class=\"deseos\">
+\t\t\t\t\t\t\t<i class=\"bi bi-envelope-open-fill\"></i>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<div class=\"vr\"></div>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a href=\"";
+        // line 64
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("acceder_lista_deseos");
+        echo "\" class=\"deseos\">
+\t\t\t\t\t\t\t<i class=\"bi bi-heart-fill\"></i>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a href=\"";
+        // line 69
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mostrar_carrito");
         echo "\" class=\"carrito\">
 \t\t\t\t\t\t\t<i class=\"bi bi-bag\"></i>
@@ -182,7 +199,7 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
 \t<nav class=\"menu2 navbar navbar-expand-md\" aria-label=\"\">
 \t\t<div class=\"container-fluid\">
 \t\t\t<a href=\"";
-        // line 70
+        // line 81
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         echo "\"><img class=\"logo\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/nav/Logo.png"), "html", null, true);
@@ -207,17 +224,17 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\">
 \t\t\t\t\t\t\t";
-        // line 90
+        // line 101
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["fabricantes"]) || array_key_exists("fabricantes", $context) ? $context["fabricantes"] : (function () { throw new RuntimeError('Variable "fabricantes" does not exist.', 90, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["fabricantes"]) || array_key_exists("fabricantes", $context) ? $context["fabricantes"] : (function () { throw new RuntimeError('Variable "fabricantes" does not exist.', 101, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["fabricante"]) {
-            // line 91
+            // line 102
             echo "\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
-            // line 92
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_fabricante", ["id" => twig_get_attribute($this->env, $this->source, $context["fabricante"], "id", [], "any", false, false, false, 92)]), "html", null, true);
+            // line 103
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_fabricante", ["id" => twig_get_attribute($this->env, $this->source, $context["fabricante"], "id", [], "any", false, false, false, 103)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fabricante"], "nombre", [], "any", false, false, false, 92), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fabricante"], "nombre", [], "any", false, false, false, 103), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t";
@@ -225,7 +242,7 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fabricante'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 95
+        // line 106
         echo "\t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"nav-item dropdown\">
@@ -234,17 +251,17 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\">
 \t\t\t\t\t\t\t";
-        // line 102
+        // line 113
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["escalas"]) || array_key_exists("escalas", $context) ? $context["escalas"] : (function () { throw new RuntimeError('Variable "escalas" does not exist.', 102, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["escalas"]) || array_key_exists("escalas", $context) ? $context["escalas"] : (function () { throw new RuntimeError('Variable "escalas" does not exist.', 113, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["escala"]) {
-            // line 103
+            // line 114
             echo "\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
-            // line 104
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_escala", ["id" => twig_get_attribute($this->env, $this->source, $context["escala"], "id", [], "any", false, false, false, 104)]), "html", null, true);
+            // line 115
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_escala", ["id" => twig_get_attribute($this->env, $this->source, $context["escala"], "id", [], "any", false, false, false, 115)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["escala"], "nombreescala", [], "any", false, false, false, 104), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["escala"], "nombreescala", [], "any", false, false, false, 115), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t";
@@ -252,7 +269,7 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['escala'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 107
+        // line 118
         echo "\t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"nav-item dropdown\">
@@ -261,17 +278,17 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<ul class=\"dropdown-menu\">
 \t\t\t\t\t\t\t";
-        // line 114
+        // line 125
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["equipos"]) || array_key_exists("equipos", $context) ? $context["equipos"] : (function () { throw new RuntimeError('Variable "equipos" does not exist.', 114, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["equipos"]) || array_key_exists("equipos", $context) ? $context["equipos"] : (function () { throw new RuntimeError('Variable "equipos" does not exist.', 125, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["equipo"]) {
-            // line 115
+            // line 126
             echo "\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
-            // line 116
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => twig_get_attribute($this->env, $this->source, $context["equipo"], "id", [], "any", false, false, false, 116)]), "html", null, true);
+            // line 127
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seleccion_equipo", ["id" => twig_get_attribute($this->env, $this->source, $context["equipo"], "id", [], "any", false, false, false, 127)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["equipo"], "nombreequipo", [], "any", false, false, false, 116), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["equipo"], "nombreequipo", [], "any", false, false, false, 127), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t";
@@ -279,16 +296,18 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['equipo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 119
+        // line 130
         echo "\t\t\t\t\t\t</ul>
 \t\t\t\t\t</li>
 \t\t\t\t</ul>
 \t\t\t\t<form class=\"d-flex\" action=\"";
-        // line 122
+        // line 133
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("busqueda_producto");
         echo "\" method=\"post\">
 \t\t\t\t\t<input class=\"form-control me-2\" name=\"busqueda\" type=\"search\" placeholder=\"Buscar producto\" aria-label=\"Search\">
-\t\t\t\t\t<button class=\"btn\" type=\"submit\"><i class=\"lupa bi bi-search\"></i></button>
+\t\t\t\t\t<button class=\"btn\" type=\"submit\">
+\t\t\t\t\t\t<i class=\"lupa bi bi-search\"></i>
+\t\t\t\t\t</button>
 \t\t\t\t</form>
 \t\t\t</div>
 \t\t</div>
@@ -320,7 +339,7 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  288 => 122,  283 => 119,  272 => 116,  269 => 115,  265 => 114,  256 => 107,  245 => 104,  242 => 103,  238 => 102,  229 => 95,  218 => 92,  215 => 91,  211 => 90,  186 => 70,  171 => 58,  163 => 53,  156 => 48,  150 => 45,  144 => 42,  141 => 41,  135 => 38,  129 => 35,  126 => 34,  124 => 33,  118 => 29,  114 => 27,  108 => 25,  106 => 24,  90 => 10,  83 => 9,  71 => 7,  61 => 4,  54 => 3,  37 => 1,);
+        return array (  305 => 133,  300 => 130,  289 => 127,  286 => 126,  282 => 125,  273 => 118,  262 => 115,  259 => 114,  255 => 113,  246 => 106,  235 => 103,  232 => 102,  228 => 101,  203 => 81,  188 => 69,  180 => 64,  171 => 58,  163 => 53,  156 => 48,  150 => 45,  144 => 42,  141 => 41,  135 => 38,  129 => 35,  126 => 34,  124 => 33,  118 => 29,  114 => 27,  108 => 25,  106 => 24,  90 => 10,  83 => 9,  71 => 7,  61 => 4,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -374,6 +393,17 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
 \t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t</li>
+\t\t\t\t\t<div class=\"vr\"></div>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a href=\"{{ path('acceder_lista_deseos')}}\" class=\"deseos\">
+\t\t\t\t\t\t\t<i class=\"bi bi-envelope-plus-fill\"></i>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a href=\"{{ path('acceder_lista_deseos')}}\" class=\"deseos\">
+\t\t\t\t\t\t\t<i class=\"bi bi-envelope-open-fill\"></i>
+\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t<div class=\"vr\"></div>
 \t\t\t\t\t<li class=\"nav-item\">
@@ -448,12 +478,14 @@ class __TwigTemplate_47de9f1ae6fc40a5cb23b92d56ae7c34 extends Template
 \t\t\t\t</ul>
 \t\t\t\t<form class=\"d-flex\" action=\"{{ path('busqueda_producto')}}\" method=\"post\">
 \t\t\t\t\t<input class=\"form-control me-2\" name=\"busqueda\" type=\"search\" placeholder=\"Buscar producto\" aria-label=\"Search\">
-\t\t\t\t\t<button class=\"btn\" type=\"submit\"><i class=\"lupa bi bi-search\"></i></button>
+\t\t\t\t\t<button class=\"btn\" type=\"submit\">
+\t\t\t\t\t\t<i class=\"lupa bi bi-search\"></i>
+\t\t\t\t\t</button>
 \t\t\t\t</form>
 \t\t\t</div>
 \t\t</div>
 \t</nav>
 {% endblock %}
-", "/compartido/nav.html.twig", "/home/daw/Escritorio/Proyecto_tienda/proyectoServidor/templates/compartido/nav.html.twig");
+", "/compartido/nav.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/compartido/nav.html.twig");
     }
 }

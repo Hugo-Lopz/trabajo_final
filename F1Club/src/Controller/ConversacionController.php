@@ -74,12 +74,8 @@ class ConversacionController extends AbstractController
                 $this->entityManager->rollback();
                 throw $e;
             }
-
-
         }
 
-
-        
         return $this->json(['id' => $conversacion->getId()], Response::HTTP_CREATED, [], []);
     }
 
