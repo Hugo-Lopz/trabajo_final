@@ -408,13 +408,6 @@
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\Shop\ProductoController"/>
       </call>
     </service>
-    <service id="App\Controller\SocialMediaHomeController" class="App\Controller\SocialMediaHomeController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\SocialMediaHomeController"/>
-      </call>
-    </service>
     <service id="App\Controller\User\LoginController" class="App\Controller\User\LoginController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -443,18 +436,7 @@
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
     <service id="App\Module\ProductoImagenModule" class="App\Module\ProductoImagenModule" autowire="true" autoconfigure="true"/>
-    <service id="App\Module\TemasModule" class="App\Module\TemasModule" autowire="true" autoconfigure="true">
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
-    </service>
     <service id="App\Repository\ConversacionRepository" class="App\Repository\ConversacionRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\CuponRepository" class="App\Repository\CuponRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\DescuentoRepository" class="App\Repository\DescuentoRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -498,15 +480,7 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\PostsRepository" class="App\Repository\PostsRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
     <service id="App\Repository\ProductoRepository" class="App\Repository\ProductoRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\TemasRepository" class="App\Repository\TemasRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -553,7 +527,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.542mztD"/>
+      <argument type="service" id=".service_locator.2_jZ5tj"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -2742,7 +2716,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.542mztD"/>
+      <argument type="service" id=".service_locator.2_jZ5tj"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -3707,7 +3681,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.Dc8T414"/>
+      <argument type="service" id=".service_locator._YH1RcM"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5939,9 +5913,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Shop\ProductoController" class="App\Controller\Shop\ProductoController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Shop\ProductoController" class="App\Controller\Shop\ProductoController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Shop\ProductoController" class="App\Controller\Shop\ProductoController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SocialMediaHomeController" class="App\Controller\SocialMediaHomeController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SocialMediaHomeController" class="App\Controller\SocialMediaHomeController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\SocialMediaHomeController" class="App\Controller\SocialMediaHomeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\User\LoginController" class="App\Controller\User\LoginController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\User\LoginController" class="App\Controller\User\LoginController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\User\LoginController" class="App\Controller\User\LoginController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5955,10 +5926,6 @@
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ConversacionRepository" class="App\Repository\ConversacionRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ConversacionRepository" class="App\Repository\ConversacionRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CuponRepository" class="App\Repository\CuponRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\CuponRepository" class="App\Repository\CuponRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DescuentoRepository" class="App\Repository\DescuentoRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\DescuentoRepository" class="App\Repository\DescuentoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EquipoRepository" class="App\Repository\EquipoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\EquipoRepository" class="App\Repository\EquipoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EscalaRepository" class="App\Repository\EscalaRepository" autowire="true" abstract="true"/>
@@ -5979,12 +5946,8 @@
     <service id=".abstract.instanceof.App\Repository\ParticipanteRepository" class="App\Repository\ParticipanteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PedidoRepository" class="App\Repository\PedidoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PedidoRepository" class="App\Repository\PedidoRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PostsRepository" class="App\Repository\PostsRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\PostsRepository" class="App\Repository\PostsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProductoRepository" class="App\Repository\ProductoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProductoRepository" class="App\Repository\ProductoRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TemasRepository" class="App\Repository\TemasRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\TemasRepository" class="App\Repository\TemasRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsuarioRepository" class="App\Repository\UsuarioRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UsuarioRepository" class="App\Repository\UsuarioRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ValoracionRepository" class="App\Repository\ValoracionRepository" autowire="true" abstract="true"/>
@@ -6641,12 +6604,6 @@
         <argument key="productoRepository" type="service_closure" id="App\Repository\ProductoRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.FBaCfmj" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="temasModule" type="service_closure" id="App\Module\TemasModule"/>
-      </argument>
-    </service>
     <service id=".service_locator.6Wfvake" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6662,7 +6619,7 @@
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
-    <service id=".service_locator.542mztD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.2_jZ5tj" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CuponCrudController::autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
@@ -6896,7 +6853,6 @@
         <argument key="App\Controller\Shop\ProductoController::buscarProducto" type="service_closure" id=".service_locator.fVLnH44"/>
         <argument key="App\Controller\Shop\ProductoController::valorarProducto" type="service_closure" id=".service_locator.MUSGIxd"/>
         <argument key="App\Controller\Shop\ProductoController::visualizarProducto" type="service_closure" id=".service_locator.nkLIFYO"/>
-        <argument key="App\Controller\SocialMediaHomeController::socialMediaHome" type="service_closure" id=".service_locator.FBaCfmj"/>
         <argument key="App\Controller\User\LoginController::login" type="service_closure" id=".service_locator.6Wfvake"/>
         <argument key="App\Controller\User\RegistrationController::register" type="service_closure" id=".service_locator.QLhFzGu"/>
         <argument key="App\Controller\User\UsuarioController::verPedidos" type="service_closure" id=".service_locator.cJLU5RN"/>
@@ -7135,7 +7091,6 @@
         <argument key="App\Controller\Shop\ProductoController:buscarProducto" type="service_closure" id=".service_locator.fVLnH44"/>
         <argument key="App\Controller\Shop\ProductoController:valorarProducto" type="service_closure" id=".service_locator.MUSGIxd"/>
         <argument key="App\Controller\Shop\ProductoController:visualizarProducto" type="service_closure" id=".service_locator.nkLIFYO"/>
-        <argument key="App\Controller\SocialMediaHomeController:socialMediaHome" type="service_closure" id=".service_locator.FBaCfmj"/>
         <argument key="App\Controller\User\LoginController:login" type="service_closure" id=".service_locator.6Wfvake"/>
         <argument key="App\Controller\User\RegistrationController:register" type="service_closure" id=".service_locator.QLhFzGu"/>
         <argument key="App\Controller\User\UsuarioController:verPedidos" type="service_closure" id=".service_locator.cJLU5RN"/>
@@ -7256,12 +7211,10 @@
         <argument key="doctrine.orm.listeners.pdo_session_handler_schema_listener" type="service_closure" id="doctrine.orm.listeners.pdo_session_handler_schema_listener"/>
       </argument>
     </service>
-    <service id=".service_locator.Dc8T414" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator._YH1RcM" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\ConversacionRepository" type="service_closure" id="App\Repository\ConversacionRepository"/>
-        <argument key="App\Repository\CuponRepository" type="service_closure" id="App\Repository\CuponRepository"/>
-        <argument key="App\Repository\DescuentoRepository" type="service_closure" id="App\Repository\DescuentoRepository"/>
         <argument key="App\Repository\EquipoRepository" type="service_closure" id="App\Repository\EquipoRepository"/>
         <argument key="App\Repository\EscalaRepository" type="service_closure" id="App\Repository\EscalaRepository"/>
         <argument key="App\Repository\FabricanteRepository" type="service_closure" id="App\Repository\FabricanteRepository"/>
@@ -7272,9 +7225,7 @@
         <argument key="App\Repository\MetodoDePagoRepository" type="service_closure" id="App\Repository\MetodoDePagoRepository"/>
         <argument key="App\Repository\ParticipanteRepository" type="service_closure" id="App\Repository\ParticipanteRepository"/>
         <argument key="App\Repository\PedidoRepository" type="service_closure" id="App\Repository\PedidoRepository"/>
-        <argument key="App\Repository\PostsRepository" type="service_closure" id="App\Repository\PostsRepository"/>
         <argument key="App\Repository\ProductoRepository" type="service_closure" id="App\Repository\ProductoRepository"/>
-        <argument key="App\Repository\TemasRepository" type="service_closure" id="App\Repository\TemasRepository"/>
         <argument key="App\Repository\UsuarioRepository" type="service_closure" id="App\Repository\UsuarioRepository"/>
         <argument key="App\Repository\ValoracionRepository" type="service_closure" id="App\Repository\ValoracionRepository"/>
       </argument>
@@ -7794,12 +7745,6 @@
     <service id=".service_locator.jUv.zyj.App\Controller\Shop\ProductoController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Shop\ProductoController"/>
       <argument>App\Controller\Shop\ProductoController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.jUv.zyj" method="withContext"/>
-    </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\SocialMediaHomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\SocialMediaHomeController"/>
-      <argument>App\Controller\SocialMediaHomeController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
@@ -8920,7 +8865,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.542mztD"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.2_jZ5tj"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -8972,7 +8917,6 @@
     <service id=".service_locator.Lo0V9_I" alias=".service_locator.nkLIFYO"/>
     <service id=".service_locator.nOrbv5U" alias=".service_locator.fVLnH44"/>
     <service id=".service_locator.O.tGhQR" alias=".service_locator.MUSGIxd"/>
-    <service id=".service_locator.fU.4RI2" alias=".service_locator.FBaCfmj"/>
     <service id=".service_locator.JmMGBM1" alias=".service_locator.6Wfvake"/>
     <service id=".service_locator.IGlA3Xd" alias=".service_locator.QLhFzGu"/>
     <service id=".service_locator.OukUT8u" alias=".service_locator.ZP92gqz"/>

@@ -59,9 +59,6 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: Valoracion::class, orphanRemoval: true)]
     private Collection $valoraciones;
 
-    #[ORM\ManyToMany(targetEntity: Cupon::class, mappedBy: 'usuario')]
-    private Collection $cupones;
-
     #[ORM\OneToOne(inversedBy: 'usuario', cascade: ['persist', 'remove'])]
     private ?ListaDeseos $lista_deseos = null;
 
@@ -71,17 +68,12 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: Participante::class)]
     private Collection $participantes;
 
-    #[ORM\OneToMany(mappedBy: 'usuarios', targetEntity: Posts::class, orphanRemoval: true)]
-    private Collection $posts;
-
     public function __construct()
     {
         $this->pedidos = new ArrayCollection();
         $this->valoraciones = new ArrayCollection();
-        $this->cupones = new ArrayCollection();
         $this->mensajes = new ArrayCollection();
         $this->participantes = new ArrayCollection();
-        $this->posts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -298,33 +290,6 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * @return Collection<int, Cupon>
-     */
-    public function getCupones(): Collection
-    {
-        return $this->cupones;
-    }
-
-    public function addCupon(Cupon $cupon): static
-    {
-        if (!$this->cupones->contains($cupon)) {
-            $this->cupones->add($cupon);
-            $cupon->addUsuario($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCupon(Cupon $cupon): static
-    {
-        if ($this->cupones->removeElement($cupon)) {
-            $cupon->removeUsuario($this);
-        }
-
-        return $this;
-    }
-
     public function getListaDeseos(): ?ListaDeseos
     {
         return $this->lista_deseos;
@@ -391,36 +356,6 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($participante->getUsuario() === $this) {
                 $participante->setUsuario(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Posts>
-     */
-    public function getPosts(): Collection
-    {
-        return $this->posts;
-    }
-
-    public function addPost(Posts $post): static
-    {
-        if (!$this->posts->contains($post)) {
-            $this->posts->add($post);
-            $post->setUsuarios($this);
-        }
-
-        return $this;
-    }
-
-    public function removePost(Posts $post): static
-    {
-        if ($this->posts->removeElement($post)) {
-            // set the owning side to null (unless already changed)
-            if ($post->getUsuarios() === $this) {
-                $post->setUsuarios(null);
             }
         }
 

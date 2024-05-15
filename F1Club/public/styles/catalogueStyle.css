@@ -40,7 +40,7 @@ nav li a {
 }
 
 .menu2 {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.808);
 }
 
 .menu2 i {
@@ -56,7 +56,7 @@ nav li a {
 .logo {
     width: 15rem;
     margin-top: -60px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.808);
     padding: 1rem;
     border-radius: 60%;
 }
@@ -118,7 +118,7 @@ nav li a {
 }
 
 .datos .btn {
-    background-color: red !important;
+    background-color: rgba(255, 0, 0, 0.808) !important;
     color: white !important;
 }
 
@@ -164,11 +164,11 @@ nav li a {
 }
 
 .footer a:hover  {
-    color: red;
+    color: rgba(255, 0, 0, 0.808);
 }
 
 .footer .btn {
-    background-color: red !important;
+    background-color: rgba(255, 0, 0, 0.808) !important;
     color: white !important;
 }
 

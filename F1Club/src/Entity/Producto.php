@@ -30,10 +30,6 @@ class Producto
     #[ORM\OneToMany(mappedBy: 'producto', targetEntity: Valoracion::class)]
     private Collection $valoraciones;
 
-    #[ORM\ManyToOne(inversedBy: 'producto')]
-    #[ORM\JoinColumn(nullable: true)]
-    private ?Descuento $descuento = null;
-
     #[ORM\ManyToMany(targetEntity: ListaDeseos::class, inversedBy: 'productos')]
     private Collection $listaDeseos;
 
@@ -51,6 +47,9 @@ class Producto
     #[ORM\ManyToOne(inversedBy: 'producto')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Fabricante $fabricante = null;
+
+    #[ORM\Column]
+    private ?bool $segunda_mano = null;
 
     public function __construct()
     {
@@ -187,22 +186,6 @@ class Producto
     /**
      * @return Collection<int, ListaDeseos>
      */
-
-    public function getDescuento(): ?Descuento
-    {
-        return $this->descuento;
-    }
-
-    public function setDescuento(?Descuento $descuento): static
-    {
-        $this->descuento = $descuento;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, ListaDeseos>
-     */
     public function getListaDeseos(): Collection
     {
         return $this->listaDeseos;
@@ -268,6 +251,18 @@ class Producto
     public function setFabricante(?Fabricante $fabricante): static
     {
         $this->fabricante = $fabricante;
+
+        return $this;
+    }
+
+    public function isSegundaMano(): ?bool
+    {
+        return $this->segunda_mano;
+    }
+
+    public function setSegundaMano(bool $segunda_mano): static
+    {
+        $this->segunda_mano = $segunda_mano;
 
         return $this;
     }

@@ -1,14 +1,9 @@
 /*Navegación*/
-.deseos {
+.icono{
     font-size: 2rem;
     margin-right: 1rem;
     color: black;
-}
-
-.carrito {
-    font-size: 2rem;
-    margin-right: 1rem;
-    color: black;
+    padding: 0% !important;
 }
 
 nav li a {
@@ -40,7 +35,7 @@ nav li a {
 }
 
 .menu2 {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.808);
 }
 
 .menu2 i {
@@ -56,7 +51,7 @@ nav li a {
 .logo {
     width: 15rem;
     margin-top: -60px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.808);
     padding: 1rem;
     border-radius: 60%;
 }
@@ -88,14 +83,16 @@ nav li a {
     background-color: rgb(66, 66, 66);
 }
 
-.botonMandarMensaje {
-
+.botonConversacion {
+    font-size: 2rem;
+    margin-left: 5rem;
+    color: black;
 }
 
 /*Sección presentación*/
 .seccionPresentacion .card {
-    border-right: 5px solid red;
-    border-bottom: 5px solid red;
+    border-right: 5px solid rgba(255, 0, 0, 0.808);
+    border-bottom: 5px solid rgba(255, 0, 0, 0.808);
     border-left: none;
     border-top: none;
     border-top-right-radius: 0%;
@@ -230,11 +227,11 @@ li.timeline-item {
 /* Timeline item circle marker */
 li.timeline-item::before {
     content: ' ';
-    background: red;
+    background: rgba(255, 0, 0, 0.808);
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid red;
+    border: 3px solid rgba(255, 0, 0, 0.808);
     left: 11px;
     width: 14px;
     height: 14px;
@@ -301,11 +298,11 @@ li.timeline-item::before {
 }
 
 .footer a:hover  {
-    color: red;
+    color: rgba(255, 0, 0, 0.808);
 }
 
 .footer .btn {
-    background-color: red !important;
+    background-color: rgba(255, 0, 0, 0.808) !important;
     color: white !important;
 }
 
@@ -328,7 +325,7 @@ section {
 }
 
 .carousel i {
-    color: red;
+    color: rgba(255, 0, 0, 0.808);
     font-size: 2rem;
 }
 

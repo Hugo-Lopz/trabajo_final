@@ -16,7 +16,6 @@ class Producto extends \App\Entity\Producto implements \Doctrine\ORM\Proxy\Inter
     }
 
     private const LAZY_OBJECT_PROPERTY_SCOPES = [
-        "\0".parent::class."\0".'descuento' => [parent::class, 'descuento', null],
         "\0".parent::class."\0".'equipo' => [parent::class, 'equipo', null],
         "\0".parent::class."\0".'escala' => [parent::class, 'escala', null],
         "\0".parent::class."\0".'fabricante' => [parent::class, 'fabricante', null],
@@ -28,7 +27,6 @@ class Producto extends \App\Entity\Producto implements \Doctrine\ORM\Proxy\Inter
         "\0".parent::class."\0".'precio' => [parent::class, 'precio', null],
         "\0".parent::class."\0".'stock' => [parent::class, 'stock', null],
         "\0".parent::class."\0".'valoraciones' => [parent::class, 'valoraciones', null],
-        'descuento' => [parent::class, 'descuento', null],
         'equipo' => [parent::class, 'equipo', null],
         'escala' => [parent::class, 'escala', null],
         'fabricante' => [parent::class, 'fabricante', null],

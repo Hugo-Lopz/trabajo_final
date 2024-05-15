@@ -181,22 +181,28 @@ class __TwigTemplate_29ca32bdca6bf058915aea555e27b2bf extends Template
                                         <option value=3>3</option>
                                     </select>
                                     </br>
-                                    <button class=\"btn\" type=\"submit\"><i class=\"bi bi-bag\"></i>Añadir al carrito</button>
-                                </form>
-                                <a href=\"";
-        // line 77
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("agregar_producto_a_lista_deseos", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 77, $this->source); })()), "id", [], "any", false, false, false, 77)]), "html", null, true);
+                                    <div class=\"row\">
+                                        <div class=\"col-sm-12 col-md-6\">
+                                            <button class=\"btn\" type=\"submit\"><i class=\"bi bi-bag\"></i>Añadir al carrito</button>
+                                        </div>
+                                        <div class=\"col-sm-12 col-md-6\">
+                                            <a href=\"";
+        // line 80
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("agregar_producto_a_lista_deseos", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 80, $this->source); })()), "id", [], "any", false, false, false, 80)]), "html", null, true);
         echo "\"><button class=\"btn btn2\"><i class=\"bi bi-heart-fill\"></i>Añadir a deseos</button></a>
+                                        </div>
+                                    </div>
+                                </form>
                             </br>
                             </br>
                             ";
-        // line 80
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 80, $this->source); })()), "user", [], "any", false, false, false, 80)) {
-            // line 81
+        // line 86
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 86, $this->source); })()), "user", [], "any", false, false, false, 86)) {
+            // line 87
             echo "                                <h4>Valorar producto</h4>
                                 <form class=\"valoracionForm\" action=\"";
-            // line 82
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("valoracion_producto", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 82, $this->source); })()), "id", [], "any", false, false, false, 82)]), "html", null, true);
+            // line 88
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("valoracion_producto", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 88, $this->source); })()), "id", [], "any", false, false, false, 88)]), "html", null, true);
             echo "\" method = \"post\">
                                     <h6>Seleccione que valoración numérica le da al producto:</h6>
                                     <select name=\"valoracionNumerica\">
@@ -216,7 +222,7 @@ class __TwigTemplate_29ca32bdca6bf058915aea555e27b2bf extends Template
                                 </form>
                             ";
         }
-        // line 100
+        // line 106
         echo "                            </div>
                         </div>
                     </div>
@@ -227,27 +233,27 @@ class __TwigTemplate_29ca32bdca6bf058915aea555e27b2bf extends Template
         <h3 class=\"titulo\">Valoraciones</h3>
             </br>
             ";
-        // line 109
-        if (twig_test_empty((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 109, $this->source); })()))) {
-            // line 110
+        // line 115
+        if (twig_test_empty((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 115, $this->source); })()))) {
+            // line 116
             echo "            <p> Todavía no existen valoraciones </p>
             ";
         } else {
-            // line 112
+            // line 118
             echo "            ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 112, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 118, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["valoracion"]) {
-                // line 113
+                // line 119
                 echo "            <p>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "nombreUsuario", [], "any", false, false, false, 113), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "nombreUsuario", [], "any", false, false, false, 119), "html", null, true);
                 echo " - ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 113), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 119), "html", null, true);
                 echo "/5
              </br>
              ";
-                // line 115
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "comentario", [], "any", false, false, false, 115), "html", null, true);
+                // line 121
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "comentario", [], "any", false, false, false, 121), "html", null, true);
                 echo "
             </p>
             ";
@@ -255,14 +261,14 @@ class __TwigTemplate_29ca32bdca6bf058915aea555e27b2bf extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['valoracion'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 118
+            // line 124
             echo "            ";
         }
-        // line 119
+        // line 125
         echo "    </section>
 \t";
-        // line 120
-        $this->loadTemplate("/compartido/footer.html.twig", "producto/vistaProducto.html.twig", 120)->display($context);
+        // line 126
+        $this->loadTemplate("/compartido/footer.html.twig", "producto/vistaProducto.html.twig", 126)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -289,7 +295,7 @@ class __TwigTemplate_29ca32bdca6bf058915aea555e27b2bf extends Template
      */
     public function getDebugInfo()
     {
-        return array (  265 => 120,  262 => 119,  259 => 118,  250 => 115,  242 => 113,  237 => 112,  233 => 110,  231 => 109,  220 => 100,  199 => 82,  196 => 81,  194 => 80,  188 => 77,  176 => 68,  172 => 67,  168 => 66,  162 => 63,  156 => 60,  150 => 57,  129 => 38,  126 => 37,  116 => 33,  112 => 31,  107 => 30,  105 => 29,  84 => 11,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  271 => 126,  268 => 125,  265 => 124,  256 => 121,  248 => 119,  243 => 118,  239 => 116,  237 => 115,  226 => 106,  205 => 88,  202 => 87,  200 => 86,  191 => 80,  176 => 68,  172 => 67,  168 => 66,  162 => 63,  156 => 60,  150 => 57,  129 => 38,  126 => 37,  116 => 33,  112 => 31,  107 => 30,  105 => 29,  84 => 11,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -368,9 +374,15 @@ class __TwigTemplate_29ca32bdca6bf058915aea555e27b2bf extends Template
                                         <option value=3>3</option>
                                     </select>
                                     </br>
-                                    <button class=\"btn\" type=\"submit\"><i class=\"bi bi-bag\"></i>Añadir al carrito</button>
+                                    <div class=\"row\">
+                                        <div class=\"col-sm-12 col-md-6\">
+                                            <button class=\"btn\" type=\"submit\"><i class=\"bi bi-bag\"></i>Añadir al carrito</button>
+                                        </div>
+                                        <div class=\"col-sm-12 col-md-6\">
+                                            <a href=\"{{ path('agregar_producto_a_lista_deseos', { idProducto: producto.id }) }}\"><button class=\"btn btn2\"><i class=\"bi bi-heart-fill\"></i>Añadir a deseos</button></a>
+                                        </div>
+                                    </div>
                                 </form>
-                                <a href=\"{{ path('agregar_producto_a_lista_deseos', { idProducto: producto.id }) }}\"><button class=\"btn btn2\"><i class=\"bi bi-heart-fill\"></i>Añadir a deseos</button></a>
                             </br>
                             </br>
                             {% if app.user %}
@@ -415,6 +427,6 @@ class __TwigTemplate_29ca32bdca6bf058915aea555e27b2bf extends Template
     </section>
 \t{% include '/compartido/footer.html.twig' %}
 {% endblock %}
-", "producto/vistaProducto.html.twig", "/home/daw/Escritorio/Proyecto_tienda/proyectoServidor/templates/producto/vistaProducto.html.twig");
+", "producto/vistaProducto.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/producto/vistaProducto.html.twig");
     }
 }

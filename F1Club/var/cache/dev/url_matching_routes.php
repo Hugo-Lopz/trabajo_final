@@ -20,7 +20,6 @@ return [
         '/home' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\Shop\\HomeController::home'], null, null, null, false, false, null]],
         '/lista_deseos' => [[['_route' => 'acceder_lista_deseos', '_controller' => 'App\\Controller\\Shop\\ListaDeseosController::accederAListaDeseos'], null, null, null, false, false, null]],
         '/busqueda' => [[['_route' => 'busqueda_producto', '_controller' => 'App\\Controller\\Shop\\ProductoController::buscarProducto'], null, null, null, false, false, null]],
-        '/social/media/home' => [[['_route' => 'app_social_media_home', '_controller' => 'App\\Controller\\SocialMediaHomeController::socialMediaHome'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\User\\LoginController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\User\\LoginController::logout'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\User\\RegistrationController::register'], null, null, null, false, false, null]],
