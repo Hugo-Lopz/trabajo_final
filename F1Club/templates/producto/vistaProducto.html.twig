@@ -65,6 +65,9 @@
                             <div>
                                 <h3>Precio:<span> {{ producto.precio }}€</span></h3>
                                 <h6>{{ producto.stock }} unidades en stock</h6>
+                                <div id="app" data-stock="{{ producto.stock }}">
+                                    <div id="stock-message"></div>
+                                </div>
                                 <form class="carritoForm" action="{{ path('agregar_producto_al_carrito', { idProducto: producto.id }) }}" method = "post">
                                     <select name="cantidad">
                                         <option value=1 selected>1</option>
