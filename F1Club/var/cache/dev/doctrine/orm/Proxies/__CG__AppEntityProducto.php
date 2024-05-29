@@ -25,6 +25,7 @@ class Producto extends \App\Entity\Producto implements \Doctrine\ORM\Proxy\Inter
         "\0".parent::class."\0".'listaDeseos' => [parent::class, 'listaDeseos', null],
         "\0".parent::class."\0".'nombre_producto' => [parent::class, 'nombre_producto', null],
         "\0".parent::class."\0".'precio' => [parent::class, 'precio', null],
+        "\0".parent::class."\0".'segunda_mano' => [parent::class, 'segunda_mano', null],
         "\0".parent::class."\0".'stock' => [parent::class, 'stock', null],
         "\0".parent::class."\0".'valoraciones' => [parent::class, 'valoraciones', null],
         'equipo' => [parent::class, 'equipo', null],
@@ -36,6 +37,7 @@ class Producto extends \App\Entity\Producto implements \Doctrine\ORM\Proxy\Inter
         'listaDeseos' => [parent::class, 'listaDeseos', null],
         'nombre_producto' => [parent::class, 'nombre_producto', null],
         'precio' => [parent::class, 'precio', null],
+        'segunda_mano' => [parent::class, 'segunda_mano', null],
         'stock' => [parent::class, 'stock', null],
         'valoraciones' => [parent::class, 'valoraciones', null],
     ];

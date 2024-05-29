@@ -30,6 +30,17 @@ class LineaPedidoRepository extends ServiceEntityRepository
             ->getSingleScalarResult();
     }
 
+    public function obtenerVentasProducto(int $idProducto)
+    {
+        return $this->createQueryBuilder('lp')
+            ->select('COUNT(lp.nombre_producto) AS ventas')
+            ->join('lp.producto', 'prod')
+            ->where('prod.id = :idProducto')
+            ->setParameter('idProducto', $idProducto)
+            ->getQuery()
+            ->getResult();
+    }
+
     // Obtengo de la BBDD el producto con su escala y la cantidad total que ha vendido ese producto en todo el mes
     public function findProductosMasVendidos(\DateTime $inicioMes, \DateTime $finMes): array
     {

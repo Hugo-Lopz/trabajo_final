@@ -74,207 +74,221 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
-        echo "\t";
         $this->loadTemplate("/compartido/nav.html.twig", "producto/vistaProducto.html.twig", 8)->display(twig_array_merge($context, ["escalas" => (isset($context["escalas"]) || array_key_exists("escalas", $context) ? $context["escalas"] : (function () { throw new RuntimeError('Variable "escalas" does not exist.', 8, $this->source); })()), "equipos" => (isset($context["equipos"]) || array_key_exists("equipos", $context) ? $context["equipos"] : (function () { throw new RuntimeError('Variable "equipos" does not exist.', 8, $this->source); })()), "fabricantes" => (isset($context["fabricantes"]) || array_key_exists("fabricantes", $context) ? $context["fabricantes"] : (function () { throw new RuntimeError('Variable "fabricantes" does not exist.', 8, $this->source); })())]));
         // line 9
         echo "
-\t<div class=\"d-flex align-items-center justify-content-center\">
-        <h1 class=\"titulo\">";
+<div class=\"d-flex align-items-center justify-content-center\">
+\t<h1 class=\"titulo mt-4\">";
         // line 11
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 11, $this->source); })()), "nombreproducto", [], "any", false, false, false, 11), "html", null, true);
         echo "</h1>
-    </div>
-    <section id=\"producto\" class=\"producto d-flex align-items-center\">
-        <div class=\"contenedor container-fluid\">
-            <div class=\"row\">
-                <div class=\"col-12 col-md-6 col-xl-7\">
-                    <div class=\"d-flex justify-content-center\">
-                        <div class=\"col-12 col-xl-9\">
-                            <div id=\"carousel1\" class=\"carousel slide\">
-                                <div class=\"carousel-indicators\">
-                                    <button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"0\"
-                                        class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>
-                                    <button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"1\"
-                                        aria-label=\"Slide 2\"></button>
-                                    <button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"2\"
-                                        aria-label=\"Slide 3\"></button>
-                                </div>
-                                <div class=\"carousel-inner\">
+</div>
+<section id=\"producto\" class=\"producto d-flex align-items-center\">
+\t<div class=\"contenedor container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-12 col-md-6 col-xl-7\">
+\t\t\t\t<div class=\"d-flex justify-content-center\">
+\t\t\t\t\t<div class=\"col-12 col-xl-9\">
+\t\t\t\t\t\t<div id=\"carousel1\" class=\"carousel slide\">
+\t\t\t\t\t\t\t<div class=\"carousel-indicators\">
+\t\t\t\t\t\t\t\t<button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\"></button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\"></button>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"carousel-inner\">
 \t\t\t\t\t\t\t\t";
-        // line 29
-        if ((isset($context["imagenes"]) || array_key_exists("imagenes", $context) ? $context["imagenes"] : (function () { throw new RuntimeError('Variable "imagenes" does not exist.', 29, $this->source); })())) {
-            // line 30
-            echo "        \t\t\t\t\t\t\t";
+        // line 26
+        if ((isset($context["imagenes"]) || array_key_exists("imagenes", $context) ? $context["imagenes"] : (function () { throw new RuntimeError('Variable "imagenes" does not exist.', 26, $this->source); })())) {
+            // line 27
+            echo "\t\t\t\t\t\t\t\t\t";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["imagenes"]) || array_key_exists("imagenes", $context) ? $context["imagenes"] : (function () { throw new RuntimeError('Variable "imagenes" does not exist.', 30, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["imagenes"]) || array_key_exists("imagenes", $context) ? $context["imagenes"] : (function () { throw new RuntimeError('Variable "imagenes" does not exist.', 27, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["imagen"]) {
-                // line 31
-                echo "\t\t    \t\t\t\t\t\t<div class=\"carousel-item active\">
-                                        <div class=\"container\">
-                                            <img src=\"";
-                // line 33
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, $context["imagen"], "urlimagen", [], "any", false, false, false, 33))), "html", null, true);
+                // line 28
+                echo "\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"container\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"";
+                // line 30
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, $context["imagen"], "urlimagen", [], "any", false, false, false, 30))), "html", null, true);
                 echo "\" class=\"sliderImagenCatalogo\" alt=\"Foto principal\">
-                                        </div>
-                                    </div>
-        \t\t\t\t\t\t\t";
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['imagen'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 37
+            // line 34
             echo "\t\t\t\t\t\t\t\t";
         }
-        // line 38
-        echo "                            \t</div>
-                                <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carousel1\"
-                                    data-bs-slide=\"prev\">
-                                    <i class=\"bi bi-arrow-left-square-fill\"></i>
-                                    <span class=\"visually-hidden\">Previous</span>
-                                </button>
-                                <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carousel1\"
-                                    data-bs-slide=\"next\">
-                                    <i class=\"bi bi-arrow-right-square-fill\"></i>
-                                    <span class=\"visually-hidden\">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-12 col-md-6 col-xl-5\">
-                    <div class=\"descripcion d-flex justify-content-center\">
-                        <div class=\"info\">
-                            <label>Escala</label>
-                            <p> ";
-        // line 57
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["escala"]) || array_key_exists("escala", $context) ? $context["escala"] : (function () { throw new RuntimeError('Variable "escala" does not exist.', 57, $this->source); })()), "nombreescala", [], "any", false, false, false, 57), "html", null, true);
-        echo " </p>
+        // line 35
+        echo "\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide=\"prev\">
+\t\t\t\t\t\t\t\t<i class=\"bi bi-arrow-left-square-fill\"></i>
+\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">Previous</span>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide=\"next\">
+\t\t\t\t\t\t\t\t<i class=\"bi bi-arrow-right-square-fill\"></i>
+\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">Next</span>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-12 col-md-6 col-xl-5\">
+\t\t\t\t<div class=\"descripcion d-flex justify-content-center\">
+\t\t\t\t\t<div class=\"info\">
+\t\t\t\t\t\t<label>Escala</label>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t";
+        // line 53
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["escala"]) || array_key_exists("escala", $context) ? $context["escala"] : (function () { throw new RuntimeError('Variable "escala" does not exist.', 53, $this->source); })()), "nombreescala", [], "any", false, false, false, 53), "html", null, true);
+        echo "
+\t\t\t\t\t\t</p>
 
-                            <label>Fabricante</label>
-                            <p> ";
-        // line 60
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fabricante"]) || array_key_exists("fabricante", $context) ? $context["fabricante"] : (function () { throw new RuntimeError('Variable "fabricante" does not exist.', 60, $this->source); })()), "nombre", [], "any", false, false, false, 60), "html", null, true);
-        echo " </p>
+\t\t\t\t\t\t<label>Fabricante</label>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t";
+        // line 58
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["fabricante"]) || array_key_exists("fabricante", $context) ? $context["fabricante"] : (function () { throw new RuntimeError('Variable "fabricante" does not exist.', 58, $this->source); })()), "nombre", [], "any", false, false, false, 58), "html", null, true);
+        echo "
+\t\t\t\t\t\t</p>
 
-                            <label>Equipo</label>
-                            <p> ";
+\t\t\t\t\t\t<label>Equipo</label>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t";
         // line 63
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equipo"]) || array_key_exists("equipo", $context) ? $context["equipo"] : (function () { throw new RuntimeError('Variable "equipo" does not exist.', 63, $this->source); })()), "nombreequipo", [], "any", false, false, false, 63), "html", null, true);
-        echo " </p>
+        echo "
+\t\t\t\t\t\t</p>
 
-                            <div>
-                                <h3>Precio:<span> ";
-        // line 66
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 66, $this->source); })()), "precio", [], "any", false, false, false, 66), "html", null, true);
-        echo "€</span></h3>
-                                <h6>";
+\t\t\t\t\t\t<div>
+\t\t\t\t\t\t\t<h3>Precio:<span> ";
         // line 67
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 67, $this->source); })()), "stock", [], "any", false, false, false, 67), "html", null, true);
-        echo " unidades en stock</h6>
-                                <div id=\"app\" data-stock=\"";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 67, $this->source); })()), "precio", [], "any", false, false, false, 67), "html", null, true);
+        echo "€</span></h3>
+\t\t\t\t\t\t\t<h6>";
         // line 68
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 68, $this->source); })()), "stock", [], "any", false, false, false, 68), "html", null, true);
+        echo " unidades en stock</h6>
+\t\t\t\t\t\t\t<div id=\"stock\" data-stock=\"";
+        // line 69
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 69, $this->source); })()), "stock", [], "any", false, false, false, 69), "html", null, true);
         echo "\">
-                                    <div id=\"stock-message\"></div>
-                                </div>
-                                <form class=\"carritoForm\" action=\"";
-        // line 71
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("agregar_producto_al_carrito", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 71, $this->source); })()), "id", [], "any", false, false, false, 71)]), "html", null, true);
-        echo "\" method = \"post\">
-                                    <select name=\"cantidad\">
-                                        <option value=1 selected>1</option>
-                                        <option value=2>2</option>
-                                        <option value=3>3</option>
-                                    </select>
-                                    </br>
-                                    <div class=\"row\">
-                                        <div class=\"col-sm-12 col-md-6\">
-                                            <button class=\"btn\" type=\"submit\"><i class=\"bi bi-bag\"></i>Añadir al carrito</button>
-                                        </div>
-                                        <div class=\"col-sm-12 col-md-6\">
-                                            <a href=\"";
-        // line 83
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("agregar_producto_a_lista_deseos", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 83, $this->source); })()), "id", [], "any", false, false, false, 83)]), "html", null, true);
-        echo "\"><button class=\"btn btn2\"><i class=\"bi bi-heart-fill\"></i>Añadir a deseos</button></a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </br>
-                            </br>
-                            ";
-        // line 89
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 89, $this->source); })()), "user", [], "any", false, false, false, 89)) {
-            // line 90
-            echo "                                <h4>Valorar producto</h4>
-                                <form class=\"valoracionForm\" action=\"";
-            // line 91
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("valoracion_producto", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 91, $this->source); })()), "id", [], "any", false, false, false, 91)]), "html", null, true);
-            echo "\" method = \"post\">
-                                    <h6>Seleccione que valoración numérica le da al producto:</h6>
-                                    <select name=\"valoracionNumerica\">
-                                        <option value=1 selected>1</option>
-                                        <option value=2>2</option>
-                                        <option value=3>3</option>
-                                        <option value=4>4</option>
-                                        <option value=5>5</option>
-                                    </select>
-                                        </br>
-                                        </br>
-                                    <label for=\"comentario\" class=\"form-label\">Comentario:</label>
-                                       </br>
-                                    <input type=\"text\" name=\"comentario\" id=\"comentario\" class=\"form-control\"></input>
-                                    </br>
-                                    <button class=\"btn\" type=\"submit\">Valorar producto</button>
-                                </form>
-                            ";
-        }
+\t\t\t\t\t\t\t\t<div id=\"stock-message\"></div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<form action=\"";
+        // line 72
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("agregar_producto_al_carrito", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 72, $this->source); })()), "id", [], "any", false, false, false, 72)]), "html", null, true);
+        echo "\" method=\"post\">
+\t\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"modalCantidad\" tabindex=\"-1\" aria-labelledby=\"labelModalCantidad\" aria-hidden=\"true\">
+\t\t\t\t\t\t\t\t\t<div class=\"modal-dialog\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"modal-title fs-5\" id=\"labelModalCantidad\">Elige cuantas unidades quieres</h1>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body d-flex align-items-center justify-content-center\">
+\t\t\t\t\t\t\t\t\t\t\t\t<select name=\"cantidad\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"1\" selected>1</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"2\">2</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"3\">3</option>
+\t\t\t\t\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn\" data-bs-dismiss=\"modal\">Cerrar</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn\">Aceptar</button>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</br>
+\t\t\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t\t\t<div class=\"col-12\">
+\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn\" data-bs-toggle=\"modal\" data-bs-target=\"#modalCantidad\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-bag\"></i>Añadir al carro
+\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"col-12\">
+\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 102
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("agregar_producto_a_lista_deseos", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 102, $this->source); })()), "id", [], "any", false, false, false, 102)]), "html", null, true);
+        echo "\">
+\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn2\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-heart-fill\"></i>Añadir a deseos</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t";
         // line 109
-        echo "                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section class=\"valoraciones d-flex align-items-start\">
-        <h3 class=\"titulo\">Valoraciones</h3>
-            </br>
-            ";
-        // line 118
-        if (twig_test_empty((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 118, $this->source); })()))) {
-            // line 119
-            echo "            <p> Todavía no existen valoraciones </p>
-            ";
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 109, $this->source); })()), "user", [], "any", false, false, false, 109)) {
+            // line 110
+            echo "\t\t\t\t<div class=\"mt-5\">
+                    <h4>Valorar producto</h4>
+                    <form class=\"valoracionForm\" action=\"";
+            // line 112
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("valoracion_producto", ["idProducto" => twig_get_attribute($this->env, $this->source, (isset($context["producto"]) || array_key_exists("producto", $context) ? $context["producto"] : (function () { throw new RuntimeError('Variable "producto" does not exist.', 112, $this->source); })()), "id", [], "any", false, false, false, 112)]), "html", null, true);
+            echo "\" method = \"post\">
+                        <h6>Seleccione que valoración numérica le da al producto:</h6>
+                        <select name=\"valoracionNumerica\">
+                            <option value=1 selected>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+\t\t\t\t\t\t</br>
+                        <label for=\"comentario\" class=\"form-label mt-2\">Comentario:</label>
+                        <input type=\"text\" name=\"comentario\" id=\"comentario\" class=\"form-control mt-2\"></input>
+                    \t<button class=\"btn mt-2\" type=\"submit\">Valorar producto</button>
+                    </form>
+\t\t\t\t</div>
+                ";
+        }
+        // line 128
+        echo "</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class=\"valoraciones d-flex align-items-start\">
+    <h3 class=\"titulo\">Valoraciones</h3>
+    </br>
+    ";
+        // line 137
+        if (twig_test_empty((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 137, $this->source); })()))) {
+            // line 138
+            echo "    <p>Todavía no existen valoraciones</p>
+    ";
         } else {
-            // line 121
-            echo "            ";
+            // line 140
+            echo "    ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 121, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["valoraciones"]) || array_key_exists("valoraciones", $context) ? $context["valoraciones"] : (function () { throw new RuntimeError('Variable "valoraciones" does not exist.', 140, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["valoracion"]) {
-                // line 122
-                echo "            <p>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "nombreUsuario", [], "any", false, false, false, 122), "html", null, true);
-                echo " - ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 122), "html", null, true);
-                echo "/5
-             </br>
-             ";
-                // line 124
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "comentario", [], "any", false, false, false, 124), "html", null, true);
-                echo "
-            </p>
-            ";
+                // line 141
+                echo "    <p>";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "nombreUsuario", [], "any", false, false, false, 141), "html", null, true);
+                echo "-";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 141), "html", null, true);
+                echo "/5</p></br>";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "comentario", [], "any", false, false, false, 141), "html", null, true);
+                echo "</p>
+    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['valoracion'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 127
-            echo "            ";
+            // line 143
+            echo "    ";
         }
-        // line 128
-        echo "    </section>
-\t";
-        // line 129
-        $this->loadTemplate("/compartido/footer.html.twig", "producto/vistaProducto.html.twig", 129)->display($context);
+        echo " 
+    </section> 
+    ";
+        // line 145
+        $this->loadTemplate("/compartido/footer.html.twig", "producto/vistaProducto.html.twig", 145)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -301,7 +315,7 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  277 => 129,  274 => 128,  271 => 127,  262 => 124,  254 => 122,  249 => 121,  245 => 119,  243 => 118,  232 => 109,  211 => 91,  208 => 90,  206 => 89,  197 => 83,  182 => 71,  176 => 68,  172 => 67,  168 => 66,  162 => 63,  156 => 60,  150 => 57,  129 => 38,  126 => 37,  116 => 33,  112 => 31,  107 => 30,  105 => 29,  84 => 11,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  291 => 145,  285 => 143,  272 => 141,  267 => 140,  263 => 138,  261 => 137,  250 => 128,  231 => 112,  227 => 110,  225 => 109,  215 => 102,  182 => 72,  176 => 69,  172 => 68,  168 => 67,  161 => 63,  153 => 58,  145 => 53,  125 => 35,  122 => 34,  112 => 30,  108 => 28,  103 => 27,  101 => 26,  83 => 11,  79 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -313,129 +327,144 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
 {% endblock %}
 
 {% block body %}
-\t{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
+{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
 
-\t<div class=\"d-flex align-items-center justify-content-center\">
-        <h1 class=\"titulo\">{{ producto.nombreproducto }}</h1>
-    </div>
-    <section id=\"producto\" class=\"producto d-flex align-items-center\">
-        <div class=\"contenedor container-fluid\">
-            <div class=\"row\">
-                <div class=\"col-12 col-md-6 col-xl-7\">
-                    <div class=\"d-flex justify-content-center\">
-                        <div class=\"col-12 col-xl-9\">
-                            <div id=\"carousel1\" class=\"carousel slide\">
-                                <div class=\"carousel-indicators\">
-                                    <button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"0\"
-                                        class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>
-                                    <button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"1\"
-                                        aria-label=\"Slide 2\"></button>
-                                    <button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"2\"
-                                        aria-label=\"Slide 3\"></button>
-                                </div>
-                                <div class=\"carousel-inner\">
+<div class=\"d-flex align-items-center justify-content-center\">
+\t<h1 class=\"titulo mt-4\">{{ producto.nombreproducto }}</h1>
+</div>
+<section id=\"producto\" class=\"producto d-flex align-items-center\">
+\t<div class=\"contenedor container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-12 col-md-6 col-xl-7\">
+\t\t\t\t<div class=\"d-flex justify-content-center\">
+\t\t\t\t\t<div class=\"col-12 col-xl-9\">
+\t\t\t\t\t\t<div id=\"carousel1\" class=\"carousel slide\">
+\t\t\t\t\t\t\t<div class=\"carousel-indicators\">
+\t\t\t\t\t\t\t\t<button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\"></button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\"></button>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"carousel-inner\">
 \t\t\t\t\t\t\t\t{% if imagenes %}
-        \t\t\t\t\t\t\t{% for imagen in imagenes %}
-\t\t    \t\t\t\t\t\t<div class=\"carousel-item active\">
-                                        <div class=\"container\">
-                                            <img src=\"{{ asset('images/' ~ imagen.urlimagen) }}\" class=\"sliderImagenCatalogo\" alt=\"Foto principal\">
-                                        </div>
-                                    </div>
-        \t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t\t\t{% for imagen in imagenes %}
+\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"container\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/' ~ imagen.urlimagen) }}\" class=\"sliderImagenCatalogo\" alt=\"Foto principal\">
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t{% endif %}
-                            \t</div>
-                                <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carousel1\"
-                                    data-bs-slide=\"prev\">
-                                    <i class=\"bi bi-arrow-left-square-fill\"></i>
-                                    <span class=\"visually-hidden\">Previous</span>
-                                </button>
-                                <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carousel1\"
-                                    data-bs-slide=\"next\">
-                                    <i class=\"bi bi-arrow-right-square-fill\"></i>
-                                    <span class=\"visually-hidden\">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-12 col-md-6 col-xl-5\">
-                    <div class=\"descripcion d-flex justify-content-center\">
-                        <div class=\"info\">
-                            <label>Escala</label>
-                            <p> {{ escala.nombreescala }} </p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide=\"prev\">
+\t\t\t\t\t\t\t\t<i class=\"bi bi-arrow-left-square-fill\"></i>
+\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">Previous</span>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carousel1\" data-bs-slide=\"next\">
+\t\t\t\t\t\t\t\t<i class=\"bi bi-arrow-right-square-fill\"></i>
+\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">Next</span>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-12 col-md-6 col-xl-5\">
+\t\t\t\t<div class=\"descripcion d-flex justify-content-center\">
+\t\t\t\t\t<div class=\"info\">
+\t\t\t\t\t\t<label>Escala</label>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t{{ escala.nombreescala }}
+\t\t\t\t\t\t</p>
 
-                            <label>Fabricante</label>
-                            <p> {{ fabricante.nombre }} </p>
+\t\t\t\t\t\t<label>Fabricante</label>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t{{ fabricante.nombre }}
+\t\t\t\t\t\t</p>
 
-                            <label>Equipo</label>
-                            <p> {{ equipo.nombreequipo }} </p>
+\t\t\t\t\t\t<label>Equipo</label>
+\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t{{ equipo.nombreequipo }}
+\t\t\t\t\t\t</p>
 
-                            <div>
-                                <h3>Precio:<span> {{ producto.precio }}€</span></h3>
-                                <h6>{{ producto.stock }} unidades en stock</h6>
-                                <div id=\"app\" data-stock=\"{{ producto.stock }}\">
-                                    <div id=\"stock-message\"></div>
-                                </div>
-                                <form class=\"carritoForm\" action=\"{{ path('agregar_producto_al_carrito', { idProducto: producto.id }) }}\" method = \"post\">
-                                    <select name=\"cantidad\">
-                                        <option value=1 selected>1</option>
-                                        <option value=2>2</option>
-                                        <option value=3>3</option>
-                                    </select>
-                                    </br>
-                                    <div class=\"row\">
-                                        <div class=\"col-sm-12 col-md-6\">
-                                            <button class=\"btn\" type=\"submit\"><i class=\"bi bi-bag\"></i>Añadir al carrito</button>
-                                        </div>
-                                        <div class=\"col-sm-12 col-md-6\">
-                                            <a href=\"{{ path('agregar_producto_a_lista_deseos', { idProducto: producto.id }) }}\"><button class=\"btn btn2\"><i class=\"bi bi-heart-fill\"></i>Añadir a deseos</button></a>
-                                        </div>
-                                    </div>
-                                </form>
-                            </br>
-                            </br>
-                            {% if app.user %}
-                                <h4>Valorar producto</h4>
-                                <form class=\"valoracionForm\" action=\"{{ path('valoracion_producto', { idProducto: producto.id }) }}\" method = \"post\">
-                                    <h6>Seleccione que valoración numérica le da al producto:</h6>
-                                    <select name=\"valoracionNumerica\">
-                                        <option value=1 selected>1</option>
-                                        <option value=2>2</option>
-                                        <option value=3>3</option>
-                                        <option value=4>4</option>
-                                        <option value=5>5</option>
-                                    </select>
-                                        </br>
-                                        </br>
-                                    <label for=\"comentario\" class=\"form-label\">Comentario:</label>
-                                       </br>
-                                    <input type=\"text\" name=\"comentario\" id=\"comentario\" class=\"form-control\"></input>
-                                    </br>
-                                    <button class=\"btn\" type=\"submit\">Valorar producto</button>
-                                </form>
-                            {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section class=\"valoraciones d-flex align-items-start\">
-        <h3 class=\"titulo\">Valoraciones</h3>
-            </br>
-            {% if valoraciones is empty %}
-            <p> Todavía no existen valoraciones </p>
-            {% else %}
-            {% for valoracion in valoraciones %}
-            <p>{{valoracion.nombreUsuario}} - {{valoracion.valoracionNumerica}}/5
-             </br>
-             {{valoracion.comentario}}
-            </p>
-            {% endfor %}
-            {% endif %}
-    </section>
-\t{% include '/compartido/footer.html.twig' %}
-{% endblock %}
+\t\t\t\t\t\t<div>
+\t\t\t\t\t\t\t<h3>Precio:<span> {{ producto.precio }}€</span></h3>
+\t\t\t\t\t\t\t<h6>{{ producto.stock }} unidades en stock</h6>
+\t\t\t\t\t\t\t<div id=\"stock\" data-stock=\"{{ producto.stock }}\">
+\t\t\t\t\t\t\t\t<div id=\"stock-message\"></div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<form action=\"{{ path('agregar_producto_al_carrito', { idProducto: producto.id }) }}\" method=\"post\">
+\t\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"modalCantidad\" tabindex=\"-1\" aria-labelledby=\"labelModalCantidad\" aria-hidden=\"true\">
+\t\t\t\t\t\t\t\t\t<div class=\"modal-dialog\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"modal-title fs-5\" id=\"labelModalCantidad\">Elige cuantas unidades quieres</h1>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body d-flex align-items-center justify-content-center\">
+\t\t\t\t\t\t\t\t\t\t\t\t<select name=\"cantidad\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"1\" selected>1</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"2\">2</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"3\">3</option>
+\t\t\t\t\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn\" data-bs-dismiss=\"modal\">Cerrar</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn\">Aceptar</button>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</br>
+\t\t\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t\t\t<div class=\"col-12\">
+\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn\" data-bs-toggle=\"modal\" data-bs-target=\"#modalCantidad\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-bag\"></i>Añadir al carro
+\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"col-12\">
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('agregar_producto_a_lista_deseos', { idProducto: producto.id }) }}\">
+\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn2\">
+\t\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-heart-fill\"></i>Añadir a deseos</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t{% if app.user %}
+\t\t\t\t<div class=\"mt-5\">
+                    <h4>Valorar producto</h4>
+                    <form class=\"valoracionForm\" action=\"{{ path('valoracion_producto', { idProducto: producto.id }) }}\" method = \"post\">
+                        <h6>Seleccione que valoración numérica le da al producto:</h6>
+                        <select name=\"valoracionNumerica\">
+                            <option value=1 selected>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+\t\t\t\t\t\t</br>
+                        <label for=\"comentario\" class=\"form-label mt-2\">Comentario:</label>
+                        <input type=\"text\" name=\"comentario\" id=\"comentario\" class=\"form-control mt-2\"></input>
+                    \t<button class=\"btn mt-2\" type=\"submit\">Valorar producto</button>
+                    </form>
+\t\t\t\t</div>
+                {% endif %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class=\"valoraciones d-flex align-items-start\">
+    <h3 class=\"titulo\">Valoraciones</h3>
+    </br>
+    {% if valoraciones is empty %}
+    <p>Todavía no existen valoraciones</p>
+    {% else %}
+    {% for valoracion in valoraciones %}
+    <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p></br>{{valoracion.comentario}}</p>
+    {% endfor %}
+    {% endif %} 
+    </section> 
+    {% include '/compartido/footer.html.twig' %}{% endblock %}
 ", "producto/vistaProducto.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/producto/vistaProducto.html.twig");
     }
 }

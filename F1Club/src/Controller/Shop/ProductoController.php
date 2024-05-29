@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductoController extends AbstractController
 {
     #[Route('/producto/{id}', name: 'ver_producto')]
-    public function visualizarProducto(ValoracionRepository $valoracionRepository, CategoriaModule $categoriaModule, ProductoRepository $productoRepository, int $id): Response
+    public function visualizarProducto(LineaPedidoRepository $lineaPedidoRepository,ValoracionRepository $valoracionRepository, CategoriaModule $categoriaModule, ProductoRepository $productoRepository, int $id): Response
     {
         //Con la clase que hemos creado vuelvo a obtener todos los datos necesarios para el navbar
         $escalas = $categoriaModule->getEscalas();
@@ -31,12 +31,13 @@ class ProductoController extends AbstractController
         $escala = $producto->getEscala();
         $fabricante = $producto->getFabricante();
         $equipo = $producto->getEquipo();
+        $ventas = $lineaPedidoRepository->obtenerVentasProducto($id);
         //Obtengo todas las valoraciones de este producto con el repository
         $valoraciones = $valoracionRepository->findBy(['producto' => $producto]);
 
 
         return $this->render('producto/vistaProducto.html.twig', [
-            'valoraciones' => $valoraciones, 'producto' => $producto, 'imagenes' => $imagenes, 'escala' => $escala, 'fabricante' => $fabricante, 'equipo' => $equipo, 'escalas' => $escalas, 'equipos' => $equipos, 'fabricantes' => $fabricantes
+            'ventas' => $ventas, 'valoraciones' => $valoraciones, 'producto' => $producto, 'imagenes' => $imagenes, 'escala' => $escala, 'fabricante' => $fabricante, 'equipo' => $equipo, 'escalas' => $escalas, 'equipos' => $equipos, 'fabricantes' => $fabricantes
         ]);
     }
 

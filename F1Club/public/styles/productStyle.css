@@ -170,8 +170,8 @@ option i {
 }
 
 .sliderImagenCatalogo {
-    width: 600px;
-    height: 370px;
+    width: 1000px;
+    height: 560px;
 }
 
 .producto .carousel-item .container {
@@ -210,10 +210,6 @@ option i {
 
 .info {
     margin-top: 3rem;
-}
-
-.carritoForm {
-    margin-top: 1rem;
 }
 
 /*Valoración*/
