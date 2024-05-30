@@ -125,9 +125,9 @@
                     </form>
 				</div>
                 {% endif %}
-</div>
-</div>
-</div>
+			</div>
+		</div>
+	</div>
 </div>
 </div>
 </section>
@@ -138,8 +138,12 @@
     <p>Todavía no existen valoraciones</p>
     {% else %}
     {% for valoracion in valoraciones %}
-    <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p></br>{{valoracion.comentario}}</p>
+    <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p>
+	<div id="estrellas">
+        <estrellas-valoracion :rating="{{ valoracion.valoracionNumerica }}"></estrellas-valoracion>
+    </div>
+	<p>{{valoracion.comentario}}</p>
     {% endfor %}
     {% endif %} 
-    </section> 
-    {% include '/compartido/footer.html.twig' %}{% endblock %}
+</section> 
+{% include '/compartido/footer.html.twig' %}{% endblock %}

@@ -9,10 +9,10 @@
 
 	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
     <section class="seccionPresentacion d-flex flex-column">
-        <div class="titulo">
-            <h2 class="seccion-titulo">Te damos la bienvenida a F1 Club
+        <div>
+            <h2 class="titulo">Te damos la bienvenida a F1 Club
                 Shop</h2>
-            <h3 class="seccion-titulo">El lugar en el que podrás...</h3>
+            <h3 class="titulo">El lugar en el que podrás...</h3>
         </div>
 
         <div class="container-fluid text-center categoria-contenedor">
@@ -58,6 +58,30 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo" class="catalogo d-flex flex-column">
+     <h2 class="titulo">Top ventas</h2>
+        <div class="container-fluid">
+            <div class="row">
+				{% for producto in productosMasVendidos %}
+                <div class="col-md-12 col-lg-4 d-flex align-items-center justify-content-center">
+                    <div class="producto">
+						{% if producto.url_imagen %}
+							<img src="{{ asset('images/' ~ producto.url_imagen) }}" alt="Imagen del producto">
+						{% endif %}
+                        <div class="datos">
+                            <h5> {{ producto.nombre_producto }}</h5>
+                            <h6> Precio: {{ producto.precio }} </h6>
+                            <a href="{{ path('ver_producto', { id: producto.id }) }}"><button class="btn" type="button" aria-expanded="false">
+                                Ver producto
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+				{% endfor %}
             </div>
         </div>
     </section>
@@ -144,72 +168,6 @@
                             </button></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Catálogo escalas-->
-    <section class="catalogo3">
-        <h2 class="titulo">¿Como funcionan las escalas?</h2>
-        <div class="container-fluid d-flex align-items-center justify-content-center">
-            <div class="row">
-                <div class="col-lg-12 mx-auto">
-                    <ul class="timeline">
-                        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-                            <div class="timeline-arrow"></div>
-                            <h5>1/18 (Más grande)</h5>
-                            <ul>
-                                <li> 18 cm del vehículo real es 1 cm de la
-                                    miniatura </li>
-                                <li> Longitud aproximada de 30 cm </li>
-                                <li> Mayor calidad en los detalles </li>
-                            </ul>
-                            <a href="{{ path('seleccion_escala', { id: 1 }) }}"><button class="btn btn-dark" type="button" aria-expanded="false">
-                                Comprar
-                            </button></a>
-                        </li>
-                        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-                            <div class="timeline-arrow"></div>
-                            <h5>1/24</h5>
-                            <ul>
-                                <li> 24 cm del vehículo real es 1 cm de la
-                                    miniatura </li>
-                                <li> Longitud aproximada de 20 cm </li>
-                                <li> Incluye vitrina de exposición </li>
-                            </ul>
-                            <a href="{{ path('seleccion_escala', { id: 2 }) }}"><button class="btn btn-dark" type="button" aria-expanded="false">
-                                Comprar
-                            </button></a>
-                        </li>
-                        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-                            <div class="timeline-arrow"></div>
-                            <h5>1/43</h5>
-                            <ul>
-                                <li> 43 cm del vehículo real es 1 cm de la
-                                    miniatura </li>
-                                <li> Longitud aproximada de 12 cm </li>
-                                <li> Incluye vitrina de exposición </li>
-                            </ul>
-                            <a href="{{ path('seleccion_escala', { id: 3 }) }}"><button class="btn btn-dark" type="button" aria-expanded="false">
-                                Comprar
-                            </button></a>
-                        </li>
-                        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-                            <div class="timeline-arrow"></div>
-                            <h5>1/64 (Más pequeño)</h5>
-                            <ul>
-                                <li> 64 cm del vehículo real es 1 cm de la
-                                    miniatura </li>
-                                <li> Longitud aproximada de 7 cm </li>
-                                <li> Menor tamaño pero con gran variedad de
-                                    detalles de calidad </li>
-                            </ul>
-                            <a href="{{ path('seleccion_escala', { id: 4 }) }}"><button class="btn btn-dark" type="button" aria-expanded="false">
-                                Comprar
-                            </button></a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

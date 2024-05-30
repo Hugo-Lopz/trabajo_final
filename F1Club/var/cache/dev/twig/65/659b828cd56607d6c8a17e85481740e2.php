@@ -247,9 +247,9 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
                 ";
         }
         // line 128
-        echo "</div>
-</div>
-</div>
+        echo "\t\t\t</div>
+\t\t</div>
+\t</div>
 </div>
 </div>
 </section>
@@ -273,22 +273,30 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "nombreUsuario", [], "any", false, false, false, 141), "html", null, true);
                 echo "-";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 141), "html", null, true);
-                echo "/5</p></br>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "comentario", [], "any", false, false, false, 141), "html", null, true);
+                echo "/5</p>
+\t<div id=\"estrellas\">
+        <estrellas-valoracion :rating=\"";
+                // line 143
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 143), "html", null, true);
+                echo "\"></estrellas-valoracion>
+    </div>
+\t<p>";
+                // line 145
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "comentario", [], "any", false, false, false, 145), "html", null, true);
                 echo "</p>
     ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['valoracion'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 143
+            // line 147
             echo "    ";
         }
         echo " 
-    </section> 
-    ";
-        // line 145
-        $this->loadTemplate("/compartido/footer.html.twig", "producto/vistaProducto.html.twig", 145)->display($context);
+</section> 
+";
+        // line 149
+        $this->loadTemplate("/compartido/footer.html.twig", "producto/vistaProducto.html.twig", 149)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -315,7 +323,7 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  291 => 145,  285 => 143,  272 => 141,  267 => 140,  263 => 138,  261 => 137,  250 => 128,  231 => 112,  227 => 110,  225 => 109,  215 => 102,  182 => 72,  176 => 69,  172 => 68,  168 => 67,  161 => 63,  153 => 58,  145 => 53,  125 => 35,  122 => 34,  112 => 30,  108 => 28,  103 => 27,  101 => 26,  83 => 11,  79 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  299 => 149,  293 => 147,  285 => 145,  280 => 143,  272 => 141,  267 => 140,  263 => 138,  261 => 137,  250 => 128,  231 => 112,  227 => 110,  225 => 109,  215 => 102,  182 => 72,  176 => 69,  172 => 68,  168 => 67,  161 => 63,  153 => 58,  145 => 53,  125 => 35,  122 => 34,  112 => 30,  108 => 28,  103 => 27,  101 => 26,  83 => 11,  79 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -447,9 +455,9 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
                     </form>
 \t\t\t\t</div>
                 {% endif %}
-</div>
-</div>
-</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 </div>
 </div>
 </section>
@@ -460,11 +468,15 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
     <p>Todavía no existen valoraciones</p>
     {% else %}
     {% for valoracion in valoraciones %}
-    <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p></br>{{valoracion.comentario}}</p>
+    <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p>
+\t<div id=\"estrellas\">
+        <estrellas-valoracion :rating=\"{{ valoracion.valoracionNumerica }}\"></estrellas-valoracion>
+    </div>
+\t<p>{{valoracion.comentario}}</p>
     {% endfor %}
     {% endif %} 
-    </section> 
-    {% include '/compartido/footer.html.twig' %}{% endblock %}
+</section> 
+{% include '/compartido/footer.html.twig' %}{% endblock %}
 ", "producto/vistaProducto.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/producto/vistaProducto.html.twig");
     }
 }

@@ -30,15 +30,20 @@ class LineaPedidoRepository extends ServiceEntityRepository
             ->getSingleScalarResult();
     }
 
-    public function obtenerVentasProducto(int $idProducto)
+    public function obtenerTop3ProductosMasVendidos()
     {
         return $this->createQueryBuilder('lp')
-            ->select('COUNT(lp.nombre_producto) AS ventas')
-            ->join('lp.producto', 'prod')
-            ->where('prod.id = :idProducto')
-            ->setParameter('idProducto', $idProducto)
-            ->getQuery()
-            ->getResult();
+        ->select('img.url_imagen, pr.nombre_producto, pr.precio, pr.id, SUM(lp.cantidad) as total_vendido')
+        ->join('lp.producto', 'pr')
+        ->join('pr.escala', 'e')
+        ->join('lp.pedido', 'p')
+        ->join('pr.imagenes', 'img')
+        ->groupBy('lp.nombre_producto')
+        ->orderBy('total_vendido', 'DESC')
+        ->setMaxResults(10)
+        ->setMaxResults(3)
+        ->getQuery()
+        ->getResult();
     }
 
     // Obtengo de la BBDD el producto con su escala y la cantidad total que ha vendido ese producto en todo el mes

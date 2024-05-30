@@ -26,12 +26,3 @@ export default {
 };
 </script>
 
-<style>
-.rojo {
-  color: red !important;
-}
-
-.naranja {
-  color: orange !important;
-}
-</style>
