@@ -131,7 +131,7 @@
 </div>
 </div>
 </section>
-<section class="valoraciones d-flex align-items-start">
+<section class="valoraciones d-flex align-items-start" id="estrellas">
     <h3 class="titulo">Valoraciones</h3>
     </br>
     {% if valoraciones is empty %}
@@ -139,7 +139,7 @@
     {% else %}
     {% for valoracion in valoraciones %}
     <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p>
-	<div id="estrellas">
+	<div>
         <estrellas-valoracion :rating="{{ valoracion.valoracionNumerica }}"></estrellas-valoracion>
     </div>
 	<p>{{valoracion.comentario}}</p>

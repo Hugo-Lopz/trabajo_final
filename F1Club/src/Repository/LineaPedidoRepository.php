@@ -40,7 +40,6 @@ class LineaPedidoRepository extends ServiceEntityRepository
         ->join('pr.imagenes', 'img')
         ->groupBy('lp.nombre_producto')
         ->orderBy('total_vendido', 'DESC')
-        ->setMaxResults(10)
         ->setMaxResults(3)
         ->getQuery()
         ->getResult();

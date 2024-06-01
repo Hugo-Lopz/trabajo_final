@@ -14,7 +14,7 @@
     },
     methods: {
       starClass(n) {
-        return n <= this.rating ? 'bi-star-fill' : 'bi-star';
+        return n <= Math.round(this.rating) ? 'bi-star-fill' : 'bi-star';
       }
     }
   };

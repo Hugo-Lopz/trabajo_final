@@ -253,7 +253,7 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
 </div>
 </div>
 </section>
-<section class=\"valoraciones d-flex align-items-start\">
+<section class=\"valoraciones d-flex align-items-start\" id=\"estrellas\">
     <h3 class=\"titulo\">Valoraciones</h3>
     </br>
     ";
@@ -274,7 +274,7 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
                 echo "-";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 141), "html", null, true);
                 echo "/5</p>
-\t<div id=\"estrellas\">
+\t<div>
         <estrellas-valoracion :rating=\"";
                 // line 143
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["valoracion"], "valoracionNumerica", [], "any", false, false, false, 143), "html", null, true);
@@ -461,7 +461,7 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
 </div>
 </div>
 </section>
-<section class=\"valoraciones d-flex align-items-start\">
+<section class=\"valoraciones d-flex align-items-start\" id=\"estrellas\">
     <h3 class=\"titulo\">Valoraciones</h3>
     </br>
     {% if valoraciones is empty %}
@@ -469,7 +469,7 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
     {% else %}
     {% for valoracion in valoraciones %}
     <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p>
-\t<div id=\"estrellas\">
+\t<div>
         <estrellas-valoracion :rating=\"{{ valoracion.valoracionNumerica }}\"></estrellas-valoracion>
     </div>
 \t<p>{{valoracion.comentario}}</p>

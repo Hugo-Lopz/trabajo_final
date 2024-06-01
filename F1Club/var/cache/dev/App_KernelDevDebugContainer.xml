@@ -532,7 +532,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.gJghvSh"/>
+      <argument type="service" id=".service_locator.3Q_DlgE"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -2761,7 +2761,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.gJghvSh"/>
+      <argument type="service" id=".service_locator.3Q_DlgE"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -6682,11 +6682,12 @@
         <argument key="productoRepository" type="service_closure" id="App\Repository\ProductoRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.sJXikzq" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.gu7DLi4" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="categoriaModuCategoriaModule" type="service_closure" id="App\Module\CategoriaModule"/>
         <argument key="lineaPedidoRepository" type="service_closure" id="App\Repository\LineaPedidoRepository"/>
+        <argument key="productoRepository" type="service_closure" id="App\Repository\ProductoRepository"/>
       </argument>
     </service>
     <service id=".service_locator.AgW61D2" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6749,7 +6750,7 @@
         <argument key="categoriaModuCategoriaModule" type="service_closure" id="App\Module\CategoriaModule"/>
       </argument>
     </service>
-    <service id=".service_locator.gJghvSh" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.3Q_DlgE" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CuponCrudController::autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
@@ -6976,7 +6977,7 @@
         <argument key="App\Controller\Shop\CategoriaController::catalogoFabricantes" type="service_closure" id=".service_locator.Nog44rT"/>
         <argument key="App\Controller\Shop\CompraController::comprarProductos" type="service_closure" id=".service_locator.p1dx99V"/>
         <argument key="App\Controller\Shop\CompraController::pagar" type="service_closure" id=".service_locator.sRku2Ad"/>
-        <argument key="App\Controller\Shop\HomeController::home" type="service_closure" id=".service_locator.sJXikzq"/>
+        <argument key="App\Controller\Shop\HomeController::home" type="service_closure" id=".service_locator.gu7DLi4"/>
         <argument key="App\Controller\Shop\ListaDeseosController::accederAListaDeseos" type="service_closure" id=".service_locator.5jvlNAe"/>
         <argument key="App\Controller\Shop\ListaDeseosController::agregarProductoAListaDeseos" type="service_closure" id=".service_locator.AgW61D2"/>
         <argument key="App\Controller\Shop\ListaDeseosController::eliminarProductoAListaDeseos" type="service_closure" id=".service_locator.AgW61D2"/>
@@ -7214,7 +7215,7 @@
         <argument key="App\Controller\Shop\CategoriaController:catalogoFabricantes" type="service_closure" id=".service_locator.Nog44rT"/>
         <argument key="App\Controller\Shop\CompraController:comprarProductos" type="service_closure" id=".service_locator.p1dx99V"/>
         <argument key="App\Controller\Shop\CompraController:pagar" type="service_closure" id=".service_locator.sRku2Ad"/>
-        <argument key="App\Controller\Shop\HomeController:home" type="service_closure" id=".service_locator.sJXikzq"/>
+        <argument key="App\Controller\Shop\HomeController:home" type="service_closure" id=".service_locator.gu7DLi4"/>
         <argument key="App\Controller\Shop\ListaDeseosController:accederAListaDeseos" type="service_closure" id=".service_locator.5jvlNAe"/>
         <argument key="App\Controller\Shop\ListaDeseosController:agregarProductoAListaDeseos" type="service_closure" id=".service_locator.AgW61D2"/>
         <argument key="App\Controller\Shop\ListaDeseosController:eliminarProductoAListaDeseos" type="service_closure" id=".service_locator.AgW61D2"/>
@@ -8997,7 +8998,7 @@
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.gJghvSh"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.3Q_DlgE"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9044,7 +9045,7 @@
     <service id=".service_locator.UCUgfYW" alias=".service_locator.THbmHY5"/>
     <service id=".service_locator.Y1Jesng" alias=".service_locator.sRku2Ad"/>
     <service id=".service_locator.i3.7fCU" alias=".service_locator.p1dx99V"/>
-    <service id=".service_locator.6ezNgCL" alias=".service_locator.sJXikzq"/>
+    <service id=".service_locator.m7jyqVo" alias=".service_locator.gu7DLi4"/>
     <service id=".service_locator.ZCH07bL" alias=".service_locator.AgW61D2"/>
     <service id=".service_locator.JufHtXH" alias=".service_locator.5jvlNAe"/>
     <service id=".service_locator.Lo0V9_I" alias=".service_locator.nkLIFYO"/>

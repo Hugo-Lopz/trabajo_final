@@ -43,28 +43,17 @@ class ProductoRepository extends ServiceEntityRepository
             ->getResult(); //Covierto la consulta en un objeto query y realizo la consulta
     }
 
-    //    /**
-    //     * @return Producto[] Returns an array of Producto objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('p')
-    //            ->andWhere('p.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('p.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    public function findProductosMejorValorados()
+    {
+        return $this->createQueryBuilder('p')
+            ->select('p.nombre_producto', 'p.precio', 'p.id', 'img.url_imagen', 'AVG(v.valoracion_numerica) as media')
+            ->leftJoin('p.valoraciones', 'v')
+            ->join('p.imagenes', 'img')
+            ->groupBy('p.id')
+            ->orderBy('media', 'DESC')
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult();
 
-    //    public function findOneBySomeField($value): ?Producto
-    //    {
-    //        return $this->createQueryBuilder('p')
-    //            ->andWhere('p.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+    }
 }

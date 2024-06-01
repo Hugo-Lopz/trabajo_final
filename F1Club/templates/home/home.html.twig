@@ -63,9 +63,9 @@
     </section>
 
     <section id="catalogo" class="catalogo d-flex flex-column">
-     <h2 class="titulo">Top ventas</h2>
+        <h2 class="titulo">Top ventas</h2>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row" id="unidadesVendidas">
 				{% for producto in productosMasVendidos %}
                 <div class="col-md-12 col-lg-4 d-flex align-items-center justify-content-center">
                     <div class="producto">
@@ -78,6 +78,33 @@
                             <a href="{{ path('ver_producto', { id: producto.id }) }}"><button class="btn" type="button" aria-expanded="false">
                                 Ver producto
                             </button></a>
+                            <div>
+                                <counter :unidades-vendidas="{{ producto.total_vendido }}"></counter>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				{% endfor %}
+            </div>
+        </div>
+        <h2 class="titulo">Mejor valorados</h2>
+        <div class="container-fluid">
+            <div class="row" id="estrellas">
+				{% for producto in productosMejorValorados %}
+                <div class="col-md-12 col-lg-4 d-flex align-items-center justify-content-center">
+                    <div class="producto">
+						{% if producto.url_imagen %}
+							<img src="{{ asset('images/' ~ producto.url_imagen) }}" alt="Imagen del producto">
+						{% endif %}
+                        <div class="datos">
+                            <h5> {{ producto.nombre_producto }}</h5>
+                            <h6> Precio: {{ producto.precio }} </h6>
+                            <a href="{{ path('ver_producto', { id: producto.id }) }}"><button class="btn" type="button" aria-expanded="false">
+                                Ver producto
+                            </button></a>
+                            <div> 
+                                <estrellas-valoracion :rating="{{ producto.media }}"></estrellas-valoracion>
+                            </div>
                         </div>
                     </div>
                 </div>
