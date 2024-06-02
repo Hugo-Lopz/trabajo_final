@@ -77,7 +77,7 @@ class __TwigTemplate_0d4e9ed8265ddbfc3bf8e4529f58e409 extends Template
         echo "\t";
         $this->loadTemplate("/compartido/nav.html.twig", "catalogo/catalogo.html.twig", 8)->display(twig_array_merge($context, ["escalas" => (isset($context["escalas"]) || array_key_exists("escalas", $context) ? $context["escalas"] : (function () { throw new RuntimeError('Variable "escalas" does not exist.', 8, $this->source); })()), "equipos" => (isset($context["equipos"]) || array_key_exists("equipos", $context) ? $context["equipos"] : (function () { throw new RuntimeError('Variable "equipos" does not exist.', 8, $this->source); })()), "fabricantes" => (isset($context["fabricantes"]) || array_key_exists("fabricantes", $context) ? $context["fabricantes"] : (function () { throw new RuntimeError('Variable "fabricantes" does not exist.', 8, $this->source); })())]));
         // line 9
-        echo "\t\t<h1 class=\"titulo\">Catálogo productos</h1>
+        echo "\t\t<h1 class=\"titulo d-flex justify-content-center mt-5\">Catálogo productos</h1>
 \t    <section id=\"catalogo\" class=\"catalogo d-flex flex-column\">
         <div class=\"container-fluid\">
             <div class=\"row\">
@@ -169,7 +169,7 @@ class __TwigTemplate_0d4e9ed8265ddbfc3bf8e4529f58e409 extends Template
 
 {% block body %}
 \t{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
-\t\t<h1 class=\"titulo\">Catálogo productos</h1>
+\t\t<h1 class=\"titulo d-flex justify-content-center mt-5\">Catálogo productos</h1>
 \t    <section id=\"catalogo\" class=\"catalogo d-flex flex-column\">
         <div class=\"container-fluid\">
             <div class=\"row\">

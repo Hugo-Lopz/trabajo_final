@@ -6,19 +6,33 @@
 
 {% block body %}
 	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
-	<h1>Lista de deseos</h1>
+		<h1 class="titulo d-flex justify-content-center mt-5">Lista de deseos</h1>
+
 	{% for productoConImagen in productosConImagen %}
-		<li>
-			{% if productoConImagen.imagen %}
-				<img src="{{ asset('images/' ~ productoConImagen.imagen.urlimagen) }}" alt="Imagen del producto">
-			{% endif %}
-			<p>Nombre:
-				{{ productoConImagen.producto.nombreproducto }}</p>
-			<a href="{{ path('ver_producto', { id: productoConImagen.producto.id }) }}">
-				<button class="btn btn-danger">Ver producto</button>
-				<a>
+		<div id="listaDeseos" class="d-flex justify-content-center">
+			<li>
+				{% if productoConImagen.imagen %}
+				<div class="d-flex justify-content-center">
+					<img src="{{ asset('images/' ~ productoConImagen.imagen.urlimagen) }}" alt="Imagen del producto">
+				</div>
+				{% endif %}
+				<div class="d-flex justify-content-center">
+					<p>
+						Nombre: {{ productoConImagen.producto.nombreproducto }}
+					</p>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="{{ path('ver_producto', { id: productoConImagen.producto.id }) }}">
+						<button class="btn btn-danger me-1">Ver producto</button>
+					</a>
 					<a href="{{ path('eliminar_producto_de_lista_deseos', { idProducto: productoConImagen.producto.id }) }}">
 						<button class="btn btn-danger">Quitar de la lista</button>
-						<a></li>
-					{% endfor %}
+					</a>
+				</div>
+			</li>
+		</div>
+	{% endfor %}
+
+
+	{% include '/compartido/footer.html.twig' %}
 {% endblock %}

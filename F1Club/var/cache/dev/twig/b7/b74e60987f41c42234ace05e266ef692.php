@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* compartido/footer.html.twig */
+/* /compartido/footer.html.twig */
 class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
 {
     private $source;
@@ -41,9 +41,9 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "compartido/footer.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/compartido/footer.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "compartido/footer.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "/compartido/footer.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -92,7 +92,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
         <div class=\"container-fluid\">
             <footer class=\"py-2\">
                 <div class=\"row\">
-                    <div class=\"col-2\">
+                    <div class=\"col-3\">
                         <h6>Tienda</h6>
                         <ul class=\"nav flex-column\">
                             <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Productos por escala</a></li>
@@ -101,17 +101,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
                         </ul>
                     </div>
 
-                    <div class=\"col-2\">
-                        <h6>Foro</h6>
-                        <ul class=\"nav flex-column\">
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Noticias</a></li>
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Rumores</a></li>
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Carreras</a></li>
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Coleccionismo</a></li>
-                        </ul>
-                    </div>
-
-                    <div class=\"col-2\">
+                    <div class=\"col-3\">
                         <h6>Sobre la web</h6>
                         <ul class=\"nav flex-column\">
                             <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">¿Quienes somos?</a></li>
@@ -122,7 +112,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
                         </ul>
                     </div>
 
-                    <div class=\"col-4 offset-1\">
+                    <div class=\"col-6\">
                         <form>
                             <h6>Subscribete a nuestro newsletter</h6>
                             <p>Recibirás noticias mensuales</p>
@@ -158,7 +148,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
      */
     public function getTemplateName()
     {
-        return "compartido/footer.html.twig";
+        return "/compartido/footer.html.twig";
     }
 
     /**
@@ -193,7 +183,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
         <div class=\"container-fluid\">
             <footer class=\"py-2\">
                 <div class=\"row\">
-                    <div class=\"col-2\">
+                    <div class=\"col-3\">
                         <h6>Tienda</h6>
                         <ul class=\"nav flex-column\">
                             <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Productos por escala</a></li>
@@ -202,17 +192,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
                         </ul>
                     </div>
 
-                    <div class=\"col-2\">
-                        <h6>Foro</h6>
-                        <ul class=\"nav flex-column\">
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Noticias</a></li>
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Rumores</a></li>
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Carreras</a></li>
-                            <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">Coleccionismo</a></li>
-                        </ul>
-                    </div>
-
-                    <div class=\"col-2\">
+                    <div class=\"col-3\">
                         <h6>Sobre la web</h6>
                         <ul class=\"nav flex-column\">
                             <li class=\"nav-item mb-2\"><a href=\"#\" class=\"nav-link p-0 \">¿Quienes somos?</a></li>
@@ -223,7 +203,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
                         </ul>
                     </div>
 
-                    <div class=\"col-4 offset-1\">
+                    <div class=\"col-6\">
                         <form>
                             <h6>Subscribete a nuestro newsletter</h6>
                             <p>Recibirás noticias mensuales</p>
@@ -248,6 +228,6 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
             </footer>
         </div>
     </section>
-{% endblock %}", "compartido/footer.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/compartido/footer.html.twig");
+{% endblock %}", "/compartido/footer.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/compartido/footer.html.twig");
     }
 }

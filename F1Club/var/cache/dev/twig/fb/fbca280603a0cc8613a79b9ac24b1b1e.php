@@ -77,46 +77,64 @@ class __TwigTemplate_8cf60a2992a074edbfca98671ee0f0d3 extends Template
         echo "\t";
         $this->loadTemplate("/compartido/nav.html.twig", "lista_deseos/lista_deseos.html.twig", 8)->display(twig_array_merge($context, ["escalas" => (isset($context["escalas"]) || array_key_exists("escalas", $context) ? $context["escalas"] : (function () { throw new RuntimeError('Variable "escalas" does not exist.', 8, $this->source); })()), "equipos" => (isset($context["equipos"]) || array_key_exists("equipos", $context) ? $context["equipos"] : (function () { throw new RuntimeError('Variable "equipos" does not exist.', 8, $this->source); })()), "fabricantes" => (isset($context["fabricantes"]) || array_key_exists("fabricantes", $context) ? $context["fabricantes"] : (function () { throw new RuntimeError('Variable "fabricantes" does not exist.', 8, $this->source); })())]));
         // line 9
-        echo "\t<h1>Lista de deseos</h1>
+        echo "\t\t<h1 class=\"titulo d-flex justify-content-center mt-5\">Lista de deseos</h1>
+
 \t";
-        // line 10
+        // line 11
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["productosConImagen"]) || array_key_exists("productosConImagen", $context) ? $context["productosConImagen"] : (function () { throw new RuntimeError('Variable "productosConImagen" does not exist.', 10, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["productosConImagen"]) || array_key_exists("productosConImagen", $context) ? $context["productosConImagen"] : (function () { throw new RuntimeError('Variable "productosConImagen" does not exist.', 11, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["productoConImagen"]) {
-            // line 11
-            echo "\t\t<li>
-\t\t\t";
             // line 12
-            if (twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 12)) {
-                // line 13
-                echo "\t\t\t\t<img src=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 13), "urlimagen", [], "any", false, false, false, 13))), "html", null, true);
-                echo "\" alt=\"Imagen del producto\">
-\t\t\t";
-            }
-            // line 15
-            echo "\t\t\t<p>Nombre:
+            echo "\t\t<div id=\"listaDeseos\" class=\"d-flex justify-content-center\">
+\t\t\t<li>
 \t\t\t\t";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 16), "nombreproducto", [], "any", false, false, false, 16), "html", null, true);
-            echo "</p>
-\t\t\t<a href=\"";
-            // line 17
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ver_producto", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17)]), "html", null, true);
-            echo "\">
-\t\t\t\t<button class=\"btn btn-danger\">Ver producto</button>
-\t\t\t\t<a>
+            // line 14
+            if (twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 14)) {
+                // line 15
+                echo "\t\t\t\t<div class=\"d-flex justify-content-center\">
+\t\t\t\t\t<img src=\"";
+                // line 16
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 16), "urlimagen", [], "any", false, false, false, 16))), "html", null, true);
+                echo "\" alt=\"Imagen del producto\">
+\t\t\t\t</div>
+\t\t\t\t";
+            }
+            // line 19
+            echo "\t\t\t\t<div class=\"d-flex justify-content-center\">
+\t\t\t\t\t<p>
+\t\t\t\t\t\tNombre: ";
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 21), "nombreproducto", [], "any", false, false, false, 21), "html", null, true);
+            echo "
+\t\t\t\t\t</p>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"d-flex justify-content-center\">
 \t\t\t\t\t<a href=\"";
-            // line 20
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_producto_de_lista_deseos", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20)]), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ver_producto", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 25), "id", [], "any", false, false, false, 25)]), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t<button class=\"btn btn-danger me-1\">Ver producto</button>
+\t\t\t\t\t</a>
+\t\t\t\t\t<a href=\"";
+            // line 28
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("eliminar_producto_de_lista_deseos", ["idProducto" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 28), "id", [], "any", false, false, false, 28)]), "html", null, true);
             echo "\">
 \t\t\t\t\t\t<button class=\"btn btn-danger\">Quitar de la lista</button>
-\t\t\t\t\t\t<a></li>
-\t\t\t\t\t";
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</li>
+\t\t</div>
+\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['productoConImagen'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 35
+        echo "
+
+\t";
+        // line 37
+        $this->loadTemplate("/compartido/footer.html.twig", "lista_deseos/lista_deseos.html.twig", 37)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -143,7 +161,7 @@ class __TwigTemplate_8cf60a2992a074edbfca98671ee0f0d3 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  111 => 20,  105 => 17,  101 => 16,  98 => 15,  92 => 13,  90 => 12,  87 => 11,  83 => 10,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  137 => 37,  133 => 35,  120 => 28,  114 => 25,  107 => 21,  103 => 19,  97 => 16,  94 => 15,  92 => 14,  88 => 12,  84 => 11,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -156,21 +174,35 @@ class __TwigTemplate_8cf60a2992a074edbfca98671ee0f0d3 extends Template
 
 {% block body %}
 \t{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
-\t<h1>Lista de deseos</h1>
+\t\t<h1 class=\"titulo d-flex justify-content-center mt-5\">Lista de deseos</h1>
+
 \t{% for productoConImagen in productosConImagen %}
-\t\t<li>
-\t\t\t{% if productoConImagen.imagen %}
-\t\t\t\t<img src=\"{{ asset('images/' ~ productoConImagen.imagen.urlimagen) }}\" alt=\"Imagen del producto\">
-\t\t\t{% endif %}
-\t\t\t<p>Nombre:
-\t\t\t\t{{ productoConImagen.producto.nombreproducto }}</p>
-\t\t\t<a href=\"{{ path('ver_producto', { id: productoConImagen.producto.id }) }}\">
-\t\t\t\t<button class=\"btn btn-danger\">Ver producto</button>
-\t\t\t\t<a>
+\t\t<div id=\"listaDeseos\" class=\"d-flex justify-content-center\">
+\t\t\t<li>
+\t\t\t\t{% if productoConImagen.imagen %}
+\t\t\t\t<div class=\"d-flex justify-content-center\">
+\t\t\t\t\t<img src=\"{{ asset('images/' ~ productoConImagen.imagen.urlimagen) }}\" alt=\"Imagen del producto\">
+\t\t\t\t</div>
+\t\t\t\t{% endif %}
+\t\t\t\t<div class=\"d-flex justify-content-center\">
+\t\t\t\t\t<p>
+\t\t\t\t\t\tNombre: {{ productoConImagen.producto.nombreproducto }}
+\t\t\t\t\t</p>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"d-flex justify-content-center\">
+\t\t\t\t\t<a href=\"{{ path('ver_producto', { id: productoConImagen.producto.id }) }}\">
+\t\t\t\t\t\t<button class=\"btn btn-danger me-1\">Ver producto</button>
+\t\t\t\t\t</a>
 \t\t\t\t\t<a href=\"{{ path('eliminar_producto_de_lista_deseos', { idProducto: productoConImagen.producto.id }) }}\">
 \t\t\t\t\t\t<button class=\"btn btn-danger\">Quitar de la lista</button>
-\t\t\t\t\t\t<a></li>
-\t\t\t\t\t{% endfor %}
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</li>
+\t\t</div>
+\t{% endfor %}
+
+
+\t{% include '/compartido/footer.html.twig' %}
 {% endblock %}
 ", "lista_deseos/lista_deseos.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/lista_deseos/lista_deseos.html.twig");
     }

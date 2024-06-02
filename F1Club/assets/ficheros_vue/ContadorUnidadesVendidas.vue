@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     animacionContador() {
-      const duration = 2000; // Duración de la animación en milisegundos
+      const duration = 12000; // Duración de la animación en milisegundos
       const start = performance.now()+1;
       const endValue = this.unidadesVendidas;
 

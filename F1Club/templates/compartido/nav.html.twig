@@ -50,46 +50,6 @@
 					</li>
 					<div class="vr"></div>
 					<li class="nav-item">
-						<button type="button" class="btn icono" data-bs-toggle="modal" data-bs-target="#newConversationModal">
-							<i class="bi bi-chat-dots-fill"></i>
-						</button>
-						<!-- Modal -->
-						<div class="modal fade" id="newConversationModal" tabindex="-1" aria-labelledby="newConversationModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-lg">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h1 class="modal-title fs-5" id="newConversationModalLabel">Nueva conversación</h1>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										<div class="row mx-2">
-											<div class="col-6 d-flex align-items-center">
-												<label>Buscar usuario:</label>
-											</div>
-											<div class="col-6">
-												<form class="d-flex" action="" method = "post">
-                                    				<input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control">
-                                    				<button class="btn" type="submit">
-														<i class="lupa bi bi-search"></i>
-													</button>
-                                				</form>
-											</div>
-										</div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</li>
-					<li class="nav-item">
-						<a href="{{ path('acceder_lista_deseos')}}" class="icono">
-							<i class="bi bi-wechat"></i>
-						</a>
-					</li>
-					<li class="nav-item">
 						<a href="{{ path('acceder_lista_deseos')}}" class="icono">
 							<i class="bi bi-heart-fill"></i>
 						</a>

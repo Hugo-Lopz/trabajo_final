@@ -99,9 +99,8 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
                         <div class=\"col-12 col-xl-9\">
                             <h1>F1Club</h1>
                             <hr class=\"border-dark-subtle mb-4\">
-                            <h2 class=\"h1 mb-4\">El foro y tienda de más calidad sobre F1</h2>
-                            <p class=\"lead mb-5\">Vendemos maquetas de alta calidad y tenemos el foro con mejores
-                                noticias y conversaciones sobre el deporte.</p>
+                            <h2 class=\"h1 mb-4\">La tienda de más calidad sobre F1</h2>
+                            <p class=\"lead mb-5\">Vendemos las maquetas siempre has pensado que nunca ibas a encontrar.</p>
                         </div>
                     </div>
                 </div>
@@ -120,79 +119,77 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
                             </div>
                             
                                 ";
-        // line 39
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 39, $this->source); })()), 'errors');
+        // line 38
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 38, $this->source); })()), 'errors');
         echo "
 
                                 ";
-        // line 41
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 41, $this->source); })()), 'form_start');
+        // line 40
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 40, $this->source); })()), 'form_start');
         echo "
                                 <div class=\"row gy-3 overflow-hidden\">
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             ";
-        // line 45
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 45, $this->source); })()), "nombre", [], "any", false, false, false, 45), 'row');
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 44, $this->source); })()), "nombre", [], "any", false, false, false, 44), 'row');
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"col-12 inputForm \">
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 49
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 49, $this->source); })()), "apellidos", [], "any", false, false, false, 49), 'row');
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"col-12 inputForm \">
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 54
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 54, $this->source); })()), "email", [], "any", false, false, false, 54), 'row');
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"col-12 inputForm \">
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 59
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 59, $this->source); })()), "plainPassword", [], "any", false, false, false, 59), 'row', ["label" => "Password"]);
+        // line 61
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"col-12 inputForm \">
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 66
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 66, $this->source); })()), "calle", [], "any", false, false, false, 66), 'row');
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"col-12 inputForm \">
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 71
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 71, $this->source); })()), "ciudad", [], "any", false, false, false, 71), 'row');
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"col-12 inputForm \">
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 76
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 76, $this->source); })()), "codigoPostal", [], "any", false, false, false, 76), 'row');
         echo "
                                         </div>
                                     </div>
                                     <div class=\"col-12\">
-                                        <div class=\"form-floating mb-3\">
-                                            ";
-        // line 50
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 50, $this->source); })()), "apellidos", [], "any", false, false, false, 50), 'row');
-        echo "
-                                        </div>
-                                    </div>
-                                    <div class=\"col-12\">
-                                        <div class=\"form-floating mb-3\">
-                                            ";
-        // line 55
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 55, $this->source); })()), "email", [], "any", false, false, false, 55), 'row');
-        echo "
-                                        </div>
-                                    </div>
-                                    <div class=\"col-12\">
-                                        <div class=\"form-floating mb-3\">
-                                            ";
-        // line 60
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 60, $this->source); })()), "plainPassword", [], "any", false, false, false, 60), 'row', ["label" => "Password"]);
-        // line 62
-        echo "
-                                        </div>
-                                    </div>
-                                    <div class=\"col-12\">
-                                        <div class=\"form-floating mb-3\">
-                                            ";
-        // line 67
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 67, $this->source); })()), "calle", [], "any", false, false, false, 67), 'row');
-        echo "
-                                        </div>
-                                    </div>
-                                    <div class=\"col-12\">
-                                        <div class=\"form-floating mb-3\">
-                                            ";
-        // line 72
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 72, $this->source); })()), "ciudad", [], "any", false, false, false, 72), 'row');
-        echo "
-                                        </div>
-                                    </div>
-                                    <div class=\"col-12\">
-                                        <div class=\"form-floating mb-3\">
-                                            ";
-        // line 77
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 77, $this->source); })()), "codigoPostal", [], "any", false, false, false, 77), 'row');
-        echo "
-                                        </div>
-                                    </div>
-                                    <div class=\"col-12\">
-                                        <div class=\"form-check\">
-                                            ";
-        // line 82
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 82, $this->source); })()), "agreeTerms", [], "any", false, false, false, 82), 'row');
-        echo "
-                                        </div>
+                                        ";
+        // line 80
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 80, $this->source); })()), "agreeTerms", [], "any", false, false, false, 80), 'row');
+        echo "    
                                     </div>
                                     <div class=\"botonSubmit col-12\">
                                         <div class=\"d-grid\">
@@ -201,39 +198,17 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
                                     </div>
                                 </div>
                             ";
-        // line 91
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 91, $this->source); })()), 'form_end');
+        // line 88
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 88, $this->source); })()), 'form_end');
         echo "
                             <div class=\"row\">
                                 <div class=\"col-12\">
-                                    <div
-                                        class=\"d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end mt-4\">
+                                    <div class=\"d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end mt-4\">
                                         <p class=\"m-0 text-secondary text-center\">Ya tienes cuenta? <a href=\"";
-        // line 96
+        // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\"
                                                 class=\"link-primary text-decoration-none\">Iniciar sesión</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"row\">
-                                <div class=\"col-12\">
-                                    <p class=\"mt-4 mb-4\">O registrarse con</p>
-                                    <div class=\"d-flex gap-2 gap-sm-3 justify-content-centerX\">
-                                        <a href=\"#!\" class=\"btn btn-outline-danger bsb-btn-circle bsb-btn-circle-2xl\">
-                                            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"
-                                                fill=\"currentColor\" class=\"bi bi-google\" viewBox=\"0 0 16 16\">
-                                                <path
-                                                    d=\"M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z\" />
-                                            </svg>
-                                        </a>
-                                        <a href=\"#!\" class=\"btn btn-outline-primary bsb-btn-circle bsb-btn-circle-2xl\">
-                                            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"
-                                                fill=\"currentColor\" class=\"bi bi-facebook\" viewBox=\"0 0 16 16\">
-                                                <path
-                                                    d=\"M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z\" />
-                                            </svg>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -244,8 +219,8 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
         </div>
     </section>
     ";
-        // line 128
-        $this->loadTemplate("/compartido/footer.html.twig", "registration/register.html.twig", 128)->display($context);
+        // line 103
+        $this->loadTemplate("/compartido/footer.html.twig", "registration/register.html.twig", 103)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -272,7 +247,7 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  248 => 128,  213 => 96,  205 => 91,  193 => 82,  185 => 77,  177 => 72,  169 => 67,  162 => 62,  160 => 60,  152 => 55,  144 => 50,  136 => 45,  129 => 41,  124 => 39,  94 => 11,  91 => 10,  84 => 9,  71 => 7,  61 => 4,  54 => 3,  37 => 1,);
+        return array (  223 => 103,  209 => 92,  202 => 88,  191 => 80,  184 => 76,  176 => 71,  168 => 66,  161 => 61,  159 => 59,  151 => 54,  143 => 49,  135 => 44,  128 => 40,  123 => 38,  94 => 11,  91 => 10,  84 => 9,  71 => 7,  61 => 4,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -295,9 +270,8 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
                         <div class=\"col-12 col-xl-9\">
                             <h1>F1Club</h1>
                             <hr class=\"border-dark-subtle mb-4\">
-                            <h2 class=\"h1 mb-4\">El foro y tienda de más calidad sobre F1</h2>
-                            <p class=\"lead mb-5\">Vendemos maquetas de alta calidad y tenemos el foro con mejores
-                                noticias y conversaciones sobre el deporte.</p>
+                            <h2 class=\"h1 mb-4\">La tienda de más calidad sobre F1</h2>
+                            <p class=\"lead mb-5\">Vendemos las maquetas siempre has pensado que nunca ibas a encontrar.</p>
                         </div>
                     </div>
                 </div>
@@ -319,47 +293,45 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
 
                                 {{ form_start(registrationForm) }}
                                 <div class=\"row gy-3 overflow-hidden\">
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             {{ form_row(registrationForm.nombre) }}
                                         </div>
                                     </div>
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             {{ form_row(registrationForm.apellidos) }}
                                         </div>
                                     </div>
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             {{ form_row(registrationForm.email) }}
                                         </div>
                                     </div>
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             {{ form_row(registrationForm.plainPassword, {
                                                 label: 'Password'
                                             }) }}
                                         </div>
                                     </div>
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             {{ form_row(registrationForm.calle) }}
                                         </div>
                                     </div>
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             {{ form_row(registrationForm.ciudad) }}
                                         </div>
                                     </div>
-                                    <div class=\"col-12\">
+                                    <div class=\"col-12 inputForm \">
                                         <div class=\"form-floating mb-3\">
                                             {{ form_row(registrationForm.codigoPostal) }}
                                         </div>
                                     </div>
                                     <div class=\"col-12\">
-                                        <div class=\"form-check\">
-                                            {{ form_row(registrationForm.agreeTerms) }}
-                                        </div>
+                                        {{ form_row(registrationForm.agreeTerms) }}    
                                     </div>
                                     <div class=\"botonSubmit col-12\">
                                         <div class=\"d-grid\">
@@ -370,31 +342,9 @@ class __TwigTemplate_1888d51dca48583d0673f0ea1a173b42 extends Template
                             {{ form_end(registrationForm) }}
                             <div class=\"row\">
                                 <div class=\"col-12\">
-                                    <div
-                                        class=\"d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end mt-4\">
+                                    <div class=\"d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end mt-4\">
                                         <p class=\"m-0 text-secondary text-center\">Ya tienes cuenta? <a href=\"{{ path('app_login') }}\"
                                                 class=\"link-primary text-decoration-none\">Iniciar sesión</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"row\">
-                                <div class=\"col-12\">
-                                    <p class=\"mt-4 mb-4\">O registrarse con</p>
-                                    <div class=\"d-flex gap-2 gap-sm-3 justify-content-centerX\">
-                                        <a href=\"#!\" class=\"btn btn-outline-danger bsb-btn-circle bsb-btn-circle-2xl\">
-                                            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"
-                                                fill=\"currentColor\" class=\"bi bi-google\" viewBox=\"0 0 16 16\">
-                                                <path
-                                                    d=\"M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z\" />
-                                            </svg>
-                                        </a>
-                                        <a href=\"#!\" class=\"btn btn-outline-primary bsb-btn-circle bsb-btn-circle-2xl\">
-                                            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"
-                                                fill=\"currentColor\" class=\"bi bi-facebook\" viewBox=\"0 0 16 16\">
-                                                <path
-                                                    d=\"M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z\" />
-                                            </svg>
-                                        </a>
                                     </div>
                                 </div>
                             </div>

@@ -98,14 +98,16 @@
 										<i class="bi bi-bag"></i>Añadir al carro
 									</button>
 								</div>
-								<div class="col-12">
+							</div>
+						</form>
+						<div class="row">
+												<div class="col-12">
 									<a href="{{ path('agregar_producto_a_lista_deseos', { idProducto: producto.id }) }}">
 										<button class="btn btn2">
 											<i class="bi bi-heart-fill"></i>Añadir a deseos</button>
 									</a>
 								</div>
-							</div>
-						</form>
+						</div>
 				{% if app.user %}
 				<div class="mt-5">
                     <h4>Valorar producto</h4>

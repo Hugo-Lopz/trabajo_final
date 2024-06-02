@@ -12,10 +12,9 @@
         <div>
             <h2 class="titulo">Te damos la bienvenida a F1 Club
                 Shop</h2>
-            <h3 class="titulo">El lugar en el que podrás...</h3>
         </div>
 
-        <div class="container-fluid text-center categoria-contenedor">
+        <div class="container-fluid text-center categoria-contenedor mt-5">
             <div class="row">
                 <div class="col-lg-4 col-md-12">
                     <div>
@@ -67,19 +66,21 @@
         <div class="container-fluid">
             <div class="row" id="unidadesVendidas">
 				{% for producto in productosMasVendidos %}
-                <div class="col-md-12 col-lg-4 d-flex align-items-center justify-content-center">
+                <div class="col-md-12 col-xl-4 d-flex align-items-center justify-content-center">
                     <div class="producto">
 						{% if producto.url_imagen %}
 							<img src="{{ asset('images/' ~ producto.url_imagen) }}" alt="Imagen del producto">
 						{% endif %}
                         <div class="datos">
                             <h5> {{ producto.nombre_producto }}</h5>
-                            <h6> Precio: {{ producto.precio }} </h6>
-                            <a href="{{ path('ver_producto', { id: producto.id }) }}"><button class="btn" type="button" aria-expanded="false">
-                                Ver producto
-                            </button></a>
-                            <div>
-                                <counter :unidades-vendidas="{{ producto.total_vendido }}"></counter>
+                            <h6> Precio: {{ producto.precio }} €</h6>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="{{ path('ver_producto', { id: producto.id }) }}"><button class="btn" type="button" aria-expanded="false"> Ver producto </button></a>
+                                </div>
+                                <div class="col-6 pt-2">
+                                    <counter :unidades-vendidas="{{ producto.total_vendido }}"></counter>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -98,12 +99,14 @@
 						{% endif %}
                         <div class="datos">
                             <h5> {{ producto.nombre_producto }}</h5>
-                            <h6> Precio: {{ producto.precio }} </h6>
-                            <a href="{{ path('ver_producto', { id: producto.id }) }}"><button class="btn" type="button" aria-expanded="false">
-                                Ver producto
-                            </button></a>
-                            <div> 
-                                <estrellas-valoracion :rating="{{ producto.media }}"></estrellas-valoracion>
+                            <h6> Precio: {{ producto.precio }} €</h6>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="{{ path('ver_producto', { id: producto.id }) }}"><button class="btn" type="button" aria-expanded="false">Ver producto</button></a>
+                                </div>
+                                <div class="col-6 pt-2 pe-4 d-flex justify-content-end">
+                                    <estrellas-valoracion :rating="{{ producto.media }}"></estrellas-valoracion>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,7 +119,7 @@
     <!--Catálogo equipos-->
     <section id="catalogo2" class="catalogo2 d-flex flex-column">
         <h2 class="titulo">Encontrar productos por equipo</h2>
-        <div class="container-fluid d-flex align-items-center justify-content-center">
+        <div class="container-fluid d-flex align-items-center justify-content-center mt-5">
             <div class="row">
                 <!-- Categoría 1 -->
                 <div class="col-sm-12 col-md-6 col-lg-4">

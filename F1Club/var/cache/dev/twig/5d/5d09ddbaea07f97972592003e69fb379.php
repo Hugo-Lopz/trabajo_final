@@ -77,12 +77,12 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
         echo "\t";
         $this->loadTemplate("/compartido/nav.html.twig", "catalogo/catalogoBusqueda.html.twig", 8)->display(twig_array_merge($context, ["escalas" => (isset($context["escalas"]) || array_key_exists("escalas", $context) ? $context["escalas"] : (function () { throw new RuntimeError('Variable "escalas" does not exist.', 8, $this->source); })()), "equipos" => (isset($context["equipos"]) || array_key_exists("equipos", $context) ? $context["equipos"] : (function () { throw new RuntimeError('Variable "equipos" does not exist.', 8, $this->source); })()), "fabricantes" => (isset($context["fabricantes"]) || array_key_exists("fabricantes", $context) ? $context["fabricantes"] : (function () { throw new RuntimeError('Variable "fabricantes" does not exist.', 8, $this->source); })())]));
         // line 9
-        echo "\t<h1 class=\"titulo\">Resultados de la búsqueda</h1>
+        echo "\t<h1 class=\"titulo d-flex justify-content-center mt-5\">Resultados de la búsqueda</h1>
 \t";
         // line 10
         if (twig_test_empty((isset($context["productosConImagen"]) || array_key_exists("productosConImagen", $context) ? $context["productosConImagen"] : (function () { throw new RuntimeError('Variable "productosConImagen" does not exist.', 10, $this->source); })()))) {
             // line 11
-            echo "\t\t<p>No se han enontrado resultados</p>
+            echo "\t\t<p class=\"d-flex justify-content-center mt-5\">No se han enontrado resultados</p>
 \t";
         } else {
             // line 13
@@ -136,6 +136,11 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
     \t</section>
 \t";
         }
+        // line 36
+        echo "
+\t";
+        // line 37
+        $this->loadTemplate("/compartido/footer.html.twig", "catalogo/catalogoBusqueda.html.twig", 37)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -162,7 +167,7 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  134 => 32,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  104 => 20,  102 => 19,  98 => 17,  94 => 16,  89 => 13,  85 => 11,  83 => 10,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  143 => 37,  140 => 36,  134 => 32,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  104 => 20,  102 => 19,  98 => 17,  94 => 16,  89 => 13,  85 => 11,  83 => 10,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -175,9 +180,9 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
 
 {% block body %}
 \t{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
-\t<h1 class=\"titulo\">Resultados de la búsqueda</h1>
+\t<h1 class=\"titulo d-flex justify-content-center mt-5\">Resultados de la búsqueda</h1>
 \t{% if productosConImagen is empty %}
-\t\t<p>No se han enontrado resultados</p>
+\t\t<p class=\"d-flex justify-content-center mt-5\">No se han enontrado resultados</p>
 \t{% else %}
 \t    <section id=\"catalogo\" class=\"catalogo d-flex flex-column\">
         <div class=\"container-fluid\">
@@ -202,6 +207,8 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
         </div>
     \t</section>
 \t{% endif %}
+
+\t{% include '/compartido/footer.html.twig' %}
 {% endblock %}
 ", "catalogo/catalogoBusqueda.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/catalogo/catalogoBusqueda.html.twig");
     }
