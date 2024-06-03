@@ -5,6 +5,7 @@ namespace App\Controller\Shop;
 use App\Entity\LineaPedido;
 use App\Entity\Pedido;
 use App\Entity\Usuario;
+use App\Module\CategoriaModule;
 use App\Repository\MetodoDePagoRepository;
 use App\Repository\ProductoRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -16,8 +17,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class CompraController extends AbstractController
 {
     #[Route('/pagar', name: 'pagina_de_pago')]
-    public function pagar(ProductoRepository $productoRepository, Request $request, MetodoDePagoRepository $metodoDePagoRepository): Response
+    public function pagar(ProductoRepository $productoRepository, Request $request, MetodoDePagoRepository $metodoDePagoRepository, CategoriaModule $categoriaModuCategoriaModule): Response
     {
+        //Con la clase que hemos creado vuelvo a obtener todos los datos necesarios para el navbar
+        $escalas = $categoriaModuCategoriaModule->getEscalas();
+        $equipos = $categoriaModuCategoriaModule->getEquipos();
+        $fabricantes = $categoriaModuCategoriaModule->getFabricantes();
+
         //Solo podrán realizar esta función los usuarios registrado, en caso de que no estes registrado symfony te llevará al login automáticamente
         $this->denyAccessUnlessGranted('ROLE_USER');
 
@@ -36,7 +42,7 @@ class CompraController extends AbstractController
         $request->getSession()->set('costeTotal', $precioTotal);
 
         return $this->render('compra/procesoDePago.html.twig', [
-            'precio_total' => $precioTotal, 'metodos_de_pago' => $metodosDePago
+            'escalas' => $escalas, 'equipos' => $equipos, 'fabricantes' => $fabricantes, 'precio_total' => $precioTotal, 'metodos_de_pago' => $metodosDePago
         ]);
     }
 

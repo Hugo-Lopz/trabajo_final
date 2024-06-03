@@ -48,9 +48,6 @@ class Producto
     #[ORM\JoinColumn(nullable: false)]
     private ?Fabricante $fabricante = null;
 
-    #[ORM\Column]
-    private ?bool $segunda_mano = null;
-
     public function __construct()
     {
         $this->lineaPedidos = new ArrayCollection();
@@ -251,18 +248,6 @@ class Producto
     public function setFabricante(?Fabricante $fabricante): static
     {
         $this->fabricante = $fabricante;
-
-        return $this;
-    }
-
-    public function isSegundaMano(): ?bool
-    {
-        return $this->segunda_mano;
-    }
-
-    public function setSegundaMano(bool $segunda_mano): static
-    {
-        $this->segunda_mano = $segunda_mano;
 
         return $this;
     }

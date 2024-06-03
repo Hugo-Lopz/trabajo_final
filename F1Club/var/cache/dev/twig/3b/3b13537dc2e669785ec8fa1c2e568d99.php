@@ -107,7 +107,7 @@ class __TwigTemplate_0d4e9ed8265ddbfc3bf8e4529f58e409 extends Template
                             <h6> Precio: ";
             // line 21
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 21), "precio", [], "any", false, false, false, 21), "html", null, true);
-            echo " </h6>
+            echo " € </h6>
                             <a href=\"";
             // line 22
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ver_producto", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 22), "id", [], "any", false, false, false, 22)]), "html", null, true);
@@ -181,7 +181,7 @@ class __TwigTemplate_0d4e9ed8265ddbfc3bf8e4529f58e409 extends Template
 \t\t\t\t\t\t{% endif %}
                         <div class=\"datos\">
                             <h5> {{ productoConImagen.producto.nombreproducto }}</h5>
-                            <h6> Precio: {{ productoConImagen.producto.precio }} </h6>
+                            <h6> Precio: {{ productoConImagen.producto.precio }} € </h6>
                             <a href=\"{{ path('ver_producto', { id: productoConImagen.producto.id }) }}\"><button class=\"btn\" type=\"button\" aria-expanded=\"false\">
                                 Ver producto
                             </button></a>

@@ -82,43 +82,44 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
         // line 10
         if (twig_test_empty((isset($context["productosConImagen"]) || array_key_exists("productosConImagen", $context) ? $context["productosConImagen"] : (function () { throw new RuntimeError('Variable "productosConImagen" does not exist.', 10, $this->source); })()))) {
             // line 11
-            echo "\t\t<p class=\"d-flex justify-content-center mt-5\">No se han enontrado resultados</p>
+            echo "\t\t<i class=\"listaVacia bi bi-emoji-dizzy d-flex justify-content-center my-5\"></i>
+\t\t<p class=\"d-flex justify-content-center mb-5\"> No se han encontrado resultados. </p>
 \t";
         } else {
-            // line 13
+            // line 14
             echo "\t    <section id=\"catalogo\" class=\"catalogo d-flex flex-column\">
         <div class=\"container-fluid\">
             <div class=\"row\">
 \t\t\t\t";
-            // line 16
+            // line 17
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["productosConImagen"]) || array_key_exists("productosConImagen", $context) ? $context["productosConImagen"] : (function () { throw new RuntimeError('Variable "productosConImagen" does not exist.', 16, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["productosConImagen"]) || array_key_exists("productosConImagen", $context) ? $context["productosConImagen"] : (function () { throw new RuntimeError('Variable "productosConImagen" does not exist.', 17, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["productoConImagen"]) {
-                // line 17
+                // line 18
                 echo "                <div class=\"col-md-12 col-lg-4 d-flex align-items-center justify-content-center\">
                     <div class=\"producto\">
 \t\t\t\t\t\t";
-                // line 19
-                if (twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 19)) {
-                    // line 20
+                // line 20
+                if (twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 20)) {
+                    // line 21
                     echo "\t\t\t\t\t\t\t<img src=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 20), "urlimagen", [], "any", false, false, false, 20))), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "imagen", [], "any", false, false, false, 21), "urlimagen", [], "any", false, false, false, 21))), "html", null, true);
                     echo "\" alt=\"Imagen del producto\">
 \t\t\t\t\t\t";
                 }
-                // line 22
+                // line 23
                 echo "                        <div class=\"datos\">
                             <h5> ";
-                // line 23
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 23), "nombreproducto", [], "any", false, false, false, 23), "html", null, true);
+                // line 24
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 24), "nombreproducto", [], "any", false, false, false, 24), "html", null, true);
                 echo "</h5>
                             <h6> Precio: ";
-                // line 24
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 24), "precio", [], "any", false, false, false, 24), "html", null, true);
-                echo " </h6>
-                            <a href=\"";
                 // line 25
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ver_producto", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 25), "id", [], "any", false, false, false, 25)]), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 25), "precio", [], "any", false, false, false, 25), "html", null, true);
+                echo " € </h6>
+                            <a href=\"";
+                // line 26
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ver_producto", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["productoConImagen"], "producto", [], "any", false, false, false, 26), "id", [], "any", false, false, false, 26)]), "html", null, true);
                 echo "\"><button class=\"btn\" type=\"button\" aria-expanded=\"false\">
                                 Ver producto
                             </button></a>
@@ -130,17 +131,17 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['productoConImagen'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 32
+            // line 33
             echo "            </div>
         </div>
     \t</section>
 \t";
         }
-        // line 36
+        // line 37
         echo "
 \t";
-        // line 37
-        $this->loadTemplate("/compartido/footer.html.twig", "catalogo/catalogoBusqueda.html.twig", 37)->display($context);
+        // line 38
+        $this->loadTemplate("/compartido/footer.html.twig", "catalogo/catalogoBusqueda.html.twig", 38)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -167,7 +168,7 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  143 => 37,  140 => 36,  134 => 32,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  104 => 20,  102 => 19,  98 => 17,  94 => 16,  89 => 13,  85 => 11,  83 => 10,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  144 => 38,  141 => 37,  135 => 33,  122 => 26,  118 => 25,  114 => 24,  111 => 23,  105 => 21,  103 => 20,  99 => 18,  95 => 17,  90 => 14,  85 => 11,  83 => 10,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -182,7 +183,8 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
 \t{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
 \t<h1 class=\"titulo d-flex justify-content-center mt-5\">Resultados de la búsqueda</h1>
 \t{% if productosConImagen is empty %}
-\t\t<p class=\"d-flex justify-content-center mt-5\">No se han enontrado resultados</p>
+\t\t<i class=\"listaVacia bi bi-emoji-dizzy d-flex justify-content-center my-5\"></i>
+\t\t<p class=\"d-flex justify-content-center mb-5\"> No se han encontrado resultados. </p>
 \t{% else %}
 \t    <section id=\"catalogo\" class=\"catalogo d-flex flex-column\">
         <div class=\"container-fluid\">
@@ -195,7 +197,7 @@ class __TwigTemplate_af77a9b5031bd2e62d8c299dda6d8d6c extends Template
 \t\t\t\t\t\t{% endif %}
                         <div class=\"datos\">
                             <h5> {{ productoConImagen.producto.nombreproducto }}</h5>
-                            <h6> Precio: {{ productoConImagen.producto.precio }} </h6>
+                            <h6> Precio: {{ productoConImagen.producto.precio }} € </h6>
                             <a href=\"{{ path('ver_producto', { id: productoConImagen.producto.id }) }}\"><button class=\"btn\" type=\"button\" aria-expanded=\"false\">
                                 Ver producto
                             </button></a>

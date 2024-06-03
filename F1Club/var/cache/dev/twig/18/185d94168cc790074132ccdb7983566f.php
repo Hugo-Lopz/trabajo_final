@@ -83,68 +83,69 @@ class __TwigTemplate_5201964a6cbdda77984b075ef14dc61d extends Template
         // line 11
         if (twig_test_empty((isset($context["pedidosUsuario"]) || array_key_exists("pedidosUsuario", $context) ? $context["pedidosUsuario"] : (function () { throw new RuntimeError('Variable "pedidosUsuario" does not exist.', 11, $this->source); })()))) {
             // line 12
-            echo "\t\t\t<p>Todavía no se han realizado pedidos</p>
+            echo "\t\t<i class=\"listaVacia bi bi-emoji-dizzy d-flex justify-content-center my-5\"></i>
+\t\t<p class=\"d-flex justify-content-center mb-5\"> Todavía no se han realizado pedidos. </p>
 \t\t";
         } else {
-            // line 14
+            // line 15
             echo "\t\t";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["pedidosUsuario"]) || array_key_exists("pedidosUsuario", $context) ? $context["pedidosUsuario"] : (function () { throw new RuntimeError('Variable "pedidosUsuario" does not exist.', 14, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["pedidosUsuario"]) || array_key_exists("pedidosUsuario", $context) ? $context["pedidosUsuario"] : (function () { throw new RuntimeError('Variable "pedidosUsuario" does not exist.', 15, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["pedido"]) {
-                // line 15
+                // line 16
                 echo "\t\t\t<div class=\"accordion-item\">
 \t\t\t\t<h2 class=\"accordion-header\">
 \t\t\t\t\t<button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse";
-                // line 17
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "id", [], "any", false, false, false, 17), "html", null, true);
+                // line 18
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "id", [], "any", false, false, false, 18), "html", null, true);
                 echo "\" aria-expanded=\"false\" aria-controls=\"collapse";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "id", [], "any", false, false, false, 17), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "id", [], "any", false, false, false, 18), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t<p>
 \t\t\t\t\t\t\t<i class=\"bi bi-bag-check\"></i>
 \t\t\t\t\t\t\tPedido realizado el día:
 \t\t\t\t\t\t\t";
-                // line 21
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "fechaPedido", [], "any", false, false, false, 21), "Y-m-d"), "html", null, true);
+                // line 22
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "fechaPedido", [], "any", false, false, false, 22), "Y-m-d"), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t- Coste:
 \t\t\t\t\t\t\t";
-                // line 23
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "costeTotal", [], "any", false, false, false, 23), "html", null, true);
+                // line 24
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "costeTotal", [], "any", false, false, false, 24), "html", null, true);
                 echo "
 \t\t\t\t\t\t</p>
 \t\t\t\t\t</button>
 \t\t\t\t</h2>
 \t\t\t\t<div id=\"collapse";
-                // line 27
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "id", [], "any", false, false, false, 27), "html", null, true);
+                // line 28
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "id", [], "any", false, false, false, 28), "html", null, true);
                 echo "\" class=\"accordion-collapse collapse\" data-bs-parent=\"#accordionPedidos\">
 \t\t\t\t\t<div class=\"accordion-body\">
 \t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t";
-                // line 30
+                // line 31
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["pedido"], "lineasPedido", [], "any", false, false, false, 30));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["pedido"], "lineasPedido", [], "any", false, false, false, 31));
                 foreach ($context['_seq'] as $context["_key"] => $context["lineaPedido"]) {
-                    // line 31
+                    // line 32
                     echo "\t\t\t\t\t\t\t\t<li>";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lineaPedido"], "nombreProducto", [], "any", false, false, false, 31), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lineaPedido"], "nombreProducto", [], "any", false, false, false, 32), "html", null, true);
                     echo "
 \t\t\t\t\t\t\t\t\t- x";
-                    // line 32
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lineaPedido"], "cantidad", [], "any", false, false, false, 32), "html", null, true);
+                    // line 33
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lineaPedido"], "cantidad", [], "any", false, false, false, 33), "html", null, true);
                     echo "
 \t\t\t\t\t\t\t\t\t-
 \t\t\t\t\t\t\t\t\t";
-                    // line 34
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lineaPedido"], "precio", [], "any", false, false, false, 34), "html", null, true);
+                    // line 35
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lineaPedido"], "precio", [], "any", false, false, false, 35), "html", null, true);
                     echo "€</li>
 \t\t\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['lineaPedido'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 36
+                // line 37
                 echo "\t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -154,15 +155,15 @@ class __TwigTemplate_5201964a6cbdda77984b075ef14dc61d extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pedido'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 41
+            // line 42
             echo "\t\t";
         }
-        // line 42
+        // line 43
         echo "\t</div>
 
 \t";
-        // line 44
-        $this->loadTemplate("/compartido/footer.html.twig", "usuario/vistaPedidos.html.twig", 44)->display($context);
+        // line 45
+        $this->loadTemplate("/compartido/footer.html.twig", "usuario/vistaPedidos.html.twig", 45)->display($context);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -189,7 +190,7 @@ class __TwigTemplate_5201964a6cbdda77984b075ef14dc61d extends Template
      */
     public function getDebugInfo()
     {
-        return array (  165 => 44,  161 => 42,  158 => 41,  148 => 36,  140 => 34,  135 => 32,  130 => 31,  126 => 30,  120 => 27,  113 => 23,  108 => 21,  99 => 17,  95 => 15,  90 => 14,  86 => 12,  84 => 11,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  166 => 45,  162 => 43,  159 => 42,  149 => 37,  141 => 35,  136 => 33,  131 => 32,  127 => 31,  121 => 28,  114 => 24,  109 => 22,  100 => 18,  96 => 16,  91 => 15,  86 => 12,  84 => 11,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -205,7 +206,8 @@ class __TwigTemplate_5201964a6cbdda77984b075ef14dc61d extends Template
 \t<h1 class=\"titulo d-flex justify-content-center mt-5\">Tus pedidos</h1>
 \t<div class=\"accordion px-4 pt-3\" id=\"accordionPedidos\">
 \t\t{% if pedidosUsuario is empty %}
-\t\t\t<p>Todavía no se han realizado pedidos</p>
+\t\t<i class=\"listaVacia bi bi-emoji-dizzy d-flex justify-content-center my-5\"></i>
+\t\t<p class=\"d-flex justify-content-center mb-5\"> Todavía no se han realizado pedidos. </p>
 \t\t{% else %}
 \t\t{% for pedido in pedidosUsuario %}
 \t\t\t<div class=\"accordion-item\">

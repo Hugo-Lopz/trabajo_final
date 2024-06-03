@@ -6,24 +6,38 @@
 
 {% block body %}
 	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
-    <h1>Carrito de Compras</h1>
-    <table>
-        <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Precio unitario</th>
-            <th>Total</th>
-            <th>Gestionar unidades</th>
-        </tr>
-        {% for productId, productInfo in productosCarrito %}
+    <h1 class="titulo d-flex justify-content-center mt-5">Carrito de Compras</h1>
+    <div class="d-flex tablaProductos justify-content-center pt-4">
+        <table cellpadding="20">
             <tr>
-                <td>{{ productInfo.nombre }}</td>
-                <td>{{ productInfo.cantidad }}</td>
-                <td>{{ productInfo.precio }}</td>
-                <td>{{ productInfo.cantidad * productInfo.precio }}</td>
-                <td> <a href="{{ path('quitar_producto_del_carrito', { idProducto: idProducto })}}"><button class="btn btn-danger"> Quitar una unidad </button><a> </td>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio unitario</th>
+                <th>Total</th>
+                <th>Gestionar unidades</th>
             </tr>
-        {% endfor %}
-    </table>
-    <a href="{{ path('pagina_de_pago')}}"><button class="btn btn-danger">Comprar</button><a>
+            {% for productId, productInfo in productosCarrito %}
+                <tr>
+                    <td>{{ productInfo.nombre }}</td>
+                    <td>{{ productInfo.cantidad }}</td>
+                    <td>{{ productInfo.precio }}</td>
+                    <td>{{ productInfo.cantidad * productInfo.precio }}</td>
+                    <td> <a href="{{ path('quitar_producto_del_carrito', { idProducto: idProducto })}}"><button class="btn btn-danger"> Quitar una unidad </button><a> </td>
+                </tr>
+            {% endfor %}
+            {% if productosCarrito is not empty %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th>Terminar compra: </th>
+                    <td><a href="{{ path('pagina_de_pago')}}"><button class="btn btn-danger">Pagar</button><a></td>
+                </tr>
+            {% endif %}
+        </table>
+    </div>
+
+
+    
+    	{% include '/compartido/footer.html.twig' %}
 {% endblock %}

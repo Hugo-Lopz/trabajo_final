@@ -7,41 +7,22 @@
 {% block body %}
 {% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
 
-<div class="d-flex align-items-center justify-content-center">
-	<h1 class="titulo mt-4">{{ producto.nombreproducto }}</h1>
-</div>
+<h1 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">{{ producto.nombreproducto }}</h1>
 <section id="producto" class="producto d-flex align-items-center">
 	<div class="contenedor container-fluid">
 		<div class="row">
 			<div class="col-12 col-md-6 col-xl-7">
 				<div class="d-flex justify-content-center">
 					<div class="col-12 col-xl-9">
-						<div id="carousel1" class="carousel slide">
-							<div class="carousel-indicators">
-								<button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-								<button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-								<button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-							</div>
-							<div class="carousel-inner">
-								{% if imagenes %}
-									{% for imagen in imagenes %}
-										<div class="carousel-item active">
-											<div class="container">
-												<img src="{{ asset('images/' ~ imagen.urlimagen) }}" class="sliderImagenCatalogo" alt="Foto principal">
-											</div>
-										</div>
-									{% endfor %}
-								{% endif %}
-							</div>
-							<button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-								<i class="bi bi-arrow-left-square-fill"></i>
-								<span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-								<i class="bi bi-arrow-right-square-fill"></i>
-								<span class="visually-hidden">Next</span>
-							</button>
-						</div>
+						{% if imagenes %}
+							{% for imagen in imagenes %}
+								<div>
+									<div class="d-flex justify-content-center mt-2">
+										<img src="{{ asset('images/' ~ imagen.urlimagen) }}" class="sliderImagenCatalogo" alt="Foto principal">
+									</div>
+								</div>
+							{% endfor %}
+						{% endif %}
 					</div>
 				</div>
 			</div>
@@ -62,7 +43,7 @@
 						<p>
 							{{ equipo.nombreequipo }}
 						</p>
-
+	
 						<div>
 							<h3>Precio:<span> {{ producto.precio }}€</span></h3>
 							<h6>{{ producto.stock }} unidades en stock</h6>
@@ -101,36 +82,36 @@
 							</div>
 						</form>
 						<div class="row">
-												<div class="col-12">
+								<div class="col-12">
 									<a href="{{ path('agregar_producto_a_lista_deseos', { idProducto: producto.id }) }}">
 										<button class="btn btn2">
 											<i class="bi bi-heart-fill"></i>Añadir a deseos</button>
 									</a>
 								</div>
 						</div>
-				{% if app.user %}
-				<div class="mt-5">
-                    <h4>Valorar producto</h4>
-                    <form class="valoracionForm" action="{{ path('valoracion_producto', { idProducto: producto.id }) }}" method = "post">
-                        <h6>Seleccione que valoración numérica le da al producto:</h6>
-                        <select name="valoracionNumerica">
-                            <option value=1 selected>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                        </select>
-						</br>
-                        <label for="comentario" class="form-label mt-2">Comentario:</label>
-                        <input type="text" name="comentario" id="comentario" class="form-control mt-2"></input>
-                    	<button class="btn mt-2" type="submit">Valorar producto</button>
-                    </form>
+					{% if app.user %}
+					<div class="mt-5">
+                    	<h4>Valorar producto</h4>
+                    	<form class="valoracionForm" action="{{ path('valoracion_producto', { idProducto: producto.id }) }}" method = "post">
+                        	<h6>Seleccione que valoración numérica le da al producto:</h6>
+                        	<select name="valoracionNumerica">
+                            	<option value=1 selected>1</option>
+                            	<option value=2>2</option>
+                            	<option value=3>3</option>
+                            	<option value=4>4</option>
+                            	<option value=5>5</option>
+                        	</select>
+							</br>
+                        	<label for="comentario" class="form-label mt-2">Comentario:</label>
+                        	<input type="text" name="comentario" id="comentario" class="form-control mt-2"></input>
+                    		<button class="btn mt-2" type="submit">Valorar producto</button>
+                    	</form>
+					</div>
+                	{% endif %}
 				</div>
-                {% endif %}
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 </section>
 <section class="valoraciones d-flex align-items-start" id="estrellas">
@@ -140,10 +121,8 @@
     <p>Todavía no existen valoraciones</p>
     {% else %}
     {% for valoracion in valoraciones %}
-    <p>{{valoracion.nombreUsuario}}-{{valoracion.valoracionNumerica}}/5</p>
-	<div>
-        <estrellas-valoracion :rating="{{ valoracion.valoracionNumerica }}"></estrellas-valoracion>
-    </div>
+    <p><i class="bi bi-person-circle pe-2"></i>{{valoracion.nombreUsuario}}<estrellas-valoracion :rating="{{ valoracion.valoracionNumerica }}"></estrellas-valoracion></p>
+
 	<p>{{valoracion.comentario}}</p>
     {% endfor %}
     {% endif %} 

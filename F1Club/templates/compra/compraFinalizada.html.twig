@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block body %}
-<p>Compra realizada con éxito</p>
-<a href="{{ path('app_home')}}"><button class="btn btn-danger">Volver al inicio</button><a>
-<a href="{{ path('usuario_vista_pedidos')}}"><button class="btn btn-danger">Ver pedidos</button><a>
+<h1 class="titulo d-flex justify-content-center mt-5 pb-4">Compra realizada con éxito</h1>
+<div class="d-flex justify-content-center pt-4 pb-4">
+	<a href="{{ path('app_home')}}"><button class="btn btn-danger me-2">Volver al inicio</button><a>
+	<a href="{{ path('usuario_vista_pedidos')}}"><button class="btn btn-danger ms-2">Ver pedidos</button><a>
+</div>
 {% endblock %}

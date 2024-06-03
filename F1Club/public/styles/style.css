@@ -240,15 +240,41 @@ li.timeline-item {
 }
 
 /*Pedidos*/
+.accordion {
+    margin-bottom: 300px !important;
+}
+
 .accordion-button:not(.collapsed) {
     background-color: white; 
 }
 
 /*Deseos*/
-
-li {
+.listaDeseos li {
     list-style-type: none !important;
+    margin-bottom: 200px;
+}
 
+.listaVacia {
+    font-size: 200px !important;
+}
+
+/*Carrito*/
+.tablaProductos {
+    margin-bottom: 370px !important;
+}
+
+/*Pago*/
+.pago {
+    background-color: rgb(36, 35, 35);
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    border-radius: 1rem;
+}
+
+.iconoDinero {
+    font-size: 100px !important;
+    color: greenyellow !important;
 }
 
 /*Footer*/

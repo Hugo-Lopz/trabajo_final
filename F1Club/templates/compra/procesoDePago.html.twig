@@ -5,14 +5,25 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Página de pago</h1>
-    <p>El total del pago es {{precio_total}} €</p>
-    <form action="{{ path('procesar_compra') }}" method="post">
-        <select name="metodo_pago">
-            {% for metodoPago in metodos_de_pago %}
-                <option value="{{ metodoPago.id }}">{{ metodoPago.nombre }}</option>
-            {% endfor %}
-        </select>
-        <button type="submit">Seleccionar</button>
-    </form>
+	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
+	<h1 class="titulo d-flex justify-content-center pt-4 pb-4">Página de pago</h1>
+    <div class="row pago d-flex justify-content-center pt-4 mx-5">
+        <div class="col-12 d-flex justify-content-center">
+            <i class="iconoDinero bi bi-cash-coin pe-4"></i>
+            <p class="mt-4">El total del pago es {{precio_total}} €</p>
+        </div>
+    </div>
+    <h2 class="titulo d-flex justify-content-center pt-4 pb-4">Seleccione un método de pago</h2>
+    <div class="d-flex justify-content-center pt-4">
+        <form action="{{ path('procesar_compra') }}" method="post">
+            <select name="metodo_pago">
+                {% for metodoPago in metodos_de_pago %}
+                    <option value="{{ metodoPago.id }}">{{ metodoPago.nombre }}</option>
+                {% endfor %}
+            </select>
+            <button class="btn btn-dark ms-3" type="submit">Seleccionar</button>
+        </form>
+    </div>
+    
+	{% include '/compartido/footer.html.twig' %}
 {% endblock %}

@@ -9,7 +9,8 @@
 	<h1 class="titulo d-flex justify-content-center mt-5">Tus pedidos</h1>
 	<div class="accordion px-4 pt-3" id="accordionPedidos">
 		{% if pedidosUsuario is empty %}
-			<p>Todavía no se han realizado pedidos</p>
+		<i class="listaVacia bi bi-emoji-dizzy d-flex justify-content-center my-5"></i>
+		<p class="d-flex justify-content-center mb-5"> Todavía no se han realizado pedidos. </p>
 		{% else %}
 		{% for pedido in pedidosUsuario %}
 			<div class="accordion-item">

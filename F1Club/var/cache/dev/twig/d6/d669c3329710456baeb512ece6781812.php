@@ -74,15 +74,17 @@ class __TwigTemplate_22a5d2f2da644af43d29187c9bdd3d71 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
-        echo "<p>Compra realizada con éxito</p>
-<a href=\"";
-        // line 9
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
-        echo "\"><button class=\"btn btn-danger\">Volver al inicio</button><a>
-<a href=\"";
+        echo "<h1 class=\"titulo d-flex justify-content-center mt-5 pb-4\">Compra realizada con éxito</h1>
+<div class=\"d-flex justify-content-center pt-4 pb-4\">
+\t<a href=\"";
         // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        echo "\"><button class=\"btn btn-danger me-2\">Volver al inicio</button><a>
+\t<a href=\"";
+        // line 11
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("usuario_vista_pedidos");
-        echo "\"><button class=\"btn btn-danger\">Ver pedidos</button><a>
+        echo "\"><button class=\"btn btn-danger ms-2\">Ver pedidos</button><a>
+</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -110,7 +112,7 @@ class __TwigTemplate_22a5d2f2da644af43d29187c9bdd3d71 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  84 => 10,  80 => 9,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  85 => 11,  81 => 10,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -122,9 +124,11 @@ class __TwigTemplate_22a5d2f2da644af43d29187c9bdd3d71 extends Template
 {% endblock %}
 
 {% block body %}
-<p>Compra realizada con éxito</p>
-<a href=\"{{ path('app_home')}}\"><button class=\"btn btn-danger\">Volver al inicio</button><a>
-<a href=\"{{ path('usuario_vista_pedidos')}}\"><button class=\"btn btn-danger\">Ver pedidos</button><a>
+<h1 class=\"titulo d-flex justify-content-center mt-5 pb-4\">Compra realizada con éxito</h1>
+<div class=\"d-flex justify-content-center pt-4 pb-4\">
+\t<a href=\"{{ path('app_home')}}\"><button class=\"btn btn-danger me-2\">Volver al inicio</button><a>
+\t<a href=\"{{ path('usuario_vista_pedidos')}}\"><button class=\"btn btn-danger ms-2\">Ver pedidos</button><a>
+</div>
 {% endblock %}", "compra/compraFinalizada.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/compra/compraFinalizada.html.twig");
     }
 }

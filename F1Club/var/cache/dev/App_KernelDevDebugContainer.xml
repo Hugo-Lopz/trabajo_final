@@ -345,30 +345,11 @@
         <argument type="service" id=".service_locator.ZP92gqz.App\Controller\Admin\UsuarioCrudController"/>
       </call>
     </service>
-    <service id="App\Controller\ConversacionController" class="App\Controller\ConversacionController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <argument type="service" id="App\Repository\UsuarioRepository"/>
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
-      <argument type="service" id="App\Repository\ConversacionRepository"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\ConversacionController"/>
-      </call>
-    </service>
     <service id="App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\Manager\ManagerController"/>
-      </call>
-    </service>
-    <service id="App\Controller\MensajeController" class="App\Controller\MensajeController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
-      <argument type="service" id="App\Repository\MensajeRepository"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\MensajeController"/>
       </call>
     </service>
     <service id="App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" public="true" autowire="true" autoconfigure="true">
@@ -441,10 +422,6 @@
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
     <service id="App\Module\ProductoImagenModule" class="App\Module\ProductoImagenModule" autowire="true" autoconfigure="true"/>
-    <service id="App\Repository\ConversacionRepository" class="App\Repository\ConversacionRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
     <service id="App\Repository\EquipoRepository" class="App\Repository\EquipoRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -469,15 +446,7 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\MensajeRepository" class="App\Repository\MensajeRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
     <service id="App\Repository\MetodoDePagoRepository" class="App\Repository\MetodoDePagoRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\ParticipanteRepository" class="App\Repository\ParticipanteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -501,10 +470,6 @@
       <argument type="service" id="router.default"/>
       <argument type="service" id="security.helper"/>
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Security\AuthorizationChecker"/>
-    </service>
-    <service id="App\Security\Voter\ConversacionVoter" class="App\Security\Voter\ConversacionVoter" autowire="true" autoconfigure="true">
-      <tag name="security.voter"/>
-      <argument type="service" id="App\Repository\ConversacionRepository"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="argument_resolver.backed_enum_resolver" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">
@@ -532,7 +497,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.3Q_DlgE"/>
+      <argument type="service" id=".service_locator.5u0hBXq"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -2761,7 +2726,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.3Q_DlgE"/>
+      <argument type="service" id=".service_locator.5u0hBXq"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -3726,7 +3691,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator._YH1RcM"/>
+      <argument type="service" id=".service_locator.yCrM1ws"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6009,15 +5974,9 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\UsuarioCrudController" class="App\Controller\Admin\UsuarioCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\UsuarioCrudController" class="App\Controller\Admin\UsuarioCrudController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\UsuarioCrudController" class="App\Controller\Admin\UsuarioCrudController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ConversacionController" class="App\Controller\ConversacionController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ConversacionController" class="App\Controller\ConversacionController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\ConversacionController" class="App\Controller\ConversacionController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Manager\ManagerController" class="App\Controller\Manager\ManagerController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MensajeController" class="App\Controller\MensajeController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MensajeController" class="App\Controller\MensajeController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\MensajeController" class="App\Controller\MensajeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Shop\CarritoController" class="App\Controller\Shop\CarritoController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6047,8 +6006,6 @@
     <service id=".abstract.instanceof.App\Controller\User\UsuarioController" class="App\Controller\User\UsuarioController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ConversacionRepository" class="App\Repository\ConversacionRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\ConversacionRepository" class="App\Repository\ConversacionRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EquipoRepository" class="App\Repository\EquipoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\EquipoRepository" class="App\Repository\EquipoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EscalaRepository" class="App\Repository\EscalaRepository" autowire="true" abstract="true"/>
@@ -6061,12 +6018,8 @@
     <service id=".abstract.instanceof.App\Repository\LineaPedidoRepository" class="App\Repository\LineaPedidoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ListaDeseosRepository" class="App\Repository\ListaDeseosRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ListaDeseosRepository" class="App\Repository\ListaDeseosRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MensajeRepository" class="App\Repository\MensajeRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\MensajeRepository" class="App\Repository\MensajeRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MetodoDePagoRepository" class="App\Repository\MetodoDePagoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\MetodoDePagoRepository" class="App\Repository\MetodoDePagoRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ParticipanteRepository" class="App\Repository\ParticipanteRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\ParticipanteRepository" class="App\Repository\ParticipanteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PedidoRepository" class="App\Repository\PedidoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PedidoRepository" class="App\Repository\PedidoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProductoRepository" class="App\Repository\ProductoRepository" autowire="true" abstract="true"/>
@@ -6075,8 +6028,6 @@
     <service id=".abstract.instanceof.App\Repository\UsuarioRepository" class="App\Repository\UsuarioRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ValoracionRepository" class="App\Repository\ValoracionRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ValoracionRepository" class="App\Repository\ValoracionRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Security\Core\Authorization\Voter\VoterInterface.0.App\Security\Voter\ConversacionVoter" class="App\Security\Voter\ConversacionVoter" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Security\Voter\ConversacionVoter" class="App\Security\Voter\ConversacionVoter" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Filter\FilterConfiguratorInterface.0.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" abstract="true"/>
     <service id=".abstract.instanceof.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Filter\FilterConfiguratorInterface.0.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\CommonConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\CommonConfigurator" abstract="true"/>
@@ -6621,12 +6572,6 @@
         <argument key="pedidoRepository" type="service_closure" id="App\Repository\PedidoRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.2Ne3c8p" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="conversacion" type="service_closure" id=".errored..service_locator.2Ne3c8p.App\Entity\Conversacion"/>
-      </argument>
-    </service>
     <service id=".service_locator.7rPyh_9" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6667,9 +6612,10 @@
         <argument key="productoRepository" type="service_closure" id="App\Repository\ProductoRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.sRku2Ad" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IRZ7ziL" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="categoriaModuCategoriaModule" type="service_closure" id="App\Module\CategoriaModule"/>
         <argument key="metodoDePagoRepository" type="service_closure" id="App\Repository\MetodoDePagoRepository"/>
         <argument key="productoRepository" type="service_closure" id="App\Repository\ProductoRepository"/>
       </argument>
@@ -6750,7 +6696,7 @@
         <argument key="categoriaModuCategoriaModule" type="service_closure" id="App\Module\CategoriaModule"/>
       </argument>
     </service>
-    <service id=".service_locator.3Q_DlgE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.5u0hBXq" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\CuponCrudController::autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
@@ -6968,15 +6914,13 @@
         <argument key="App\Controller\Manager\ManagerController::mostrarTop10ProductosMasVendidosEsteMes" type="service_closure" id=".service_locator.eqP90KC"/>
         <argument key="App\Controller\Manager\ManagerController::pedidosDiariosDelMesActual" type="service_closure" id=".service_locator.8f2PGRu"/>
         <argument key="App\Controller\Manager\ManagerController::ventasFabricantesMesActual" type="service_closure" id=".service_locator.eqP90KC"/>
-        <argument key="App\Controller\MensajeController::nuevoMensaje" type="service_closure" id=".service_locator.2Ne3c8p"/>
-        <argument key="App\Controller\MensajeController::obtenerMensajes" type="service_closure" id=".service_locator.2Ne3c8p"/>
         <argument key="App\Controller\Shop\CarritoController::agregarProductoAlCarrito" type="service_closure" id=".service_locator.7rPyh_9"/>
         <argument key="App\Controller\Shop\CarritoController::mostrarCarrito" type="service_closure" id=".service_locator.5c_GANY"/>
         <argument key="App\Controller\Shop\CategoriaController::catalogoEquipos" type="service_closure" id=".service_locator.4tSKL30"/>
         <argument key="App\Controller\Shop\CategoriaController::catalogoEscalas" type="service_closure" id=".service_locator.THbmHY5"/>
         <argument key="App\Controller\Shop\CategoriaController::catalogoFabricantes" type="service_closure" id=".service_locator.Nog44rT"/>
         <argument key="App\Controller\Shop\CompraController::comprarProductos" type="service_closure" id=".service_locator.p1dx99V"/>
-        <argument key="App\Controller\Shop\CompraController::pagar" type="service_closure" id=".service_locator.sRku2Ad"/>
+        <argument key="App\Controller\Shop\CompraController::pagar" type="service_closure" id=".service_locator.IRZ7ziL"/>
         <argument key="App\Controller\Shop\HomeController::home" type="service_closure" id=".service_locator.gu7DLi4"/>
         <argument key="App\Controller\Shop\ListaDeseosController::accederAListaDeseos" type="service_closure" id=".service_locator.5jvlNAe"/>
         <argument key="App\Controller\Shop\ListaDeseosController::agregarProductoAListaDeseos" type="service_closure" id=".service_locator.AgW61D2"/>
@@ -7206,15 +7150,13 @@
         <argument key="App\Controller\Manager\ManagerController:mostrarTop10ProductosMasVendidosEsteMes" type="service_closure" id=".service_locator.eqP90KC"/>
         <argument key="App\Controller\Manager\ManagerController:pedidosDiariosDelMesActual" type="service_closure" id=".service_locator.8f2PGRu"/>
         <argument key="App\Controller\Manager\ManagerController:ventasFabricantesMesActual" type="service_closure" id=".service_locator.eqP90KC"/>
-        <argument key="App\Controller\MensajeController:nuevoMensaje" type="service_closure" id=".service_locator.2Ne3c8p"/>
-        <argument key="App\Controller\MensajeController:obtenerMensajes" type="service_closure" id=".service_locator.2Ne3c8p"/>
         <argument key="App\Controller\Shop\CarritoController:agregarProductoAlCarrito" type="service_closure" id=".service_locator.7rPyh_9"/>
         <argument key="App\Controller\Shop\CarritoController:mostrarCarrito" type="service_closure" id=".service_locator.5c_GANY"/>
         <argument key="App\Controller\Shop\CategoriaController:catalogoEquipos" type="service_closure" id=".service_locator.4tSKL30"/>
         <argument key="App\Controller\Shop\CategoriaController:catalogoEscalas" type="service_closure" id=".service_locator.THbmHY5"/>
         <argument key="App\Controller\Shop\CategoriaController:catalogoFabricantes" type="service_closure" id=".service_locator.Nog44rT"/>
         <argument key="App\Controller\Shop\CompraController:comprarProductos" type="service_closure" id=".service_locator.p1dx99V"/>
-        <argument key="App\Controller\Shop\CompraController:pagar" type="service_closure" id=".service_locator.sRku2Ad"/>
+        <argument key="App\Controller\Shop\CompraController:pagar" type="service_closure" id=".service_locator.IRZ7ziL"/>
         <argument key="App\Controller\Shop\HomeController:home" type="service_closure" id=".service_locator.gu7DLi4"/>
         <argument key="App\Controller\Shop\ListaDeseosController:accederAListaDeseos" type="service_closure" id=".service_locator.5jvlNAe"/>
         <argument key="App\Controller\Shop\ListaDeseosController:agregarProductoAListaDeseos" type="service_closure" id=".service_locator.AgW61D2"/>
@@ -7342,19 +7284,16 @@
         <argument key="doctrine.orm.listeners.pdo_session_handler_schema_listener" type="service_closure" id="doctrine.orm.listeners.pdo_session_handler_schema_listener"/>
       </argument>
     </service>
-    <service id=".service_locator._YH1RcM" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.yCrM1ws" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Repository\ConversacionRepository" type="service_closure" id="App\Repository\ConversacionRepository"/>
         <argument key="App\Repository\EquipoRepository" type="service_closure" id="App\Repository\EquipoRepository"/>
         <argument key="App\Repository\EscalaRepository" type="service_closure" id="App\Repository\EscalaRepository"/>
         <argument key="App\Repository\FabricanteRepository" type="service_closure" id="App\Repository\FabricanteRepository"/>
         <argument key="App\Repository\ImagenRepository" type="service_closure" id="App\Repository\ImagenRepository"/>
         <argument key="App\Repository\LineaPedidoRepository" type="service_closure" id="App\Repository\LineaPedidoRepository"/>
         <argument key="App\Repository\ListaDeseosRepository" type="service_closure" id="App\Repository\ListaDeseosRepository"/>
-        <argument key="App\Repository\MensajeRepository" type="service_closure" id="App\Repository\MensajeRepository"/>
         <argument key="App\Repository\MetodoDePagoRepository" type="service_closure" id="App\Repository\MetodoDePagoRepository"/>
-        <argument key="App\Repository\ParticipanteRepository" type="service_closure" id="App\Repository\ParticipanteRepository"/>
         <argument key="App\Repository\PedidoRepository" type="service_closure" id="App\Repository\PedidoRepository"/>
         <argument key="App\Repository\ProductoRepository" type="service_closure" id="App\Repository\ProductoRepository"/>
         <argument key="App\Repository\UsuarioRepository" type="service_closure" id="App\Repository\UsuarioRepository"/>
@@ -7389,10 +7328,6 @@
     </service>
     <service id=".debug.security.voter.security.access.role_hierarchy_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
       <argument type="service" id="security.access.role_hierarchy_voter"/>
-      <argument type="service" id="debug.event_dispatcher"/>
-    </service>
-    <service id=".debug.security.voter.App\Security\Voter\ConversacionVoter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
-      <argument type="service" id="App\Security\Voter\ConversacionVoter"/>
       <argument type="service" id="debug.event_dispatcher"/>
     </service>
     <service id=".debug.security.voter.EasyCorp\Bundle\EasyAdminBundle\Security\SecurityVoter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
@@ -7825,21 +7760,9 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\ConversacionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\ConversacionController"/>
-      <argument>App\Controller\ConversacionController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.jUv.zyj" method="withContext"/>
-    </service>
     <service id=".service_locator.jUv.zyj.App\Controller\Manager\ManagerController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Manager\ManagerController"/>
       <argument>App\Controller\Manager\ManagerController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.jUv.zyj" method="withContext"/>
-    </service>
-    <service id=".service_locator.jUv.zyj.App\Controller\MensajeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\MensajeController"/>
-      <argument>App\Controller\MensajeController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
@@ -8065,7 +7988,6 @@
       <argument type="iterator">
         <argument type="service" id=".debug.security.voter.security.access.authenticated_voter"/>
         <argument type="service" id=".debug.security.voter.security.access.role_hierarchy_voter"/>
-        <argument type="service" id=".debug.security.voter.App\Security\Voter\ConversacionVoter"/>
         <argument type="service" id=".debug.security.voter.EasyCorp\Bundle\EasyAdminBundle\Security\SecurityVoter"/>
       </argument>
       <argument type="service">
@@ -8134,9 +8056,6 @@
     </service>
     <service id=".errored..service_locator.t7nLwyX.Symfony\Component\Security\Core\User\UserInterface" class="Symfony\Component\Security\Core\User\UserInterface">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.t7nLwyX&quot;: it references interface &quot;Symfony\Component\Security\Core\User\UserInterface&quot; but no such service exists. Did you create a class that implements this interface?"/>
-    </service>
-    <service id=".errored..service_locator.2Ne3c8p.App\Entity\Conversacion" class="App\Entity\Conversacion">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.2Ne3c8p&quot;: it needs an instance of &quot;App\Entity\Conversacion&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
@@ -8998,7 +8917,7 @@
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.3Q_DlgE"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.5u0hBXq"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9037,13 +8956,12 @@
     <service id=".service_locator.Z8gOAzz" alias=".service_locator.Ji3cMwT"/>
     <service id=".service_locator.Locm_In" alias=".service_locator.eqP90KC"/>
     <service id=".service_locator.ZSrBREl" alias=".service_locator.8f2PGRu"/>
-    <service id=".service_locator.BARlvYh" alias=".service_locator.2Ne3c8p"/>
     <service id=".service_locator.MZOdL0W" alias=".service_locator.7rPyh_9"/>
     <service id=".service_locator.q4vZ0iU" alias=".service_locator.5c_GANY"/>
     <service id=".service_locator.JES60Md" alias=".service_locator.Nog44rT"/>
     <service id=".service_locator.GLqHlUy" alias=".service_locator.4tSKL30"/>
     <service id=".service_locator.UCUgfYW" alias=".service_locator.THbmHY5"/>
-    <service id=".service_locator.Y1Jesng" alias=".service_locator.sRku2Ad"/>
+    <service id=".service_locator.n4xB52v" alias=".service_locator.IRZ7ziL"/>
     <service id=".service_locator.i3.7fCU" alias=".service_locator.p1dx99V"/>
     <service id=".service_locator.m7jyqVo" alias=".service_locator.gu7DLi4"/>
     <service id=".service_locator.ZCH07bL" alias=".service_locator.AgW61D2"/>
