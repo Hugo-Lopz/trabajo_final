@@ -56,7 +56,8 @@ class __TwigTemplate_7fc570c9e69c757b3251674cfbbc7458 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "\t<h1>Cantidad de ventas este mes</h1>
+        echo "<h1 class=\"titulo d-flex align-items-center justify-content-center mt-5 ms-5\">Cantidad Pedidos por día de mes</h1>
+
 
 \t<style>
 \t\t#chartdiv {
@@ -163,8 +164,8 @@ series.columns.template.adapters.add(\"stroke\", function (stroke, target) {
 
 // Set data
 var data = ";
-        // line 110
-        echo (isset($context["pedidosDiariosMesActual"]) || array_key_exists("pedidosDiariosMesActual", $context) ? $context["pedidosDiariosMesActual"] : (function () { throw new RuntimeError('Variable "pedidosDiariosMesActual" does not exist.', 110, $this->source); })());
+        // line 111
+        echo (isset($context["pedidosDiariosMesActual"]) || array_key_exists("pedidosDiariosMesActual", $context) ? $context["pedidosDiariosMesActual"] : (function () { throw new RuntimeError('Variable "pedidosDiariosMesActual" does not exist.', 111, $this->source); })());
         echo ";
 
 xAxis.data.setAll(data);
@@ -209,7 +210,7 @@ chart.appear(1000, 100);
      */
     public function getDebugInfo()
     {
-        return array (  167 => 110,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  168 => 111,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -217,7 +218,8 @@ chart.appear(1000, 100);
         return new Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-\t<h1>Cantidad de ventas este mes</h1>
+<h1 class=\"titulo d-flex align-items-center justify-content-center mt-5 ms-5\">Cantidad Pedidos por día de mes</h1>
+
 
 \t<style>
 \t\t#chartdiv {

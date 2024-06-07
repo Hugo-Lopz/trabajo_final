@@ -56,7 +56,7 @@ class __TwigTemplate_8681770df24d4e957d25154e85ed4dd9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "\t<h1>Los 10 productos más vendidos este mes</h1>
+        echo "<h1 class=\"titulo d-flex align-items-center justify-content-center mt-5 ms-5\">Los 10 productos más vendidos este mes</h1>
 
 \t<style>
 \t\t#chartdiv {
@@ -217,7 +217,7 @@ chart.appear(1000, 100);
         return new Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-\t<h1>Los 10 productos más vendidos este mes</h1>
+<h1 class=\"titulo d-flex align-items-center justify-content-center mt-5 ms-5\">Los 10 productos más vendidos este mes</h1>
 
 \t<style>
 \t\t#chartdiv {

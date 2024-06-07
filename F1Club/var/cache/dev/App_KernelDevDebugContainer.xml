@@ -255,14 +255,6 @@
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
-    <service id="App\Controller\Admin\CuponCrudController" class="App\Controller\Admin\CuponCrudController" public="true" autowire="true" autoconfigure="true">
-      <tag name="ea.crud_controller"/>
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.ZP92gqz.App\Controller\Admin\CuponCrudController"/>
-      </call>
-    </service>
     <service id="App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" public="true" autowire="true" autoconfigure="true">
       <tag name="ea.dashboard_controller"/>
       <tag name="controller.service_arguments"/>
@@ -270,14 +262,6 @@
       <argument type="service" id="monolog.logger"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.yTMp7CA.App\Controller\Admin\DashboardController"/>
-      </call>
-    </service>
-    <service id="App\Controller\Admin\DescuentoCrudController" class="App\Controller\Admin\DescuentoCrudController" public="true" autowire="true" autoconfigure="true">
-      <tag name="ea.crud_controller"/>
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.ZP92gqz.App\Controller\Admin\DescuentoCrudController"/>
       </call>
     </service>
     <service id="App\Controller\Admin\EquipoCrudController" class="App\Controller\Admin\EquipoCrudController" public="true" autowire="true" autoconfigure="true">
@@ -497,7 +481,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.5u0hBXq"/>
+      <argument type="service" id=".service_locator.MmkdXGT"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -2726,7 +2710,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.5u0hBXq"/>
+      <argument type="service" id=".service_locator.MmkdXGT"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -5930,18 +5914,10 @@
         <argument key="_default" type="service_closure" id="webpack_encore.entrypoint_lookup[_default]"/>
       </argument>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\CuponCrudController" class="App\Controller\Admin\CuponCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\CuponCrudController" class="App\Controller\Admin\CuponCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\CuponCrudController" class="App\Controller\Admin\CuponCrudController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Admin\CuponCrudController" class="App\Controller\Admin\CuponCrudController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\DashboardControllerInterface.0.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\DashboardController" class="App\Controller\Admin\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\DescuentoCrudController" class="App\Controller\Admin\DescuentoCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\DescuentoCrudController" class="App\Controller\Admin\DescuentoCrudController" autowire="true" abstract="true"/>
-    <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\DescuentoCrudController" class="App\Controller\Admin\DescuentoCrudController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Admin\DescuentoCrudController" class="App\Controller\Admin\DescuentoCrudController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\EquipoCrudController" class="App\Controller\Admin\EquipoCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\EquipoCrudController" class="App\Controller\Admin\EquipoCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\EquipoCrudController" class="App\Controller\Admin\EquipoCrudController" autowire="true" abstract="true"/>
@@ -6481,6 +6457,12 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.t7nLwyX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="user" type="service_closure" id=".errored..service_locator.t7nLwyX.Symfony\Component\Security\Core\User\UserInterface"/>
+      </argument>
+    </service>
     <service id=".service_locator.Nb584vp" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6545,12 +6527,6 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="responseParameters" type="service_closure" id=".errored..service_locator.vMUOjiq.EasyCorp\Bundle\EasyAdminBundle\Config\KeyValueStore"/>
-      </argument>
-    </service>
-    <service id=".service_locator.t7nLwyX" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="user" type="service_closure" id=".errored..service_locator.t7nLwyX.Symfony\Component\Security\Core\User\UserInterface"/>
       </argument>
     </service>
     <service id=".service_locator.Ji3cMwT" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6696,52 +6672,10 @@
         <argument key="categoriaModuCategoriaModule" type="service_closure" id="App\Module\CategoriaModule"/>
       </argument>
     </service>
-    <service id=".service_locator.5u0hBXq" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.MmkdXGT" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\Admin\CuponCrudController::autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController::batchDelete" type="service_closure" id=".service_locator.twrFs.m"/>
-        <argument key="App\Controller\Admin\CuponCrudController::configureActions" type="service_closure" id=".service_locator.UrOEf8r"/>
-        <argument key="App\Controller\Admin\CuponCrudController::configureAssets" type="service_closure" id=".service_locator.wvbCcwL"/>
-        <argument key="App\Controller\Admin\CuponCrudController::configureCrud" type="service_closure" id=".service_locator.Nb584vp"/>
-        <argument key="App\Controller\Admin\CuponCrudController::configureFilters" type="service_closure" id=".service_locator.kud45L1"/>
-        <argument key="App\Controller\Admin\CuponCrudController::configureResponseParameters" type="service_closure" id=".service_locator.vMUOjiq"/>
-        <argument key="App\Controller\Admin\CuponCrudController::createEditForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController::createEditFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController::createIndexQueryBuilder" type="service_closure" id=".service_locator.lng3o3t"/>
-        <argument key="App\Controller\Admin\CuponCrudController::createNewForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController::createNewFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController::delete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController::deleteEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\CuponCrudController::detail" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController::edit" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController::index" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController::new" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController::persistEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\CuponCrudController::renderFilters" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController::updateEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\Admin\DashboardController::configureUserMenu" type="service_closure" id=".service_locator.t7nLwyX"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::batchDelete" type="service_closure" id=".service_locator.twrFs.m"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::configureActions" type="service_closure" id=".service_locator.UrOEf8r"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::configureAssets" type="service_closure" id=".service_locator.wvbCcwL"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::configureCrud" type="service_closure" id=".service_locator.Nb584vp"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::configureFilters" type="service_closure" id=".service_locator.kud45L1"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::configureResponseParameters" type="service_closure" id=".service_locator.vMUOjiq"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::createEditForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::createEditFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::createIndexQueryBuilder" type="service_closure" id=".service_locator.lng3o3t"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::createNewForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::createNewFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::delete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::deleteEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::detail" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::edit" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::index" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::new" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::persistEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::renderFilters" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController::updateEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\Admin\EquipoCrudController::autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
         <argument key="App\Controller\Admin\EquipoCrudController::batchDelete" type="service_closure" id=".service_locator.twrFs.m"/>
         <argument key="App\Controller\Admin\EquipoCrudController::configureActions" type="service_closure" id=".service_locator.UrOEf8r"/>
@@ -6935,49 +6869,7 @@
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
-        <argument key="App\Controller\Admin\CuponCrudController:autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController:batchDelete" type="service_closure" id=".service_locator.twrFs.m"/>
-        <argument key="App\Controller\Admin\CuponCrudController:configureActions" type="service_closure" id=".service_locator.UrOEf8r"/>
-        <argument key="App\Controller\Admin\CuponCrudController:configureAssets" type="service_closure" id=".service_locator.wvbCcwL"/>
-        <argument key="App\Controller\Admin\CuponCrudController:configureCrud" type="service_closure" id=".service_locator.Nb584vp"/>
-        <argument key="App\Controller\Admin\CuponCrudController:configureFilters" type="service_closure" id=".service_locator.kud45L1"/>
-        <argument key="App\Controller\Admin\CuponCrudController:configureResponseParameters" type="service_closure" id=".service_locator.vMUOjiq"/>
-        <argument key="App\Controller\Admin\CuponCrudController:createEditForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController:createEditFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController:createIndexQueryBuilder" type="service_closure" id=".service_locator.lng3o3t"/>
-        <argument key="App\Controller\Admin\CuponCrudController:createNewForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController:createNewFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\CuponCrudController:delete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController:deleteEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\CuponCrudController:detail" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController:edit" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController:index" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController:new" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController:persistEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\CuponCrudController:renderFilters" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\CuponCrudController:updateEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\Admin\DashboardController:configureUserMenu" type="service_closure" id=".service_locator.t7nLwyX"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:batchDelete" type="service_closure" id=".service_locator.twrFs.m"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:configureActions" type="service_closure" id=".service_locator.UrOEf8r"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:configureAssets" type="service_closure" id=".service_locator.wvbCcwL"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:configureCrud" type="service_closure" id=".service_locator.Nb584vp"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:configureFilters" type="service_closure" id=".service_locator.kud45L1"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:configureResponseParameters" type="service_closure" id=".service_locator.vMUOjiq"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:createEditForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:createEditFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:createIndexQueryBuilder" type="service_closure" id=".service_locator.lng3o3t"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:createNewForm" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:createNewFormBuilder" type="service_closure" id=".service_locator.Lazlz4J"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:delete" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:deleteEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:detail" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:edit" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:index" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:new" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:persistEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:renderFilters" type="service_closure" id=".service_locator.t9B7cZ4"/>
-        <argument key="App\Controller\Admin\DescuentoCrudController:updateEntity" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\Admin\EquipoCrudController:autocomplete" type="service_closure" id=".service_locator.t9B7cZ4"/>
         <argument key="App\Controller\Admin\EquipoCrudController:batchDelete" type="service_closure" id=".service_locator.twrFs.m"/>
         <argument key="App\Controller\Admin\EquipoCrudController:configureActions" type="service_closure" id=".service_locator.UrOEf8r"/>
@@ -7356,8 +7248,6 @@
     </service>
     <service id="EasyCorp\Bundle\EasyAdminBundle\Registry\CrudControllerRegistry" class="EasyCorp\Bundle\EasyAdminBundle\Registry\CrudControllerRegistry">
       <argument type="collection">
-        <argument key="App\Controller\Admin\CuponCrudController">App\Entity\Cupon</argument>
-        <argument key="App\Controller\Admin\DescuentoCrudController">App\Entity\Descuento</argument>
         <argument key="App\Controller\Admin\EquipoCrudController">App\Entity\Equipo</argument>
         <argument key="App\Controller\Admin\EscalaCrudController">App\Entity\Escala</argument>
         <argument key="App\Controller\Admin\FabricanteCrudController">App\Entity\Fabricante</argument>
@@ -7368,8 +7258,6 @@
         <argument key="App\Controller\Admin\UsuarioCrudController">App\Entity\Usuario</argument>
       </argument>
       <argument type="collection">
-        <argument key="App\Controller\Admin\CuponCrudController">2d026fa</argument>
-        <argument key="App\Controller\Admin\DescuentoCrudController">ebdf279</argument>
         <argument key="App\Controller\Admin\EquipoCrudController">68ba298</argument>
         <argument key="App\Controller\Admin\EscalaCrudController">566f1d2</argument>
         <argument key="App\Controller\Admin\FabricanteCrudController">746d5c9</argument>
@@ -7380,8 +7268,6 @@
         <argument key="App\Controller\Admin\UsuarioCrudController">d37f9d4</argument>
       </argument>
       <argument type="collection">
-        <argument key="App\Entity\Cupon">App\Controller\Admin\CuponCrudController</argument>
-        <argument key="App\Entity\Descuento">App\Controller\Admin\DescuentoCrudController</argument>
         <argument key="App\Entity\Equipo">App\Controller\Admin\EquipoCrudController</argument>
         <argument key="App\Entity\Escala">App\Controller\Admin\EscalaCrudController</argument>
         <argument key="App\Entity\Fabricante">App\Controller\Admin\FabricanteCrudController</argument>
@@ -7392,8 +7278,6 @@
         <argument key="App\Entity\Usuario">App\Controller\Admin\UsuarioCrudController</argument>
       </argument>
       <argument type="collection">
-        <argument key="2d026fa">App\Controller\Admin\CuponCrudController</argument>
-        <argument key="ebdf279">App\Controller\Admin\DescuentoCrudController</argument>
         <argument key="68ba298">App\Controller\Admin\EquipoCrudController</argument>
         <argument key="566f1d2">App\Controller\Admin\EscalaCrudController</argument>
         <argument key="746d5c9">App\Controller\Admin\FabricanteCrudController</argument>
@@ -7638,6 +7522,27 @@
         <argument>0</argument>
       </call>
     </service>
+    <service id=".service_locator.yTMp7CA" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator" type="service_closure" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator" on-invalid="ignore"/>
+        <argument key="form.factory" type="service_closure" id="form.factory" on-invalid="ignore"/>
+        <argument key="http_kernel" type="service_closure" id="http_kernel" on-invalid="ignore"/>
+        <argument key="parameter_bag" type="service_closure" id="parameter_bag" on-invalid="ignore"/>
+        <argument key="request_stack" type="service_closure" id="request_stack" on-invalid="ignore"/>
+        <argument key="router" type="service_closure" id="router.default" on-invalid="ignore"/>
+        <argument key="security.authorization_checker" type="service_closure" id="security.authorization_checker" on-invalid="ignore"/>
+        <argument key="security.csrf.token_manager" type="service_closure" id="security.csrf.token_manager" on-invalid="ignore"/>
+        <argument key="security.token_storage" type="service_closure" id="security.token_storage" on-invalid="ignore"/>
+        <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
+      </argument>
+    </service>
+    <service id=".service_locator.yTMp7CA.App\Controller\Admin\DashboardController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\DashboardController"/>
+      <argument>App\Controller\Admin\DashboardController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.yTMp7CA" method="withContext"/>
+    </service>
     <service id=".service_locator.ZP92gqz" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7664,39 +7569,6 @@
         <argument key="security.token_storage" type="service_closure" id="security.token_storage" on-invalid="ignore"/>
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
-    </service>
-    <service id=".service_locator.ZP92gqz.App\Controller\Admin\CuponCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\CuponCrudController"/>
-      <argument>App\Controller\Admin\CuponCrudController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.ZP92gqz" method="withContext"/>
-    </service>
-    <service id=".service_locator.yTMp7CA" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator" type="service_closure" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator" on-invalid="ignore"/>
-        <argument key="form.factory" type="service_closure" id="form.factory" on-invalid="ignore"/>
-        <argument key="http_kernel" type="service_closure" id="http_kernel" on-invalid="ignore"/>
-        <argument key="parameter_bag" type="service_closure" id="parameter_bag" on-invalid="ignore"/>
-        <argument key="request_stack" type="service_closure" id="request_stack" on-invalid="ignore"/>
-        <argument key="router" type="service_closure" id="router.default" on-invalid="ignore"/>
-        <argument key="security.authorization_checker" type="service_closure" id="security.authorization_checker" on-invalid="ignore"/>
-        <argument key="security.csrf.token_manager" type="service_closure" id="security.csrf.token_manager" on-invalid="ignore"/>
-        <argument key="security.token_storage" type="service_closure" id="security.token_storage" on-invalid="ignore"/>
-        <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
-      </argument>
-    </service>
-    <service id=".service_locator.yTMp7CA.App\Controller\Admin\DashboardController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\DashboardController"/>
-      <argument>App\Controller\Admin\DashboardController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.yTMp7CA" method="withContext"/>
-    </service>
-    <service id=".service_locator.ZP92gqz.App\Controller\Admin\DescuentoCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\Admin\DescuentoCrudController"/>
-      <argument>App\Controller\Admin\DescuentoCrudController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.ZP92gqz" method="withContext"/>
     </service>
     <service id=".service_locator.ZP92gqz.App\Controller\Admin\EquipoCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Admin\EquipoCrudController"/>
@@ -8009,6 +7881,9 @@
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.y4_Zrx.&quot;: it needs an instance of &quot;Symfony\Component\Config\Loader\LoaderInterface&quot; but this type has been excluded from autowiring."/>
     </service>
+    <service id=".errored..service_locator.t7nLwyX.Symfony\Component\Security\Core\User\UserInterface" class="Symfony\Component\Security\Core\User\UserInterface">
+      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.t7nLwyX&quot;: it references interface &quot;Symfony\Component\Security\Core\User\UserInterface&quot; but no such service exists. Did you create a class that implements this interface?"/>
+    </service>
     <service id=".errored..service_locator.Nb584vp.EasyCorp\Bundle\EasyAdminBundle\Config\Crud" class="EasyCorp\Bundle\EasyAdminBundle\Config\Crud">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.Nb584vp&quot;: it references class &quot;EasyCorp\Bundle\EasyAdminBundle\Config\Crud&quot; but no such service exists."/>
     </service>
@@ -8053,9 +7928,6 @@
     </service>
     <service id=".errored..service_locator.vMUOjiq.EasyCorp\Bundle\EasyAdminBundle\Config\KeyValueStore" class="EasyCorp\Bundle\EasyAdminBundle\Config\KeyValueStore">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.vMUOjiq&quot;: it references class &quot;EasyCorp\Bundle\EasyAdminBundle\Config\KeyValueStore&quot; but no such service exists."/>
-    </service>
-    <service id=".errored..service_locator.t7nLwyX.Symfony\Component\Security\Core\User\UserInterface" class="Symfony\Component\Security\Core\User\UserInterface">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.t7nLwyX&quot;: it references interface &quot;Symfony\Component\Security\Core\User\UserInterface&quot; but no such service exists. Did you create a class that implements this interface?"/>
     </service>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
@@ -8917,7 +8789,7 @@
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.5u0hBXq"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.MmkdXGT"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -8942,6 +8814,7 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id="security.event_dispatcher.main" alias="debug.security.event_dispatcher.main"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
+    <service id=".service_locator.uoBNKjJ" alias=".service_locator.t7nLwyX"/>
     <service id=".service_locator.b4Agcrj" alias=".service_locator.Nb584vp"/>
     <service id=".service_locator.rr8g6a9" alias=".service_locator.wvbCcwL"/>
     <service id=".service_locator.1aiqmLQ" alias=".service_locator.UrOEf8r"/>
@@ -8952,7 +8825,6 @@
     <service id=".service_locator.9e2t_lq" alias=".service_locator.CsMkqUa"/>
     <service id=".service_locator.i.G3y1p" alias=".service_locator.Lazlz4J"/>
     <service id=".service_locator.z_typH5" alias=".service_locator.vMUOjiq"/>
-    <service id=".service_locator.uoBNKjJ" alias=".service_locator.t7nLwyX"/>
     <service id=".service_locator.Z8gOAzz" alias=".service_locator.Ji3cMwT"/>
     <service id=".service_locator.Locm_In" alias=".service_locator.eqP90KC"/>
     <service id=".service_locator.ZSrBREl" alias=".service_locator.8f2PGRu"/>
@@ -8972,8 +8844,8 @@
     <service id=".service_locator.JmMGBM1" alias=".service_locator.6Wfvake"/>
     <service id=".service_locator.IGlA3Xd" alias=".service_locator.QLhFzGu"/>
     <service id=".service_locator.A_41u1H" alias=".service_locator.cJLU5RN"/>
-    <service id=".service_locator.OukUT8u" alias=".service_locator.ZP92gqz"/>
     <service id=".service_locator.px3UucD" alias=".service_locator.yTMp7CA"/>
+    <service id=".service_locator.OukUT8u" alias=".service_locator.ZP92gqz"/>
     <service id=".service_locator.GDg2hr7" alias=".service_locator.jUv.zyj"/>
   </services>
 </container>

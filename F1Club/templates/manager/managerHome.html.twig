@@ -5,24 +5,25 @@
 {% endblock %}
 
 {% block body %}
-<div class="d-flex align-items-center justify-content-center">
-	<div class="card">
+<h1 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Apartado manager</h1>
+<div class="row d-flex align-items-center justify-content-center mx-4 mt-5">
+	<div class="card col-6">
   		<div class="card-body">
 			<h2>Total de productos vendidos</h2>
     		<p>{{productosVendidos}}</p>
   		</div>
 	</div>
-		<div class="card">
+		<div class="card col-6">
   		<div class="card-body">
 			<h2>Ingresos totales</h2>
     		<p>{{ingresosTotales}} €</p>
   		</div>
 	</div>
 </div>
-<div class="d-flex align-items-center justify-content-center">
-	<a href="{{ path('mostrar_mas_vendidos_este_mes')}}"><button class="btn btn-danger">Ver los 10 productos más vendidos este mes</button><a>
-	<a href="{{ path('mostrar_pedidos_diarios_del_mes_actual')}}"><button class="btn btn-danger">Ver cuantos pedidos se han hecho cada día del mes</button><a>
-	<a href="{{ path('mostrar_ventas_fabricantes_mes_actual')}}"><button class="btn btn-danger">Ventas de cada fabricante este mes</button><a>
-	<a href="{{ path('app_logout')}}"><button class="btn btn-danger">Cerrar sesión</button><a>
+<div class="d-flex align-items-center justify-content-center mt-5">
+	<a href="{{ path('mostrar_mas_vendidos_este_mes')}}"><button class="btn btn-danger mx-2">Ver los 10 productos más vendidos este mes</button><a>
+	<a href="{{ path('mostrar_pedidos_diarios_del_mes_actual')}}"><button class="btn btn-danger mx-2">Ver cuantos pedidos se han hecho cada día del mes</button><a>
+	<a href="{{ path('mostrar_ventas_fabricantes_mes_actual')}}"><button class="btn btn-danger mx-2">Ventas de cada fabricante este mes</button><a>
+	<a href="{{ path('app_logout')}}"><button class="btn btn-danger mx-2">Cerrar sesión</button><a>
 </div>
 {% endblock %}

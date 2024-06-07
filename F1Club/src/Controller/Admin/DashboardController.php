@@ -51,7 +51,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('ProyectoServidor');
+            ->setTitle('F1Club');
     }
 
     public function configureMenuItems(): iterable
@@ -60,8 +60,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Usuarios', 'fas fa-list', Usuario::class);
         yield MenuItem::linkToCrud('Pedidos', 'fas fa-list', Pedido::class);
         yield MenuItem::section('Administración y gestión de la tienda');
-        yield MenuItem::linkToCrud('Cupones', 'fas fa-list', Cupon::class);
-        yield MenuItem::linkToCrud('Descuentos', 'fas fa-list', Descuento::class);
         yield MenuItem::linkToCrud('Fabricantes', 'fas fa-list', Fabricante::class);
         yield MenuItem::linkToCrud('Equipos', 'fas fa-list', Equipo::class);
         yield MenuItem::linkToCrud('Escalas', 'fas fa-list', Escala::class);
