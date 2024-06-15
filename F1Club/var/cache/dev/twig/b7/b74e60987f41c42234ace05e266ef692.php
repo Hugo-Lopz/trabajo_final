@@ -112,7 +112,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
                         </ul>
                     </div>
 
-                    <div class=\"col-6\">
+                    <div class=\"col-6 suscripcion\">
                         <form>
                             <h6>Subscribete a nuestro newsletter</h6>
                             <p>Recibirás noticias mensuales</p>
@@ -203,7 +203,7 @@ class __TwigTemplate_754d2f7bc8edbc1ff7aa84029c44246c extends Template
                         </ul>
                     </div>
 
-                    <div class=\"col-6\">
+                    <div class=\"col-6 suscripcion\">
                         <form>
                             <h6>Subscribete a nuestro newsletter</h6>
                             <p>Recibirás noticias mensuales</p>
