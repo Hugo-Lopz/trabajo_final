@@ -26,4 +26,30 @@ class HomeController extends AbstractController
             'productosMejorValorados' => $productosMejorValorados,'productosMasVendidos'=> $productosMasVendidos, 'escalas' => $escalas, 'equipos' => $equipos, 'fabricantes' => $fabricantes,
         ]);
     }
+
+    #[Route('/accessibilityPage', name: 'app_accessibility')]
+    public function accessibility(CategoriaModule $categoriaModuCategoriaModule): Response
+    {
+        //Con la clase que hemos creado vuelvo a obtener todos los datos necesarios para el navbar
+        $escalas = $categoriaModuCategoriaModule->getEscalas();
+        $equipos = $categoriaModuCategoriaModule->getEquipos();
+        $fabricantes = $categoriaModuCategoriaModule->getFabricantes();
+
+        return $this->render('home/accessibility.html.twig', [
+           'escalas' => $escalas, 'equipos' => $equipos, 'fabricantes' => $fabricantes,
+        ]);
+    }
+
+    #[Route('/webmap', name: 'app_webmap')]
+    public function mapaWeb(CategoriaModule $categoriaModuCategoriaModule): Response
+    {
+        //Con la clase que hemos creado vuelvo a obtener todos los datos necesarios para el navbar
+        $escalas = $categoriaModuCategoriaModule->getEscalas();
+        $equipos = $categoriaModuCategoriaModule->getEquipos();
+        $fabricantes = $categoriaModuCategoriaModule->getFabricantes();
+
+        return $this->render('home/webmap.html.twig', [
+           'escalas' => $escalas, 'equipos' => $equipos, 'fabricantes' => $fabricantes,
+        ]);
+    }
 }

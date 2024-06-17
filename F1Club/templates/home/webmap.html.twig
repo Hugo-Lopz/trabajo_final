@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{ asset('styles/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	{% include '/compartido/nav.html.twig' with {'escalas': escalas, 'equipos': equipos, 'fabricantes': fabricantes} %}
+<section class="mapa d-flex justify-content-center align-items-center">
+         <h1 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Mapa web</h1>
+        <div>
+            <ul>
+                <h3 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Acceso a la tienda</h3>
+                <li><a href="{{ path('app_home')}}">Tienda</a></li>
+                <h3 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Lista de deseos</h3>
+                <li><a href="{{ path('acceder_lista_deseos')}}">Lista</a></li>
+                <h3 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Carrito de compra</h3>
+                <li><a href="{{ path('mostrar_carrito')}}">Carrito</a></li>
+                <h3 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Categoría fabricante</h3>
+                {% for fabricante in fabricantes %}
+					<li><a href="{{ path('seleccion_fabricante', { id: fabricante.id }) }}">{{ fabricante.nombre }}</a></li>
+				{% endfor %}
+                <h3 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Categoría escala</h3>
+				{% for escala in escalas %}
+					<li><a href="{{ path('seleccion_escala', { id: escala.id }) }}">{{ escala.nombreescala }}</a></li>
+				{% endfor %}
+                <h3 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Categoría equipo</h3>
+                {% for equipo in equipos %}
+					<li><a href="{{ path('seleccion_equipo', { id: equipo.id }) }}">{{ equipo.nombreequipo }}</a></li>
+				{% endfor %}
+                <h3 class="titulo d-flex align-items-center justify-content-center mt-5 ms-5">Sobre nosotros</h3>
+                <li><a href="#">¿Quienes somos?</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="{{ path('app_webmap')}}">Mapa web</a></li>
+                <li><a href="{{ path('app_accessibility')}}">Documento accesibilidad</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    {% include '/compartido/footer.html.twig' %}
+{% endblock %}

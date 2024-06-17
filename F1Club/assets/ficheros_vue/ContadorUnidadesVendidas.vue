@@ -20,7 +20,7 @@ export default {
   methods: {
     animacionContador() {
       const duration = 8000; // Duración de la animación en milisegundos
-      const start = performance.now()+1;
+      const start = performance.now()+1; // Devuelve un timestamp de alta resolución en milisegundos
       const endValue = this.unidadesVendidas;
 
       const updateCounter = (timestamp) => {

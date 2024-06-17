@@ -17,6 +17,8 @@ return [
         '/pagar' => [[['_route' => 'pagina_de_pago', '_controller' => 'App\\Controller\\Shop\\CompraController::pagar'], null, null, null, false, false, null]],
         '/compra' => [[['_route' => 'procesar_compra', '_controller' => 'App\\Controller\\Shop\\CompraController::comprarProductos'], null, null, null, false, false, null]],
         '/home' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\Shop\\HomeController::home'], null, null, null, false, false, null]],
+        '/accessibilityPage' => [[['_route' => 'app_accessibility', '_controller' => 'App\\Controller\\Shop\\HomeController::accessibility'], null, null, null, false, false, null]],
+        '/webmap' => [[['_route' => 'app_webmap', '_controller' => 'App\\Controller\\Shop\\HomeController::mapaWeb'], null, null, null, false, false, null]],
         '/lista_deseos' => [[['_route' => 'acceder_lista_deseos', '_controller' => 'App\\Controller\\Shop\\ListaDeseosController::accederAListaDeseos'], null, null, null, false, false, null]],
         '/busqueda' => [[['_route' => 'busqueda_producto', '_controller' => 'App\\Controller\\Shop\\ProductoController::buscarProducto'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\User\\LoginController::login'], null, null, null, false, false, null]],

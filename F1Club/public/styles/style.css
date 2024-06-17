@@ -373,6 +373,10 @@ section {
     font-size: 2rem;
 }
 
+.footer .dropdown-menu {
+    background-color: black !important;
+}
+
 /*Medias query*/
 @media screen and (max-width:767px) {
     .menu1 {

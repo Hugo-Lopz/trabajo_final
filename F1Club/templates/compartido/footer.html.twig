@@ -15,9 +15,33 @@
                     <div class="col-3">
                         <h6>Tienda</h6>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Productos por escala</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Productos por década</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Productos por equipo</a></li>
+                            <li class="nav-item dropdown mb-2"><a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos por escala</a>
+                                <ul class="dropdown-menu">
+							    {% for escala in escalas %}
+								    <li>
+									    <a class="dropdown-item" href="{{ path('seleccion_escala', { id: escala.id }) }}">{{ escala.nombreescala }}</a>
+								    </li>
+							        {% endfor %}
+						        </ul>
+                            </li>
+                            <li class="nav-item mb-2"><a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos por equipo</a>
+                                <ul class="dropdown-menu">
+							    {% for equipo in equipos %}
+								    <li>
+									    <a class="dropdown-item" href="{{ path('seleccion_equipo', { id: equipo.id }) }}">{{ equipo.nombreequipo }}</a>
+								    </li>
+							    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="nav-item mb-2"><a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos por fabricante</a>
+                            	<ul class="dropdown-menu">
+                                {% for fabricante in fabricantes %}
+								    <li>
+									    <a class="dropdown-item" href="{{ path('seleccion_fabricante', { id: fabricante.id }) }}">{{ fabricante.nombre }}</a>
+								    </li>
+							    {% endfor %}
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 
@@ -26,8 +50,8 @@
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">¿Quienes somos?</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Contacto</a></li>
-                            <li class="nav-item mb-2"><a href="/WebMap_page/webMap.html" class="nav-link p-0 ">Mapa web</a></li>
-                            <li class="nav-item mb-2"><a href="/accessibilty/accessibility.html" class="nav-link p-0 ">Documento de accesibilidad</a>
+                            <li class="nav-item mb-2"><a href="{{ path('app_webmap')}}" class="nav-link p-0 ">Mapa web</a></li>
+                            <li class="nav-item mb-2"><a href="{{ path('app_accessibility')}}" class="nav-link p-0 ">Documento de accesibilidad</a>
                             </li>
                         </ul>
                     </div>
