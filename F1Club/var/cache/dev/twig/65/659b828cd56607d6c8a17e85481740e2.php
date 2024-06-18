@@ -436,6 +436,7 @@ class __TwigTemplate_7dfa413ded862191be65b08a40496644 extends Template
     {% endif %} 
 </section> 
 {% include '/compartido/footer.html.twig' %}{% endblock %}
+
 ", "producto/vistaProducto.html.twig", "/home/daw/Escritorio/TFG/F1Club/templates/producto/vistaProducto.html.twig");
     }
 }

@@ -25,6 +25,7 @@ class ProductoCrudController extends AbstractCrudController
             TextField::new('nombre_producto'),
             NumberField::new('precio'),
             AssociationField::new('equipo')->autocomplete(),
+            AssociationField::new('fabricante')->autocomplete(),
             AssociationField::new('escala')->autocomplete(),
         ];
     }
